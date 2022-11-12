@@ -1,4 +1,5 @@
-import {DefaultSection} from '../../layouts/wrap-sections';
+import {DefaultSection} from '../../layouts/section-layouts';
+import {IS_DEVELOPMENT, } from '../../lib/env';
 
 
 export default function Hero() {
@@ -6,10 +7,12 @@ export default function Hero() {
         <DefaultSection name={'hero'} width={'full'} padding={'none'}>
             <div onClick={() => {
                 // scroll to bottom of page
-                window.scrollTo({
-                    top: document.body.scrollHeight,
-                    behavior: 'smooth',
-                });
+                if (!IS_DEVELOPMENT) {
+                    window.scrollTo({
+                        top: document.body.scrollHeight,
+                        behavior: 'smooth',
+                    });
+                }
             }}>
                 <img
                     src={'/hero/hero1.jpg'}
@@ -18,6 +21,8 @@ export default function Hero() {
                         width: '100%',
                         height: '100vh',
                         objectFit: 'cover',
+                        objectPosition: 'center',
+
                     }}
                 />
             </div>

@@ -29,7 +29,7 @@ function getEnv() {
         } else if (url.includes('192')) {
             isDev = true;
             isStage = false;
-        } else if (url.includes('stage') || url.includes('anclanka')) {
+        } else if (url.includes('stage') || url.includes('anclanka') || url.includes('vercel')) {
             isDev = false;
             isStage = true;
         } else if (isSubdomain(url)) {

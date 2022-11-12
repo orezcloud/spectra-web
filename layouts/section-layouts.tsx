@@ -51,27 +51,27 @@ function SectionPadding({children, padding}: {
     );
 }
 
-export function DefaultSection({children, name, width, padding, sectionBackgroundColor, className}:
-                                   {
-                                       children: ReactNode, name: string, className?: string, width?: 'full' | 'medium',
-                                       padding?: 'none' | 'default' | 'large' | 'top-zero',
-                                       sectionBackgroundColor?: string
-                                   },
-) {
+interface SectionProps {
+    children: ReactNode, name: string, className?: string, width?: 'full' | 'medium',
+    padding?: 'none' | 'default' | 'large' | 'top-zero',
+    sectionBackgroundColor?: string
+}
+
+export function DefaultSection(props: SectionProps) {
     return (
         <div
-            className={name + (className ? ' ' + className : '')}
+            className={props.name + (props.className ? ' ' + props.className : '')}
             style={{
-                backgroundColor: sectionBackgroundColor ? sectionBackgroundColor.includes('linear-gradient') ? 'transparent' : sectionBackgroundColor : 'none',
-                backgroundImage: sectionBackgroundColor ? sectionBackgroundColor.includes('linear-gradient') ? sectionBackgroundColor : 'none' : 'none',
+                backgroundColor: props.sectionBackgroundColor ? props.sectionBackgroundColor.includes('linear-gradient') ? 'transparent' : props.sectionBackgroundColor : 'none',
+                backgroundImage: props.sectionBackgroundColor ? props.sectionBackgroundColor.includes('linear-gradient') ? props.sectionBackgroundColor : 'none' : 'none',
             }}
 
         >
             <SectionContainer
-                width={width}
+                width={props.width}
             >
-                <SectionPadding padding={padding}>
-                    {children}
+                <SectionPadding padding={props.padding}>
+                    {props.children}
                 </SectionPadding>
             </SectionContainer>
         </div>

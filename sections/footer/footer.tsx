@@ -1,4 +1,4 @@
-import {DefaultSection} from '../../layouts/wrap-sections';
+import {DefaultSection} from '../../layouts/section-layouts';
 
 
 export default function Footer() {
