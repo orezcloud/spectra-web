@@ -1,4 +1,4 @@
 # Spectra Project
 
 Environment Variables
-- ENV - `development` or `stage` or `production`
+- ENV - `dev` or `stage` or `production`

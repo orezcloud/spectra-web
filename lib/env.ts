@@ -10,10 +10,10 @@ function getEnv() {
 
     // initialilze the environment
     if (typeof window === 'undefined') {
-        if (process.env.ENV === 'development') {
+        if (process.env.ENV === 'dev') {
             isDev = true;
             isStage = false;
-        } else if (process.env.ENV === 'staging') {
+        } else if (process.env.ENV === 'stage') {
             isDev = false;
             isStage = true;
         } else {
@@ -29,7 +29,7 @@ function getEnv() {
         } else if (url.includes('192')) {
             isDev = true;
             isStage = false;
-        } else if (url.includes('staging') || url.includes('anclanka')) {
+        } else if (url.includes('stage') || url.includes('anclanka')) {
             isDev = false;
             isStage = true;
         } else if (isSubdomain(url)) {
