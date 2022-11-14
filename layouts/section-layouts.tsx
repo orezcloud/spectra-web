@@ -1,4 +1,5 @@
 import {CSSProperties, ReactNode} from 'react';
+import {isImage} from '../lib/utils';
 
 
 interface SectionContainerProps {
@@ -52,9 +53,13 @@ function SectionPadding({children, padding}: {
 }
 
 interface SectionProps {
-    children: ReactNode, name: string, className?: string, width?: 'full' | 'medium',
+    children: ReactNode,
+    name: string,
+    className?: string,
+    width?: 'full' | 'medium',
     padding?: 'none' | 'default' | 'large' | 'top-zero',
-    sectionBackgroundColor?: string
+    sectionBackground?: string,
+    // style?: CSSProperties,
 }
 
 export function DefaultSection(props: SectionProps) {
@@ -62,10 +67,18 @@ export function DefaultSection(props: SectionProps) {
         <div
             className={props.name + (props.className ? ' ' + props.className : '')}
             style={{
-                backgroundColor: props.sectionBackgroundColor ? props.sectionBackgroundColor.includes('linear-gradient') ? 'transparent' : props.sectionBackgroundColor : 'none',
-                backgroundImage: props.sectionBackgroundColor ? props.sectionBackgroundColor.includes('linear-gradient') ? props.sectionBackgroundColor : 'none' : 'none',
+                backgroundColor: props.sectionBackground ? (props.sectionBackground.includes('linear-gradient') || isImage(props.sectionBackground)) ? 'transparent' : props.sectionBackground : 'none',
+                backgroundImage: props.sectionBackground ?
+                    props.sectionBackground.includes('linear-gradient') ?
+                        props.sectionBackground :
+                        isImage(props.sectionBackground) ?
+                            `url(${props.sectionBackground})` :
+                            'none' : 'none',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                // ...props.style,
             }}
-
         >
             <SectionContainer
                 width={props.width}

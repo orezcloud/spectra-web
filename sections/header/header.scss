@@ -1,18 +1,17 @@
 
-.header-transparent {
-  background: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
+.header {
 
-  margin-top: 30px;
+  .row {
+    height: 40px;
+
+    & * {
+      height: 100%;
+    }
+  }
 
   // logo
   .logo {
     img {
-      width: 100px;
     }
   }
 
@@ -23,27 +22,66 @@
 
     ul {
       display: flex;
+      align-items: center;
 
       li {
-        align-items: center;
-        display: flex;
+        &, a, span {
+          align-items: center;
+          display: flex;
+        }
+
         line-height: .9;
         height: 20px;
 
 
         &:not(.icon) {
-          padding: 0px 20px;
-          border-right: 2px solid white;
+          padding: 0 20px;
+          border-right: 1px solid white;
         }
 
         &.icon {
-          padding-left: 20px;
+          padding-left: 42px;
         }
 
-        a {
-          color: #fff;
-        }
+        //a {
+        //  color: #fff;
+        //}
       }
+    }
+  }
+}
+
+
+.header-transparent {
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  margin-top: 30px;
+}
+
+.header-static {
+  position: relative;
+  margin-top: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: #fff;
+  transition:  all 0.3s ease-in-out;
+
+  &.sticked{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .menu li {
+    color: #000 !important;
+    font-weight: 600;
+
+    &.icon {
+      padding-left: 30px !important;
     }
   }
 }

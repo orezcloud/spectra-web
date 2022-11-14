@@ -2,10 +2,12 @@ import {ReactNode} from 'react';
 import {IS_DEVELOPMENT, IS_STAGING} from '../lib/env';
 
 
-export default function Body({children}: {children: ReactNode}) {
+export default function Body({children, backgroundColor}: {children: ReactNode, backgroundColor?: string}) {
     return (
         <>
-            {children}
+            <div className={'body'} style={{backgroundColor: backgroundColor}}>
+                {children}
+            </div>
             {
                 IS_STAGING &&
                 <div className={'notice'}>

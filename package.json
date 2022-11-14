@@ -18,7 +18,10 @@
     "normalize.css": "^8.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-height": "^3.0.2",
     "sass": "^1.56.1",
-    "typescript": "4.8.4"
+    "typescript": "4.8.4",
+    "use-breakpoint": "^3.0.3",
+    "valtio": "^1.7.5"
   }
 }

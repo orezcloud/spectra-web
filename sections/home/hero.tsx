@@ -2,7 +2,7 @@ import {DefaultSection} from '../../layouts/section-layouts';
 import {IS_DEVELOPMENT, } from '../../lib/env';
 
 
-export default function Hero() {
+export default function HomeHero() {
     return (
         <DefaultSection name={'hero'} width={'full'} padding={'none'}>
             <div onClick={() => {

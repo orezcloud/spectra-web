@@ -7,8 +7,9 @@ import '../styles/global.scss';
 import '../sections/header/header.scss'
 
 import type { AppProps } from 'next/app'
+import init from '../lib/init';
 
-
+init()
 
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />

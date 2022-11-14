@@ -4,7 +4,7 @@ import {DefaultSection} from '../../layouts/section-layouts';
 export default function Footer() {
     return (
         <DefaultSection name={'footer'}>
-            <div className="footer-main nobullet">
+            <div className="footer-main nobullet overflow-hidden">
                 <div className="row justify-content-center">
                     {
                         footerLinks.map((link, index) => (
