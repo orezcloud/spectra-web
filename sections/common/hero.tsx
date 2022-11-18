@@ -1,6 +1,6 @@
 import {DefaultSection} from '../../layouts/section-layouts';
 import {getMobileOrTabletOnlyMediaQuery} from '../../styles/breakpoints';
-import CompHeight from '../../lib/CompHeight';
+import CompHeight from '../../lib/comp-height';
 import {useState} from 'react';
 
 

@@ -1,21 +1,21 @@
 import Body from '../layouts/body';
-import {DefaultSection} from '../layouts/section-layouts';
-import Header from '../sections/header/header';
+import MiniSlider from '../widgets/mini-slider/mini-slider';
 
 
 export default function Contact() {
 
-    
 
     return (
-        <Body backgroundColor={'#f1f1f1'}>
-            <Header/>
-            <DefaultSection name={'contact'} padding={'none'}>
-
-                <div style={{
-                     height: '400vh',
-                }}></div>
-            </DefaultSection>
+        <Body>
+            <div>
+                <MiniSlider
+                    imageUrls={[
+                        '/hero/hero-1.jpg',
+                        '/hero/hero-2.jpg',
+                    ]}
+                    size={'full'}
+                />
+            </div>
         </Body>
     );
 }

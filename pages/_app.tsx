@@ -9,6 +9,8 @@ import '../sections/header/header.scss'
 import type { AppProps } from 'next/app'
 import init from '../lib/init';
 
+import '../widgets/mini-slider/style.scss'
+
 init()
 
 export default function App({ Component, pageProps }: AppProps) {
