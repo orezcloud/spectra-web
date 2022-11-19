@@ -4,7 +4,7 @@ import {proxy, useSnapshot} from 'valtio';
 
 
 export default function MiniSlider({size, imageUrls}: {size?: 'full', imageUrls: string[]}) {
-    const {heroImage} = useSnapshot(state);
+    const {heroImage, images} = useSnapshot(state);
 
     const init = async () => {
 
@@ -28,12 +28,11 @@ export default function MiniSlider({size, imageUrls}: {size?: 'full', imageUrls:
         state.currentIndex = 0;
 
         // preload images
-        imageUrls.forEach(async (url, index) => {
-            if (index === 0) {
-                return;
-            }
-            await preloadImage(url);
-        });
+        setTimeout(() => {
+            imageUrls.forEach(async (url) => {
+                preloadImage(url);
+            });
+        }, 1400);
 
         while (true) {
             await sleep(3200);
@@ -123,6 +122,32 @@ export default function MiniSlider({size, imageUrls}: {size?: 'full', imageUrls:
                     );
                 })
             }
+
+            {
+                images.map((image) => {
+                    return (
+                        <img
+                            key={image.id}
+                            src={image.url}
+                            className={'preload'}
+                        />
+                    );
+                })
+            }
+
+            <style jsx>
+                {`
+                  .preload {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 1%;
+                    height: 1%;
+                    opacity: 0;
+                    z-index: -1;
+                  }
+                `}
+            </style>
 
         </div>
     );
