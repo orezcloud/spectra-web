@@ -15,9 +15,9 @@ export default function HomeHero() {
                 }
             }}>
                 <MiniSlider imageUrls={[
-                    '/hero/hero-1.jpg',
-                    '/hero/hero-2.jpg',
-                    '/hero/hero-3.jpg',
+                    '/images/hero/hero-1.jpg',
+                    '/images/hero/hero-2.jpg',
+                    '/images/hero/hero-3.jpg',
                 ]} size={'full'}/>
 
             </div>
