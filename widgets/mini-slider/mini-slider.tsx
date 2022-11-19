@@ -1,11 +1,10 @@
 import {useEffect} from 'react';
-import {sleep} from '../../lib/utils';
+import {preloadImage, sleep} from '../../lib/utils';
 import {proxy, useSnapshot} from 'valtio';
 
 
 export default function MiniSlider({size, imageUrls}: {size?: 'full', imageUrls: string[]}) {
     const {heroImage} = useSnapshot(state);
-
 
     const init = async () => {
 
@@ -15,8 +14,7 @@ export default function MiniSlider({size, imageUrls}: {size?: 'full', imageUrls:
         initialized = true;
 
         // set images
-        const resImages = imageUrls;
-        let images = resImages.map((image, index) => ({
+        let images = imageUrls.map((image, index) => ({
             url: image,
             id: String(index + 1),
         }));
@@ -28,6 +26,14 @@ export default function MiniSlider({size, imageUrls}: {size?: 'full', imageUrls:
             id: images[0].id,
         }];
         state.currentIndex = 0;
+
+        // preload images
+        imageUrls.forEach(async (url, index) => {
+            if (index === 0) {
+                return;
+            }
+            await preloadImage(url);
+        });
 
         while (true) {
             await sleep(3200);

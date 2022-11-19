@@ -45,6 +45,7 @@ export default function Footer() {
                     color: #fff;
                     background: #080808;
                     padding: 60px 0 20px;
+                    overflow: hidden;
                     //max-width: 100%;
                   }
 
