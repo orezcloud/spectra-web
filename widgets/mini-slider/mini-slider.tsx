@@ -4,7 +4,23 @@ import {proxy, useSnapshot} from 'valtio';
 
 
 export default function MiniSlider({size, imageUrls}: {size?: 'full', imageUrls: string[]}) {
-    const {heroImage, images} = useSnapshot(state);
+    const {heroImage, currentIndex} = useSnapshot(state);
+
+    useEffect(() => {
+
+        if (state.currentIndex  === 0) {
+            setTimeout(() => {
+                if (state.images && state.images.length > 0) {
+                    preloadImage(imageUrls[1]);
+                }
+            }, 800);
+        } else {
+            if (currentIndex < imageUrls.length - 1) {
+                preloadImage(imageUrls[state.currentIndex + 1]);
+            }
+        }
+
+    }, [currentIndex, heroImage])
 
     const init = async () => {
 
@@ -27,12 +43,6 @@ export default function MiniSlider({size, imageUrls}: {size?: 'full', imageUrls:
         }];
         state.currentIndex = 0;
 
-        // preload images
-        setTimeout(() => {
-            imageUrls.forEach(async (url) => {
-                preloadImage(url);
-            });
-        }, 1400);
 
         while (true) {
             await sleep(3200);
@@ -123,17 +133,17 @@ export default function MiniSlider({size, imageUrls}: {size?: 'full', imageUrls:
                 })
             }
 
-            {
-                images.map((image) => {
-                    return (
-                        <img
-                            key={image.id}
-                            src={image.url}
-                            className={'preload'}
-                        />
-                    );
-                })
-            }
+            {/*{*/}
+            {/*    images.map((image) => {*/}
+            {/*        return (*/}
+            {/*            <img*/}
+            {/*                key={image.id}*/}
+            {/*                src={image.url}*/}
+            {/*                className={'preload'}*/}
+            {/*            />*/}
+            {/*        );*/}
+            {/*    })*/}
+            {/*}*/}
 
             <style jsx>
                 {`
