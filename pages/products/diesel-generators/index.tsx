@@ -11,7 +11,11 @@ export default function DieselGenerators() {
     return (
         <Body backgroundColor={COLORS.lightBlue}>
             <Header/>
-            <Hero/>
+            <Hero
+                title={'Diesel Generators'}
+                subtitle={'We have a wide range of products'}
+                image={'/images/hero/hero-1.jpg'}
+            />
             <CategorySection categoryCards={dieselGeneratorCategories}/>
             <Footer/>
         </Body>

@@ -13,9 +13,9 @@ export default function About() {
             ]}
             name={'about'}
             heroProps={{
-                title: 'About',
+                image: '/images/hero/hero-2.jpg',
+                title: 'Support',
                 subtitle: 'We are here to help you',
-                image: '/images/hero/hero-3.jpg',
             }}
         />
     );

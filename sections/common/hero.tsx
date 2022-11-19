@@ -1,52 +1,68 @@
 import {DefaultSection} from '../../layouts/section-layouts';
-import {getMobileOrTabletOnlyMediaQuery} from '../../styles/breakpoints';
+import {getMobileOrTabletOnlyMediaQuery, useIsMobileOrTablet} from '../../styles/breakpoints';
 import CompHeight from '../../lib/comp-height';
 import {useState} from 'react';
 
 
-export default function Hero() {
+export interface HeroProps {
+    title: string,
+    subtitle?: string,
+    topTitle?: string,
+    image: string
+}
+
+export default function Hero({
+                                 title,
+                                 subtitle,
+                                 topTitle,
+                                 image,
+                             }: HeroProps) {
 
     const [height, setHeight] = useState(50);
+    const isMobileOrTablet = useIsMobileOrTablet();
 
     return (
         <>
-            <DefaultSection name={'hero'} sectionBackground={'/hero/hero-1.jpg'} padding={'none'}>
+            <DefaultSection name={'hero'} sectionBackground={image} padding={'none'}>
                 <div className={'hero-content'}>
                     <div className={'title-card-wrapper'}>
                         <CompHeight onHeightReady={(height) => {
                             setHeight(height);
                         }}>
-                            <TitleCard title={'The best way to learn'} subtitle={'Learn from the best'}/>
+                            <TitleCard title={title} subtitle={subtitle} topTitle={topTitle}/>
                         </CompHeight>
                     </div>
                 </div>
             </DefaultSection>
 
-            {/*<div style={{*/}
-            {/*    height: height/4,*/}
-            {/*}}/>*/}
+            {
+                isMobileOrTablet &&
+                <div style={{
+                    height: height / 4,
+                }}/>
+            }
 
             <style jsx>
                 {`
-                      .hero-content {
-                        min-height: 400px;
-                        display: flex;
-                        align-items: center;
-                      }
+                  .hero-content {
+                    min-height: 400px;
+                    display: flex;
+                    align-items: center;
+                  }
 
-                      @media (${getMobileOrTabletOnlyMediaQuery()}) {
-                        .hero-content {
-                          min-height: 300px;
-                          justify-content: center;
-                          align-items: end;
-                        }
+                  @media (${getMobileOrTabletOnlyMediaQuery()}) {
+                    .hero-content {
+                      min-height: 300px;
+                      justify-content: center;
+                      align-items: end;
+                    }
 
-                        .hero-content .title-card-wrapper {
-                          margin-bottom: -${height / 4}px;
-                          position: absolute;
-                        }
-                      }
-                    `}
+                    .hero-content .title-card-wrapper {
+                      margin-bottom: -${height / 4}px;
+                      position: absolute;
+                    }
+                  }
+                `}
             </style>
         </>
     );

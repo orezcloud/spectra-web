@@ -111,3 +111,92 @@ export const dieselGeneratorCategories = [
         url: dieselGeneratorBase + '/special-generators',
     },
 ];
+
+
+export const footerLinks = [
+    {
+        title: 'PowerMart',
+        links: [
+            {
+                name: 'Discover PowerMart',
+                path: '/',
+            },
+            {
+                name: 'PowerMart for Business',
+                path: '/about',
+            },
+            {
+                name: 'Careers',
+                path: '/careers',
+            },
+            {
+                name: 'Policies & Procedures',
+                path: '/policies',
+            },
+        ],
+    },
+    {
+        title: 'Services',
+        links: [
+            {
+                name: 'After Sales Service',
+                path: '/',
+            },
+            {
+                name: 'Spare Parts',
+                path: '/about',
+            },
+        ],
+    },
+    {
+        title: 'Resources',
+        links: [
+            {
+                name: 'FAQs',
+                path: '/',
+            },
+            {
+                name: 'Warranties',
+                path: '/about',
+            },
+            {
+                name: 'Selected Projects',
+                path: '/careers',
+            },
+            {
+                name: 'Downloads',
+                path: '/downloads',
+            },
+        ],
+    },
+    {
+        title: 'Case Studies',
+        links: [
+            {
+                name: 'Diesel to Power',
+                path: '/',
+            },
+            {
+                name: 'Gas to Power',
+                path: '/about',
+            },
+        ],
+    },
+    {
+        title: 'Contact',
+        links: [
+            {
+                name: 'Become a Partner',
+                path: '/',
+            },
+            {
+                name: 'Sales Enquiries',
+                path: '/about',
+            },
+            {
+                name: 'General Enquiries',
+                path: '/contact',
+            },
+        ],
+    },
+];

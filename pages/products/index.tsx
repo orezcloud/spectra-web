@@ -11,7 +11,11 @@ export default function Products() {
     return (
         <Body backgroundColor={COLORS.lightBlue}>
             <Header/>
-            <Hero/>
+            <Hero
+                title={'Products'}
+                subtitle={'We have a wide range of products'}
+                image={'/images/hero/hero-1.jpg'}
+            />
             <CategorySection categoryCards={productCategories}/>
             <Footer/>
         </Body>
