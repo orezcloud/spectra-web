@@ -11,7 +11,12 @@ export default function GasGenerators() {
                     </div>
                 ),
             ]}
-            name={'hybrid-generator'}
+            name={'gas-generator'}
+            heroProps={{
+                title: 'Gas Generator',
+                subtitle: 'We are here to help you',
+                image: '/images/hero/hero-3.jpg',
+            }}
         />
     )
 }
