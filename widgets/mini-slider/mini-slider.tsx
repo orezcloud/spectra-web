@@ -30,7 +30,7 @@ export default function MiniSlider({size, imageUrls}: {size?: 'full', imageUrls:
         state.currentIndex = 0;
 
         while (true) {
-            await sleep(4000);
+            await sleep(3000);
             if (startLoop) {
                 await loopFunc();
             }
@@ -63,7 +63,7 @@ export default function MiniSlider({size, imageUrls}: {size?: 'full', imageUrls:
             state.currentIndex = 0;
         }
 
-        await sleep(1200);
+        await sleep(1700);
 
         state.heroImage = state.heroImage.map((image, index) => {
             // add class leave to first image
@@ -83,7 +83,7 @@ export default function MiniSlider({size, imageUrls}: {size?: 'full', imageUrls:
             return image;
         });
 
-        await sleep(2000);
+        await sleep(1600);
 
         // remove first image
         state.heroImage = state.heroImage.filter((image, index) => index !== 0);
