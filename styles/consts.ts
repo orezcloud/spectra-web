@@ -12,6 +12,10 @@ export const COLORS = {
 
 export const baseLinePx = 18;
 
+export function base(base: number): string {
+    return `${base * baseLinePx}px`;
+}
+
 export const SHADOW = {
     default: `0 0 10px 0 ${'rgb(0, 0, 0)'}`,
     blue: `0 0 10px 0 ${'rgb(205, 225, 239)'}`,
