@@ -1,5 +1,6 @@
 import Body from '../layouts/body';
 import MiniSlider from '../widgets/mini-slider/mini-slider';
+import Header from '../sections/header/header';
 
 
 export default function Contact() {
@@ -7,15 +8,10 @@ export default function Contact() {
 
     return (
         <Body>
-            <div>
-                <MiniSlider
-                    imageUrls={[
-                        '/hero/hero-1.jpg',
-                        '/hero/hero-2.jpg',
-                    ]}
-                    size={'full'}
-                />
-            </div>
+            <Header/>
+            <h2>
+                under construction
+            </h2>
         </Body>
     );
 }

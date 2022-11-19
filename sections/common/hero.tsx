@@ -10,7 +10,7 @@ export default function Hero() {
 
     return (
         <>
-            <DefaultSection name={'hero'} sectionBackground={'/hero/hero1.jpg'} padding={'none'}>
+            <DefaultSection name={'hero'} sectionBackground={'/hero/hero-1.jpg'} padding={'none'}>
                 <div className={'hero-content'}>
                     <div className={'title-card-wrapper'}>
                         <CompHeight onHeightReady={(height) => {

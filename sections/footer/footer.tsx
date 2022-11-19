@@ -8,11 +8,11 @@ export default function Footer() {
 
     return (
         <DefaultSection name={'footer'} padding={'none'}>
-            <div className="footer-main nobullet overflow-hidden">
-                <div className="row justify-content-center">
+            <div className="footer-main nobullet overflow-hidden mx-auto">
+                <div className="row justify-content-between">
                     {
                         footerLinks.map((link, index) => (
-                            <div className="col-lg-2 col-md-6" key={index}>
+                            <div className="col-lg-auto col-md-6" key={index}>
                                 <div className="footer-widget">
                                     <h3 className="footer-title">{link.title}</h3>
                                     <ul className="footer-links">
@@ -43,10 +43,15 @@ export default function Footer() {
                     color: #fff;
                     background: #080808;
                     padding: 60px 0 20px;
+                    //max-width: 100%;
+                  }
+
+                  .footer-main {
+                    max-width: 90%;
                   }
 
                   .footer-main .col-lg-2 {
-                    width: 20%;
+                    //width: 20%;
                   }
                 `}
             </style>
@@ -104,7 +109,7 @@ function Links() {
                     max-width: 80%;
                     margin: 0 auto;
                     padding-top: 20px;
-                    font-size:  ${base(1.3)}px;
+                    font-size: ${base(1.3)}px;
                   }
                 `}
             </style>
