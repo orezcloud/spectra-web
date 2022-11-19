@@ -5,18 +5,20 @@ export interface CategoryCardProps {
     url: string;
 }
 
-export function CategoryCard({name, description, image}: CategoryCardProps) {
+export function CategoryCard({name, description, image, url}: CategoryCardProps) {
     return (
         <div className={'category-card p-4'}>
-            <div className="row">
-                <div className="col-3">
-                    <img src={image} alt={name}/>
+            <a href={url}>
+                <div className="row">
+                    <div className="col-3">
+                        <img src={image} alt={name}/>
+                    </div>
+                    <div className="col-9 align-self-center">
+                        <h3>{name}</h3>
+                        <p>{description}</p>
+                    </div>
                 </div>
-                <div className="col-9 align-self-center">
-                    <h3>{name}</h3>
-                    <p>{description}</p>
-                </div>
-            </div>
+            </a>
 
             <style jsx>
                 {`

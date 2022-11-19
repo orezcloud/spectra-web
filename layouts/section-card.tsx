@@ -20,7 +20,8 @@ export default function SectionCard({children, minusMargin}: {children: ReactNod
                   .section-card {
                     background-color: #fff;
                     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
-                    ${minusMargin ? 'margin-top: -120px;' : ''}
+                    //${minusMargin ? 'margin-top: -120px;' : ''}
+                    ${minusMargin ? 'margin-top: -60px;' : ''}
                   }
 
                   @media (${getMobileOrTabletOnlyMediaQuery()}) {

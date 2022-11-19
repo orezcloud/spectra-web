@@ -22,9 +22,9 @@ export default function Hero() {
                 </div>
             </DefaultSection>
 
-            <div style={{
-                height: height/4,
-            }}/>
+            {/*<div style={{*/}
+            {/*    height: height/4,*/}
+            {/*}}/>*/}
 
             <style jsx>
                 {`

@@ -19,6 +19,7 @@ export default function HomeHero() {
                     '/hero/hero-2.jpg',
                     '/hero/hero-3.jpg',
                 ]} size={'full'}/>
+
             </div>
         </DefaultSection>
     );

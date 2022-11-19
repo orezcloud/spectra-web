@@ -63,7 +63,7 @@ export default function MiniSlider({size, imageUrls}: {size?: 'full', imageUrls:
             state.currentIndex = 0;
         }
 
-        await sleep(100);
+        await sleep(1200);
 
         state.heroImage = state.heroImage.map((image, index) => {
             // add class leave to first image
