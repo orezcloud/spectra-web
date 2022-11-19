@@ -1,3 +1,6 @@
+import Link from 'next/link';
+
+
 export interface CategoryCardProps {
     name: string;
     description: string;
@@ -8,7 +11,7 @@ export interface CategoryCardProps {
 export function CategoryCard({name, description, image, url}: CategoryCardProps) {
     return (
         <div className={'category-card p-4'}>
-            <a href={url}>
+            <Link href={url}>
                 <div className="row">
                     <div className="col-3">
                         <img src={image} alt={name}/>
@@ -18,7 +21,7 @@ export function CategoryCard({name, description, image, url}: CategoryCardProps)
                         <p>{description}</p>
                     </div>
                 </div>
-            </a>
+            </Link>
 
             <style jsx>
                 {`

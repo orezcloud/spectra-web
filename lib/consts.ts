@@ -36,47 +36,78 @@ export const defaultHeaderMenu = [
     },
 ];
 
+const productCategoryBase = '/products';
+
 export const productCategories = [
     {
-        name: 'Category 1',
+        name: 'Diesel Generators',
         image: '/images/products/cat (1).jpg',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        url: '/products/category-1',
+        url: productCategoryBase + '/diesel-generators',
     },
     {
-        name: 'Category 1',
+        name: 'Hybrid Generator',
         image: '/images/products/cat (2).jpg',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        url: '/products/category-1',
+        url: productCategoryBase + '/hybrid-generator',
     },
     {
-        name: 'Category 1',
+        name: 'Gas Generators',
         image: '/images/products/cat (3).jpg',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        url: '/products/category-1',
+        url: productCategoryBase + '/gas-generators',
     },
     {
-        name: 'Category 1',
+        name: 'Marine Generators',
         image: '/images/products/cat (4).jpg',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        url: '/products/category-1',
+        url: productCategoryBase + '/marine-generators',
     },
     {
-        name: 'Category 1',
+        name: 'Light Towers',
         image: '/images/products/cat (5).jpg',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        url: '/products/category-1',
+        url: productCategoryBase + '/light-towers',
     },
     {
-        name: 'Category 1',
+        name: 'Portable Generators',
         image: '/images/products/cat (6).jpg',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        url: '/products/category-1',
+        url: productCategoryBase + '/portable-generators',
     },
     {
-        name: 'Category 1',
+        name: 'Distribution Solutions',
         image: '/images/products/cat (7).jpg',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        url: '/products/category-1',
+        url: productCategoryBase + '/distribution-solutions',
     },
-]
+];
+
+const dieselGeneratorBase = '/products/diesel-generators';
+
+export const dieselGeneratorCategories = [
+    {
+        name: 'Prime Power Generators',
+        image: '/images/products/cat (1).jpg',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        url: dieselGeneratorBase + '/prime-power-generators',
+    },
+    {
+        name: 'Standby Power Generators',
+        image: '/images/products/cat (2).jpg',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        url: dieselGeneratorBase + '/standby-power-generators',
+    },
+    {
+        name: 'Continuous Power Generators',
+        image: '/images/products/cat (3).jpg',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        url: dieselGeneratorBase + '/continuous-power-generators',
+    },
+    {
+        name: 'Special Generators',
+        image: '/images/products/cat (4).jpg',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        url: dieselGeneratorBase + '/special-generators',
+    },
+];

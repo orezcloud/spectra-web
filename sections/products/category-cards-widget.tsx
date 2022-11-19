@@ -1,7 +1,7 @@
 import {CategoryCard, CategoryCardProps} from './category-card';
 
 
-interface CategoryCardsProps {
+export interface CategoryCardsProps {
     categoryCards: CategoryCardProps[];
 }
 

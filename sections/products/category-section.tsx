@@ -1,12 +1,12 @@
 import {DefaultSection} from '../../layouts/section-layouts';
 import {CategoryCardsWidget} from './category-cards-widget';
-import {productCategories} from '../../lib/consts';
+import {CategoryCardProps} from './category-card';
 
 
-export function CategorySection() {
+export function CategorySection({categoryCards}: {categoryCards: CategoryCardProps[]}) {
     return (
         <DefaultSection name={'products'}>
-            <CategoryCardsWidget categoryCards={productCategories} />
+            <CategoryCardsWidget categoryCards={categoryCards}/>
         </DefaultSection>
-    )
+    );
 }
