@@ -3,18 +3,19 @@ import Hero from '../sections/common/hero';
 import Header from '../sections/header/header';
 import {DefaultSection} from '../layouts/section-layouts';
 import SectionCard from '../layouts/section-card';
+import CardsSection from '../layouts/cards-section';
+import Footer from '../sections/footer/footer';
+import {CategorySection} from '../sections/products/category-section';
+import {COLORS} from '../styles/consts';
 
 
 export default function Products() {
     return (
-        <Body>
+        <Body backgroundColor={COLORS.lightBlue}>
             <Header/>
             <Hero/>
-            <DefaultSection name={'products'} padding={'none'}>
-                <SectionCard minusMargin={true}>
-                    <h1>Under Construction</h1>
-                </SectionCard>
-            </DefaultSection>
+            <CategorySection/>
+            <Footer/>
         </Body>
-    )
+    );
 }

@@ -1,5 +1,6 @@
 import {ReactNode} from 'react';
 import {IS_DEVELOPMENT, IS_STAGING} from '../lib/env';
+import MenuLayout from './menu-layout';
 
 
 export default function Body({children, backgroundColor}: {children: ReactNode, backgroundColor?: string}) {
@@ -8,6 +9,7 @@ export default function Body({children, backgroundColor}: {children: ReactNode, 
             <div className={'body'} style={{backgroundColor: backgroundColor}}>
                 {children}
             </div>
+            <MenuLayout/>
             {
                 IS_STAGING &&
                 <div className={'notice'}>

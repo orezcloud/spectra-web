@@ -4,6 +4,8 @@ import {useSnapshot} from 'valtio';
 import {globalState} from '../../state/global';
 import {ReactNode} from 'react';
 import Link from 'next/link';
+import zIndex from '../../styles/zIndex';
+import {defaultHeaderMenu} from '../../lib/consts';
 
 
 export function HeaderSection() {
@@ -80,12 +82,13 @@ function Menu() {
     return (
         <div className="menu nobullet">
             <ul>
-                <MenuItem href={'/'}>Home</MenuItem>
-                <MenuItem href={'/about'}>About</MenuItem>
-                <MenuItem href={'/products'}>Products</MenuItem>
-                <MenuItem href={'#'}>Portfolio</MenuItem>
-                <MenuItem href={'#'}>Blog</MenuItem>
-
+                {
+                    defaultHeaderMenu.map((item, index) => {
+                        return (
+                            <MenuItem key={index} href={item.url}>{item.name}</MenuItem>
+                        );
+                    })
+                }
                 <MenuItem className={'icon'}>
                     <img className={'svg-img'} src="/icons/search-black.svg" alt="search"/>
                 </MenuItem>
@@ -98,6 +101,10 @@ function Menu() {
                 {`
                   .menu {
                     color: #fff;
+                  }
+
+                  .menu :global(.menu-item) {
+                    text-transform: uppercase;
                   }
                 `}
             </style>
@@ -122,13 +129,13 @@ export default function Header() {
                     top: 0;
                     left: 0;
                     right: 0;
-                    z-index: 100;
+                    z-index: ${zIndex.header};
                     border-bottom: #00000026 0.6px solid;
                   }
 
                   .wrap {
                     position: relative;
-                    z-index: 10;
+                    z-index: ${zIndex.page};
                     opacity: 0;
                   }
                 `}

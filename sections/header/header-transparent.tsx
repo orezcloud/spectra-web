@@ -2,6 +2,8 @@ import {DefaultSection} from '../../layouts/section-layouts';
 import {useIsMobileOrTablet} from '../../styles/breakpoints';
 import {ReactNode} from 'react';
 import Link from 'next/link';
+import {globalActions} from '../../state/global';
+import zIndex from '../../styles/zIndex';
 
 
 export default function HeaderTransparent() {
@@ -36,6 +38,14 @@ export default function HeaderTransparent() {
                     <Menu/>
                 </div>
             </div>
+
+            <style jsx>
+                {`
+                  :global(.header-transparent) {
+                    z-index: ${zIndex.header};
+                  }
+                `}
+            </style>
         </DefaultSection>
     );
 }
@@ -50,11 +60,19 @@ function Logo() {
     );
 }
 
-function MenuItem({href, children, className}: {href?: string, children: ReactNode, className?: string}) {
+function MenuItem({
+                      href,
+                      children,
+                      className,
+                      onClick,
+                  }: {href?: string, children: ReactNode, className?: string, onClick?: () => void}) {
 
     if (!href) {
         return (
-            <li className={'menu-item' + (className ? ' ' + className : '')}>
+            <li
+                className={'menu-item' + (className ? ' ' + className : '')}
+                onClick={onClick}
+            >
                 {children}
             </li>
         );
@@ -78,11 +96,11 @@ function Menu() {
                 {/*<MenuItem className={'icon'}>*/}
                 {/*    <img className={'svg-img'} src="/icons/search-white.svg" alt="search"/>*/}
                 {/*</MenuItem>*/}
-                <MenuItem className={'icon'}>
+                <MenuItem className={'icon'} onClick={() => globalActions.toggleMenu()}>
                     <span className={'me-4'}>MENU</span>
                     <img className={'svg-img'} src="/icons/menu-white.svg" alt="menu" style={{
-                        transform: 'scale(1.22)'
-                    }} />
+                        transform: 'scale(1.22)',
+                    }}/>
                 </MenuItem>
             </ul>
 
@@ -90,6 +108,10 @@ function Menu() {
                 {`
                   .menu {
                     color: #fff;
+                  }
+
+                  .menu :global(.menu-item) {
+                    cursor: pointer;
                   }
                 `}
             </style>
