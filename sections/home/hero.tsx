@@ -4,6 +4,7 @@ import MiniSlider from '../../widgets/mini-slider/mini-slider';
 
 
 export default function HomeHero() {
+
     return (
         <DefaultSection name={'hero'} width={'full'} padding={'none'}>
             <div onClick={() => {
