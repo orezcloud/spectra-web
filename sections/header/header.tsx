@@ -6,6 +6,7 @@ import {ReactNode} from 'react';
 import Link from 'next/link';
 import zIndex from '../../styles/zIndex';
 import {defaultHeaderMenu} from '../../lib/consts';
+import AnimLink from '../../lib/anim-link';
 
 
 export function HeaderSection() {
@@ -73,7 +74,7 @@ function MenuItem({href, children, className}: {href?: string, children: ReactNo
 
     return (
         <li className={'menu-item' + (className ? ' ' + className : '')}>
-            <Link href={href}>{children}</Link>
+            <AnimLink href={href}>{children}</AnimLink>
         </li>
     );
 }

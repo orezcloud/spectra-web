@@ -1,6 +1,6 @@
 import HomeHero from '../sections/home/hero';
 import Footer from '../sections/footer/footer';
-import Body from '../layouts/body';
+import Page from '../layouts/page';
 import HeaderTransparent from '../sections/header/header-transparent';
 
 
@@ -8,10 +8,10 @@ export default function Home() {
 
 
     return (
-        <Body>
+        <Page>
             <HeaderTransparent/>
             <HomeHero/>
             <Footer/>
-        </Body>
+        </Page>
     );
 }

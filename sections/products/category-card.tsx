@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import AnimLink from '../../lib/anim-link';
 
 
 export interface CategoryCardProps {
@@ -11,7 +12,7 @@ export interface CategoryCardProps {
 export function CategoryCard({name, description, image, url}: CategoryCardProps) {
     return (
         <div className={'category-card p-4'}>
-            <Link href={url}>
+            <AnimLink href={url}>
                 <div className="row">
                     <div className="col-3">
                         <img src={image} alt={name}/>
@@ -21,7 +22,7 @@ export function CategoryCard({name, description, image, url}: CategoryCardProps)
                         <p>{description}</p>
                     </div>
                 </div>
-            </Link>
+            </AnimLink>
 
             <style jsx>
                 {`

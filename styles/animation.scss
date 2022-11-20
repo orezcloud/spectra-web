@@ -1,0 +1,98 @@
+// transition out
+.wrapper-main, .footer {
+  transition: all 0.5s ease-in-out;
+}
+
+.trans-out {
+  .wrapper-main, .footer {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+}
+
+.trans-in {
+  .wrapper-main, .footer {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+}
+
+// fade up
+.u-fade {
+  opacity: 0;
+  transform: translateY(60px);
+  transition-property: opacity, transform;
+  transition-duration: .5s;
+  transition-timing-function: ease-in-out;
+
+  &.is-active {
+    opacity: 1;
+    transform: none
+  }
+}
+
+.u-parent.is-active {
+  .u-fade {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// clip path image animation
+.u-clipAnimImg {
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition-property: all;
+  transition-duration: .5s;
+  transition-timing-function: ease-in-out;
+  border-radius: 2px;
+  will-change: transform;
+
+  img {
+    transform: scale(1.05);
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+    width: 100%
+  }
+
+  &.is-active {
+    opacity: 1;
+    transform: none
+  }
+
+  &.is-active img {
+    transform: none
+  }
+}
+
+//
+.p-child__top {
+  position: relative;
+
+  .m-moveGallery {
+    transition: transform .5s ease-in-out
+  }
+
+  .u-fade {
+    transition-delay: .3s
+  }
+
+  &:not(.is-active) .m-moveGallery {
+    transform: scale(1.05)
+  }
+
+  &.is-active {
+    .u-fade {
+      opacity: 1;
+      transform: none
+    }
+
+    .m-moveGallery {
+      transform: none
+    }
+  }
+
+}
+

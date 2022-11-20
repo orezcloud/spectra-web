@@ -81,9 +81,11 @@ function MenuItem({
 
             <style jsx>
                 {`
-                  .menu-item :global(a) {
+                  .menu-item :global(*) {
                     color: #fff;
                     text-transform: uppercase;
+                    font-weight:  300;
+                    cursor: pointer;
                   }
                 `}
             </style>
@@ -98,7 +100,7 @@ function Menu() {
             <ul>
                 {
                     transparentHeaderMenu.map((item, index) => (
-                        <MenuItem href={item.name} key={index}>
+                        <MenuItem href={item.url} key={index}>
                             {item.name}
                         </MenuItem>
                     ))
@@ -115,17 +117,6 @@ function Menu() {
                 </MenuItem>
             </ul>
 
-            <style jsx>
-                {`
-                  .menu {
-                    color: #fff;
-                  }
-
-                  .menu :global(.menu-item) {
-                    cursor: pointer;
-                  }
-                `}
-            </style>
         </div>
     );
 }

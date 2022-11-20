@@ -9,7 +9,7 @@ export default function CardsSection({Elements, name}: {Elements: FC<{index?: nu
             {
                 Elements.map((Element, index) => {
                     return (
-                        <div className={'mb-12'}>
+                        <div className={'mb-12'} key={index}>
                             <SectionCard minusMargin={index === 0} key={index}>
                                 <Element index={index}/>
                             </SectionCard>
