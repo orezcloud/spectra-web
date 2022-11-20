@@ -49,6 +49,10 @@ export default function Footer() {
                     //max-width: 100%;
                   }
 
+                  :global(.footer a), :global(.footer p), :global(.footer h3) {
+                    color: #fff;
+                  }
+
                   .footer-main {
                     max-width: 90%;
                   }

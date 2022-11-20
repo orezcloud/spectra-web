@@ -1,12 +1,13 @@
 import {ReactNode} from 'react';
 import {IS_DEVELOPMENT, IS_STAGING} from '../lib/env';
 import MenuLayout from './menu-layout';
+import {COLORS} from '../styles/consts';
 
 
 export default function Body({children, backgroundColor}: {children: ReactNode, backgroundColor?: string}) {
     return (
         <>
-            <div className={'body'} style={{backgroundColor: backgroundColor}}>
+            <div className={'body'} style={{backgroundColor: backgroundColor || COLORS.bodyBackground}}>
                 {children}
             </div>
             <MenuLayout/>

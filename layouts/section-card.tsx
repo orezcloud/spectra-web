@@ -19,8 +19,8 @@ export default function SectionCard({children, minusMargin}: {children: ReactNod
                 {`
                   .section-card {
                     background-color: #fff;
-                    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
-                    //${minusMargin ? 'margin-top: -120px;' : ''}
+                    //box-shadow: 0 0 88px 0 rgba(65, 65, 65, 0.07);
+                      //${minusMargin ? 'margin-top: -120px;' : ''}
                     ${minusMargin ? 'margin-top: -60px;' : ''}
                   }
 
@@ -52,7 +52,8 @@ export default function SectionCard({children, minusMargin}: {children: ReactNod
 
                   @media (${getLaptopMediaQuery()}) {
                     .content-container {
-                      padding-top: 152px;
+                      //padding-top: 152px; // default
+                      padding-top: 115px; 
                     }
                   }
 

@@ -4,6 +4,7 @@ import {ReactNode} from 'react';
 import Link from 'next/link';
 import {globalActions} from '../../state/global';
 import zIndex from '../../styles/zIndex';
+import {transparentHeaderMenu} from '../../lib/consts';
 
 
 export default function HeaderTransparent() {
@@ -67,21 +68,26 @@ function MenuItem({
                       onClick,
                   }: {href?: string, children: ReactNode, className?: string, onClick?: () => void}) {
 
-    if (!href) {
-        return (
-            <li
-                className={'menu-item' + (className ? ' ' + className : '')}
-                onClick={onClick}
-            >
-                {children}
-            </li>
-        );
-    }
-
     return (
-        <li className={'menu-item' + (className ? ' ' + className : '')}>
-            <Link href={href}>{children}</Link>
-        </li>
+        <>
+            {
+                !href ?
+                    <li className={'menu-item' + (className ? ' ' + className : '')}
+                        onClick={onClick}>{children}</li> :
+                    <li className={'menu-item' + (className ? ' ' + className : '')}>
+                        <Link href={href}>{children}</Link>
+                    </li>
+            }
+
+            <style jsx>
+                {`
+                  .menu-item :global(a) {
+                    color: #fff;
+                    text-transform: uppercase;
+                  }
+                `}
+            </style>
+        </>
     );
 }
 
@@ -90,8 +96,13 @@ function Menu() {
     return (
         <div className="menu nobullet">
             <ul>
-                <MenuItem href={'#'}>EN</MenuItem>
-                <MenuItem href={'/contact'}>CONTACT</MenuItem>
+                {
+                    transparentHeaderMenu.map((item, index) => (
+                        <MenuItem href={item.name} key={index}>
+                            {item.name}
+                        </MenuItem>
+                    ))
+                }
                 <MenuItem href={'#'}>QUICK LINKS</MenuItem>
                 {/*<MenuItem className={'icon'}>*/}
                 {/*    <img className={'svg-img'} src="/icons/search-white.svg" alt="search"/>*/}

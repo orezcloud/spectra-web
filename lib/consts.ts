@@ -36,6 +36,17 @@ export const defaultHeaderMenu = [
     },
 ];
 
+export const transparentHeaderMenu = [
+    {
+        name: 'Products',
+        url: urls.products,
+    },
+    {
+        name: 'Contact',
+        url: urls.contact,
+    }
+];
+
 const productCategoryBase = '/products';
 
 export const productCategories = [

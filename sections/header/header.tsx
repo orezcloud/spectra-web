@@ -130,7 +130,7 @@ export default function Header() {
                     left: 0;
                     right: 0;
                     z-index: ${zIndex.header};
-                    border-bottom: #00000026 0.6px solid;
+                    //border-bottom: #00000026 0.6px solid;
                   }
 
                   .wrap {

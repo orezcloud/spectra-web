@@ -8,6 +8,7 @@ export const COLORS = {
     dark: '#262626',
     littleDark: '#686868',// p text color
     lightestRed: '#FFF7F7',
+    bodyBackground: '#f4f4f4'
 };
 
 export const baseLinePx = 18;

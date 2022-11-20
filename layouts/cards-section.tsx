@@ -5,13 +5,15 @@ import {FC} from 'react';
 
 export default function CardsSection({Elements, name}: {Elements: FC<{index?: number}>[], name: string}) {
     return (
-        <DefaultSection name={name} padding={'none'}>
+        <DefaultSection name={name} padding={'none'} className={'pb-10'}>
             {
                 Elements.map((Element, index) => {
                     return (
-                        <SectionCard minusMargin={index === 0} key={index}>
-                            <Element index={index}/>
-                        </SectionCard>
+                        <div className={'mb-12'}>
+                            <SectionCard minusMargin={index === 0} key={index}>
+                                <Element index={index}/>
+                            </SectionCard>
+                        </div>
                     );
                 })
             }

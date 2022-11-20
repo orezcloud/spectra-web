@@ -9,7 +9,7 @@ import {productCategories} from '../../lib/consts';
 
 export default function Products() {
     return (
-        <Body backgroundColor={COLORS.lightBlue}>
+        <Body backgroundColor={COLORS.bodyBackground}>
             <Header/>
             <Hero
                 title={'Products'}

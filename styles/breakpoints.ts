@@ -110,6 +110,10 @@ export function getLaptopMediaQuery() {
     return `min-width: ${Breakpoints.laptop}px`;
 }
 
+export function getLaptopOrDesktopMediaQuery() {
+    return `min-width: ${Breakpoints.laptop}px`;
+}
+
 export {
     useBreakpoint,
     useIsMobile,

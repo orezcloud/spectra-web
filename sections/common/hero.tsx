@@ -1,7 +1,12 @@
 import {DefaultSection} from '../../layouts/section-layouts';
-import {getMobileOrTabletOnlyMediaQuery, useIsMobileOrTablet} from '../../styles/breakpoints';
+import {
+    getLaptopOrDesktopMediaQuery,
+    getMobileOrTabletOnlyMediaQuery,
+    useIsMobileOrTablet,
+} from '../../styles/breakpoints';
 import CompHeight from '../../lib/comp-height';
 import {useState} from 'react';
+import TitleCard from './_title-card';
 
 
 export interface HeroProps {
@@ -45,9 +50,16 @@ export default function Hero({
             <style jsx>
                 {`
                   .hero-content {
-                    min-height: 400px;
+                    min-height: 500px;
                     display: flex;
                     align-items: center;
+                  }
+
+
+                  @media (${getLaptopOrDesktopMediaQuery()}) {
+                    .title-card-wrapper {
+                      padding-left: 45px;
+                    }
                   }
 
                   @media (${getMobileOrTabletOnlyMediaQuery()}) {
@@ -68,31 +80,3 @@ export default function Hero({
     );
 }
 
-function TitleCard({title, subtitle, topTitle}: {
-    title: string,
-    subtitle?: string,
-    topTitle?: string,
-}) {
-    return (
-        <div className={'title-card'}>
-            {topTitle && <h5 className={'top-title'}>{topTitle}</h5>}
-            <h2 className={'title'}>{title}</h2>
-            {
-                subtitle &&
-                <h5 className={'subtitle'}>{subtitle}</h5>
-            }
-
-            <style jsx>
-                {`
-                  .title-card {
-                    color: white;
-                    padding: 20px;
-                    max-width: 500px;
-                    background-image: linear-gradient(0deg, #323030, #111 29%);
-                    z-index: 10;
-                  }
-                `}
-            </style>
-        </div>
-    );
-}
