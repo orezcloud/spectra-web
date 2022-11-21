@@ -3,7 +3,7 @@ import ProductList from '../widgets/list/product-list';
 import UlList from '../widgets/list/ul-list';
 
 
-export default function About() {
+export default function Support() {
     return (
         <DefaultPostLayout
             Elements={[

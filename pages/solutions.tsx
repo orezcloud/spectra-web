@@ -8,7 +8,7 @@ export default function Solutions() {
             Elements={[
                 () => (
                     <div>
-                        <h1>All power solutions under one roof</h1>
+                        <h2>All power solutions under one roof</h2>
                         <ServiceList services={[
                             {
                                 title: 'Construction',
