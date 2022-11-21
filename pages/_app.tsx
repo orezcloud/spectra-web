@@ -15,6 +15,8 @@ import {COLORS} from '../styles/consts';
 import {useRouter} from 'next/router';
 import {useEffect} from 'react';
 import $ from 'jquery';
+import {sleep, throttle} from '../lib/utils';
+import {globalState} from '../state/global';
 
 
 init();
@@ -23,19 +25,46 @@ export default function App({Component, pageProps}: AppProps) {
 
     const router = useRouter();
 
-    useEffect(() => {
-        const handleRouteComplete = () => {
-            let i = 0;
-            while (i < 2) {
-                i++;
-                $('.js-anim:not(.is-active)').addClass('is-active');
+    const runOnScroll = () => {
+        console.log('runOnScroll');
+        $('.js-anim:not(.is-active)').each(function () {
+
+            // @ts-ignore
+            let bottom_of_object = $(this).offset()?.top + ($(this).outerHeight() * 0.18);
+            // @ts-ignore
+            let bottom_of_window = $(window).scrollTop() + $(window).height();
+            if (bottom_of_window > bottom_of_object) {
+                $(this).addClass('is-active');
             }
-        };
-        router.events.on('routeChangeComplete', handleRouteComplete);
+        });
+    };
+
+    useEffect(() => {
+
+        $(window).on('scroll', throttle(runOnScroll, 20));
+
+        (async () => {
+            while (true) {
+                await sleep(1000);
+                runOnScroll();
+            }
+        })()
+
+        router.events.on('routeChangeComplete', runOnScroll);
+
         return () => {
-            router.events.off('routeChangeComplete', handleRouteComplete);
+            router.events.off('routeChangeComplete', runOnScroll);
         };
+
     }, []);
+
+    useEffect(() => {
+        if (router.pathname === '/') {
+            globalState.bgMenuActive = false;
+        } else {
+            globalState.bgMenuActive = true;
+        }
+    })
 
     return <>
         <Component {...pageProps} />

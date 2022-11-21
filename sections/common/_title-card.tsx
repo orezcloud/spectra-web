@@ -7,7 +7,7 @@ export default function TitleCard({title, subtitle, topTitle}: {
     topTitle?: string,
 }) {
     return (
-        <div className={'title-card'}>
+        <div className={'title-card js-anim u-fade'}>
             {topTitle && <h5 className={'top-title'}>{topTitle}</h5>}
             <h1 className={'title'}>{title}</h1>
             {

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import {globalActions} from '../../state/global';
 import zIndex from '../../styles/zIndex';
 import {transparentHeaderMenu} from '../../lib/consts';
+import AnimLink from '../../lib/anim-link';
 
 
 export default function HeaderTransparent() {
@@ -43,7 +44,7 @@ export default function HeaderTransparent() {
             <style jsx>
                 {`
                   :global(.header-transparent) {
-                    z-index: ${zIndex.header};
+                    z-index: ${zIndex.header + 1};
                   }
                 `}
             </style>
@@ -75,7 +76,7 @@ function MenuItem({
                     <li className={'menu-item' + (className ? ' ' + className : '')}
                         onClick={onClick}>{children}</li> :
                     <li className={'menu-item' + (className ? ' ' + className : '')}>
-                        <Link href={href}>{children}</Link>
+                        <AnimLink href={href}>{children}</AnimLink>
                     </li>
             }
 

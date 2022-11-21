@@ -9,7 +9,7 @@ import {
 
 export default function SectionCard({children, minusMargin}: {children: ReactNode, minusMargin?: boolean}) {
     return (
-        <div className={'section-card'}>
+        <div className={'section-card u-fade js-anim'}>
             <div className={'content-container'}>
                 <div className="content-wrapper">
                     {children}

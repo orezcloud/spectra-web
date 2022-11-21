@@ -28,7 +28,13 @@ export default function Hero({
 
     return (
         <>
-            <DefaultSection name={'hero'} sectionBackground={image} padding={'none'}>
+            <DefaultSection name={'hero p-child__top js-anim'} padding={'none'}
+                            TopElement={
+                                <div className="image-wrapper">
+                                    <img src={image} alt="hero image" className={'m-moveGallery'}/>
+                                </div>
+                            }
+            >
                 <div className={'hero-content'}>
                     <div className={'title-card-wrapper'}>
                         <CompHeight onHeightReady={(height) => {
@@ -49,6 +55,24 @@ export default function Hero({
 
             <style jsx>
                 {`
+                  :global(.hero) {
+                    position: relative;
+                  }
+
+                  :global(.image-wrapper) {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                  }
+                  :global(.image-wrapper img) {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                  }
+
                   .hero-content {
                     min-height: 500px;
                     display: flex;

@@ -9,22 +9,38 @@ interface SectionContainerProps {
 }
 
 function SectionContainer(props: SectionContainerProps) {
+
     return (
-        <div
-            className={
-                'section-container' +
-                (props.width === 'full' ? '' : '') +
-                (props.width === 'medium' ? ' container container-medium' : '') +
-                (!props.width ? ' container' : '')
-            }
-            style={{
-                ...props.style,
-            }}
+        <div className={
+            'section-container pad-container'
+        }
         >
             {props.children}
-
+            <style jsx global>
+                {`
+                  .section-container {
+                    width: 100%;
+                  }
+                `}
+            </style>
         </div>
     );
+    // return (
+    //     <div
+    //         className={
+    //             'section-container' +
+    //             (props.width === 'full' ? '' : '') +
+    //             (props.width === 'medium' ? ' container container-medium' : '') +
+    //             (!props.width ? ' container' : '')
+    //         }
+    //         style={{
+    //             ...props.style,
+    //         }}
+    //     >
+    //         {props.children}
+    //
+    //     </div>
+    // );
 }
 
 function SectionPadding({children, padding}: {
@@ -59,6 +75,7 @@ interface SectionProps {
     width?: 'full' | 'medium',
     padding?: 'none' | 'default' | 'large' | 'top-zero',
     sectionBackground?: string,
+    TopElement?: ReactNode
     // style?: CSSProperties,
 }
 
@@ -80,6 +97,10 @@ export function DefaultSection(props: SectionProps) {
                 // ...props.style,
             }}
         >
+            {
+                props.TopElement &&
+                props.TopElement
+            }
             <SectionContainer
                 width={props.width}
             >

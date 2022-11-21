@@ -6,6 +6,8 @@ interface Global {
     menuOpen: boolean;
     transOut: boolean;
     transIn: boolean;
+    transZero: boolean;
+    bgMenuActive: boolean;
 }
 
 export const globalState = proxy<Global>({
@@ -13,7 +15,9 @@ export const globalState = proxy<Global>({
     menuOpen: false,
     transOut: false,
     transIn: false,
-})
+    transZero: false,
+    bgMenuActive: false,
+});
 
 export function useIsMenuOpen() {
     const state = useSnapshot(globalState);
@@ -35,6 +39,11 @@ export function useIsTransIn() {
     return state.transIn;
 }
 
+export function useIsTransZero() {
+    const state = useSnapshot(globalState);
+    return state.transZero;
+}
+
 export const globalActions = {
     toggleMenu: () => {
         globalState.menuOpen = !globalState.menuOpen;
@@ -45,8 +54,16 @@ export const globalActions = {
     transIn: () => {
         globalState.transIn = true;
     },
-    resetTrans: () => {
+    transZero: () => {
+        globalState.transZero = true;
+    },
+    resetTransOut: () => {
         globalState.transOut = false;
+    },
+    resetTransIn: () => {
         globalState.transIn = false;
-    }
-}
+    },
+    resetTransZero: () => {
+        globalState.transZero = false;
+    },
+};

@@ -16,6 +16,12 @@ export default function PostImage({src, alt, footnote}: {src: string, alt?: stri
                     margin-bottom: 60px;
                     margin-top: 50px;
                   }
+                  @media (max-width: 767px) {
+                    .image {
+                        width: 100%;
+                        left: 0;
+                    }
+                  }
 
                   .image img {
                     width: 100%;

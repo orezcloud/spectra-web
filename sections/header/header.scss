@@ -69,6 +69,10 @@
   padding-bottom: 55px;
   background: #fff;
 
+  &.off {
+    transform: translateY(-100%);
+  }
+
 
   .menu li {
     color: #000 !important;

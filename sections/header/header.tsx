@@ -12,13 +12,14 @@ import AnimLink from '../../lib/anim-link';
 export function HeaderSection() {
 
     const isMobileOrTablet = useIsMobileOrTablet();
-    const {sticked} = useSnapshot(globalState);
+    const {sticked, bgMenuActive} = useSnapshot(globalState);
 
     if (isMobileOrTablet) {
         return (
             <DefaultSection name={
                 'header header-static'
                 + (sticked ? ' sticked' : '')
+                + (!bgMenuActive ? ' off' : '')
             } padding={'none'}>
                 <div className="row m-0">
                     <div className="col-auto">
@@ -39,6 +40,7 @@ export function HeaderSection() {
         <DefaultSection name={
             'header header-static'
             + (sticked ? ' sticked' : '')
+            + (!bgMenuActive ? ' off' : '')
         } padding={'none'}>
             <div className="row">
                 <div className="col-auto">
@@ -114,12 +116,17 @@ function Menu() {
 }
 
 export default function Header() {
+
+    const {sticked, bgMenuActive} = useSnapshot(globalState);
+
     return (
         <>
             <div className="header-wrap wrap-top">
                 <HeaderSection/>
             </div>
-            <div className="header-wrap wrap">
+            <div className="header-wrap wrap" style={{
+                display: bgMenuActive ? 'block' : 'none',
+            }}>
                 <HeaderSection/>
             </div>
 

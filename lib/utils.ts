@@ -16,3 +16,14 @@ export function preloadImage(src: string): Promise<HTMLImageElement> {
 }
 
 
+export const throttle = (fn: () => void, delay: number) => {
+    console.log('throttle');
+    let time = Date.now();
+
+    return () => {
+        if((time + delay - Date.now()) <= 0) {
+            fn();
+            time = Date.now();
+        }
+    }
+}

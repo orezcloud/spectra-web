@@ -38,6 +38,7 @@ function ProductListItem({image, title, description}: ProductListItemProps) {
                     padding: 40px 0;
                     border-bottom: 1px solid #eaeaea;
                   }
+
                 `}
             </style>
         </div>

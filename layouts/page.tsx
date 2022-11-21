@@ -2,19 +2,22 @@ import {ReactNode} from 'react';
 import {IS_DEVELOPMENT, IS_STAGING} from '../lib/env';
 import MenuLayout from './menu-layout';
 import {COLORS} from '../styles/consts';
-import {useIsTransIn, useIsTransOut} from '../state/global';
+import {useIsTransIn, useIsTransOut, useIsTransZero} from '../state/global';
 
 
 export default function Page({children, backgroundColor}: {children: ReactNode, backgroundColor?: string}) {
 
     const isTransIn = useIsTransIn();
     const isTransOut = useIsTransOut();
+    const isTransZero = useIsTransZero()
+
     return (
         <>
             <div className={
-                'page'
+                'page overflow-hidden'
                 + (isTransIn ? ' trans-in' : '')
                 + (isTransOut ? ' trans-out' : '')
+                + (isTransZero ? ' trans-zero' : '')
             }
                  style={{backgroundColor: backgroundColor || COLORS.bodyBackground}}>
                 {children}

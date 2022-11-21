@@ -12,8 +12,16 @@
 
 .trans-in {
   .wrapper-main, .footer {
+    //transition: all 0.3s ease-in-out;
     transform: translateY(60px);
+    //transform: translateY(50px);
     opacity: 0;
+  }
+}
+
+.trans-zero {
+  .wrapper-main, .footer {
+    transition: none;
   }
 }
 
@@ -72,7 +80,7 @@
   position: relative;
 
   .m-moveGallery {
-    transition: transform .5s ease-in-out
+    transition: transform .3s ease-in-out;
   }
 
   .u-fade {
