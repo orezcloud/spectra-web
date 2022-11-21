@@ -144,6 +144,10 @@ export const footerLinks = [
                 name: 'Policies & Procedures',
                 path: '/policies',
             },
+            {
+                name: 'Environment policies',
+                path: '/environment-policies',
+            },
         ],
     },
     {
@@ -151,7 +155,7 @@ export const footerLinks = [
         links: [
             {
                 name: 'After Sales Service',
-                path: '/',
+                path: '/after-sales',
             },
             {
                 name: 'Spare Parts',
@@ -164,15 +168,15 @@ export const footerLinks = [
         links: [
             {
                 name: 'FAQs',
-                path: '/',
+                path: '/faq',
             },
             {
                 name: 'Warranties',
-                path: '/about',
+                path: '/warranty-policy',
             },
             {
                 name: 'Selected Projects',
-                path: '/careers',
+                path: '/selected-projects',
             },
             {
                 name: 'Downloads',
