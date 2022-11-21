@@ -104,3 +104,26 @@
 
 }
 
+// image hover
+.u-hoverImg img {
+  transition: transform .5s ease-in-out;
+  will-change: transform;
+
+  &:hover {
+    transform: scale(1.05)
+  }
+}
+
+.u-hover {
+  .u-hoverImg img {
+    transition: transform .5s ease-in-out;
+    will-change: transform;
+
+  }
+
+  &:hover {
+    .u-hoverImg img {
+      transform: scale(1.05)
+    }
+  }
+}

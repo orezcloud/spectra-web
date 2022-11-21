@@ -12,7 +12,8 @@ function SectionContainer(props: SectionContainerProps) {
 
     return (
         <div className={
-            'section-container pad-container'
+            'section-container ' +
+            (props.width === 'full' ? '' : 'pad-container')
         }
         >
             {props.children}

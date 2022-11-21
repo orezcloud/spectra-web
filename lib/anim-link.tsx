@@ -21,13 +21,13 @@ export default function AnimLink({children, href, ...props}: Props) {
             const d = $('body, html');
 
             globalActions.transOut();
-            await sleep(400);
+            await sleep(500);
             d.css({height: '100%', overflow: 'hidden'});
             window.scroll(0, 0);
             // d.animate({scrollTop: '0px'}, 50);
             // await sleep(10);
             d.css({overflow: 'auto', height: 'auto'});
-            await sleep(100);
+            await sleep(50);
 
             await router.push(href);
 

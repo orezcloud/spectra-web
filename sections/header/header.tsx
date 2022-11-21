@@ -57,9 +57,9 @@ export function HeaderSection() {
 function Logo() {
     return (
         <div className="logo">
-            <Link href="/">
+            <AnimLink href="/">
                 <img src="/logo-black.png" alt="logo"/>
-            </Link>
+            </AnimLink>
         </div>
     );
 }
@@ -92,9 +92,9 @@ function Menu() {
                         );
                     })
                 }
-                <MenuItem className={'icon'}>
-                    <img className={'svg-img'} src="/icons/search-black.svg" alt="search"/>
-                </MenuItem>
+                {/*<MenuItem className={'icon'}>*/}
+                {/*    <img className={'svg-img'} src="/icons/search-black.svg" alt="search"/>*/}
+                {/*</MenuItem>*/}
                 <MenuItem className={'icon'}>
                     <img className={'svg-img'} src="/icons/menu-black.svg" alt="menu"/>
                 </MenuItem>

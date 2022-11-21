@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import AnimLink from '../../lib/anim-link';
+import AnimImageWrap from '../../widgets/anim-image-wrap';
 
 
 export interface CategoryCardProps {
@@ -11,11 +12,12 @@ export interface CategoryCardProps {
 
 export function CategoryCard({name, description, image, url}: CategoryCardProps) {
     return (
-        <div className={'category-card p-4 u-fade js-anim'}>
+        <div className={'category-card p-4 u-fade js-anim u-hover'}>
             <AnimLink href={url}>
                 <div className="row">
                     <div className="col-3">
-                        <img src={image} alt={name}/>
+                        {/*<img src={image} alt={name}/>*/}
+                        <AnimImageWrap children={<img src={image} alt={name}/>}/>
                     </div>
                     <div className="col-9 align-self-center">
                         <h3>{name}</h3>

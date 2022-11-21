@@ -1,3 +1,6 @@
+import AnimImageWrap from '../anim-image-wrap';
+
+
 export default function ServiceList({services}: {services: ServiceListItemProps[]}) {
     return (
         <div>
@@ -21,12 +24,13 @@ interface ServiceListItemProps {
 
 function ServiceListItem({image, title, description}: ServiceListItemProps) {
     return (
-        <div className={'service-list-item'}>
+        <div className={'service-list-item js-anim u-fade'}>
             <div className="row">
-                <div className="col-12 col-lg-3 order-1 order-lg-0">
-                    <img src={image} alt={title}/>
+                <div className="col-12 col-lg-3 order-1 order-lg-0 mt-4">
+                    <AnimImageWrap children={<img src={image} alt={title}/>}/>
+                    {/*<img src={image} alt={title}/>*/}
                 </div>
-                <div className="col-12 col-lg-9 align-self-center">
+                <div className="col-12 col-lg-9 align-self-center ps-lg-7">
                     <h3>{title}</h3>
                     <p className={'mb-0'}>{description}</p>
                 </div>
@@ -34,8 +38,9 @@ function ServiceListItem({image, title, description}: ServiceListItemProps) {
 
             <style jsx>
                 {`
-                  .product-list-item {
-                    padding: 20px 0;
+                  .service-list-item {
+                    padding: 40px 0;
+                    border-bottom: 1px solid #eaeaea;
                   }
                 `}
             </style>

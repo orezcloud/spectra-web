@@ -1,3 +1,6 @@
+import AnimImageWrap from '../anim-image-wrap';
+
+
 export default function ProductList({products}: {products: ProductListItemProps[]}) {
     return (
         <div>
@@ -21,10 +24,11 @@ interface ProductListItemProps {
 
 function ProductListItem({image, title, description}: ProductListItemProps) {
     return (
-        <div className={'product-list-item'}>
+        <div className={'product-list-item js-anim u-fade'}>
             <div className="row">
                 <div className="col-12 col-lg-3 order-1 order-lg-0 mt-4">
-                    <img src={image} alt={title}/>
+                    <AnimImageWrap children={<img src={image} alt={title}/>}/>
+                    {/*<img src={image} alt={title}/>*/}
                 </div>
                 <div className="col-12 col-lg-9 align-self-center ps-lg-7">
                     <h3 className={'mt-0 mb-4'}>{title}</h3>

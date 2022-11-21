@@ -1,7 +1,11 @@
+import AnimImageWrap from './anim-image-wrap';
+
+
 export default function PostImage({src, alt, footnote}: {src: string, alt?: string, footnote?: string}) {
     return (
         <div className={'image'}>
-            <img src={src} alt={alt || ''}/>
+            {/*<img src={src} alt={alt || ''}/>*/}
+            <AnimImageWrap children={<img src={src} alt={alt || ''}/>}/>
             {
                 footnote &&
                 <p className={'mt-2'}>{footnote}</p>
