@@ -64,7 +64,7 @@ export default function TitleCard({title, subtitle, topTitle}: {
                   
                   @media (${getMobileOrTabletOnlyMediaQuery()}) {
                     .title {
-                      line-height: 1;
+                      //line-height: 1;
                       margin-bottom: 15px;
                     }
 
