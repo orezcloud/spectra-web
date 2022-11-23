@@ -2,9 +2,9 @@ import {DefaultSection} from '../../layouts/section-layouts';
 import {useIsMobileOrTablet} from '../../styles/breakpoints';
 import {ReactNode} from 'react';
 import Link from 'next/link';
-import {globalActions, useGlobalState, useIsBgMenuActive} from '../../state/global';
+import {globalActions, useGlobalState} from '../../state/global';
 import zIndex from '../../styles/zIndex';
-import {isServer, transparentHeaderMenu} from '../../lib/consts';
+import {transparentHeaderMenu} from '../../lib/consts';
 import AnimLink from '../../lib/anim-link';
 
 
@@ -27,6 +27,16 @@ export default function HeaderTransparent({showMenu = true}: { showMenu?: boolea
                         <img className={'svg-img'} src="/icons/search-white.svg" alt="search"/>
                     </div>
                 </div>
+
+                <style jsx>
+                    {`
+                  :global(.header-transparent) {
+                    z-index: ${zIndex.header + 1};
+                    opacity: ${ !transMenu ? 0 : showMenu ? 1 : 0};
+                    transition: ${ !transMenu ? 'opacity .4s' : 'opacity 1s'};
+                  }
+                `}
+                </style>
             </DefaultSection>
         );
     }

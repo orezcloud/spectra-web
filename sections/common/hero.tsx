@@ -67,6 +67,7 @@ export default function Hero({
                     height: 100%;
                     overflow: hidden;
                   }
+
                   :global(.image-wrapper img) {
                     width: 100%;
                     height: 100%;
@@ -91,12 +92,18 @@ export default function Hero({
                       min-height: 300px;
                       justify-content: center;
                       align-items: end;
+
                     }
 
-                    .hero-content .title-card-wrapper {
+                    .title-card-wrapper {
                       margin-bottom: -${height / 4}px;
+                      padding: 0;
                       position: absolute;
+                      max-width: 95%;
+                      min-width: unset;
+                      overflow: hidden;
                     }
+
                   }
                 `}
             </style>

@@ -1,4 +1,5 @@
 import zIndex from '../../styles/zIndex';
+import {getMobileOrTabletOnlyMediaQuery} from '../../styles/breakpoints';
 
 
 export default function TitleCard({title, subtitle, topTitle}: {
@@ -25,6 +26,14 @@ export default function TitleCard({title, subtitle, topTitle}: {
                     background-image: linear-gradient(0deg, #323030, #111 29%);
                     //background: linear-gradient(180deg, #0E0E10 0%, #252536 100%);
                     z-index: ${zIndex.page};
+
+                  }
+
+                  @media (${getMobileOrTabletOnlyMediaQuery()}) {
+                    .title-card {
+                      min-width: unset;
+                      padding: 15px 25px;
+                    }
                   }
 
                   h1, h3, h5 {
@@ -35,6 +44,8 @@ export default function TitleCard({title, subtitle, topTitle}: {
                     font-family: Spectral, Noto Sans, serif;
                     font-weight: 400;
                   }
+
+                  
 
                   .top-title {
                     font-size: 13px;
@@ -48,8 +59,20 @@ export default function TitleCard({title, subtitle, topTitle}: {
                   .subtitle {
                     font-size: 15px;
                     font-family: 'Noto Serif', serif;
-                    letter-spacing:  1px;
+                    letter-spacing: 1px;
                   }
+                  
+                  @media (${getMobileOrTabletOnlyMediaQuery()}) {
+                    .title {
+                      line-height: 1;
+                      margin-bottom: 15px;
+                    }
+
+                    .subtitle, .top-title {
+                      line-height: 1.4;
+                    }
+                  }
+                  
                 `}
             </style>
         </div>

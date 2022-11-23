@@ -21,23 +21,29 @@ export default function AnimLink({children, href, ...props}: Props) {
             const d = $('body, html');
             if (href !== '/') {
                 globalState.transMenu = false;
+            } else {
+                globalState.bgMenuActive = false;
             }
 
             globalActions.transOut();
             await sleep(500);
-            d.css({height: '100%', overflow: 'hidden'});
+            // d.css({height: '100%', overflow: 'hidden'});
+            d.css({height: '100.1%'});
+            await sleep(1);
             window.scroll(0, 0);
-            // d.animate({scrollTop: '0px'}, 50);
-            // await sleep(10);
+            d.animate({scrollTop: '0px'}, 1);
+            await sleep(1);
             d.css({overflow: 'auto', height: 'auto'});
             await sleep(50);
+
 
             await router.push(href);
 
             globalActions.transZero();
             globalActions.resetTransOut();
             globalActions.transIn();
-            await sleep(1);
+
+            await sleep(12);
             globalActions.resetTransZero();
             globalActions.resetTransIn();
         })();

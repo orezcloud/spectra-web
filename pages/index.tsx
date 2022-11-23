@@ -5,14 +5,14 @@ import HeaderTransparent from '../sections/header/header-transparent';
 import Header from '../sections/header/header';
 import Body from '../layouts/body';
 import {useEffect, useState} from 'react';
-import {useIsMobileOrTablet} from '../styles/breakpoints';
+import {Breakpoints, getTabletMediaQuery, useIsMobileOrTablet} from '../styles/breakpoints';
 import {isServer} from '../lib/consts';
 
 
 export default function Home() {
 
     const [showMenu, setShowMenu] = useState(
-        !isServer && window.innerWidth < 991,
+        !isServer && window.innerWidth < Breakpoints.laptop,
     );
 
     useEffect(() => {

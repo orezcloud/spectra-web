@@ -30,6 +30,11 @@ function useBreakpoint(lastBreakpoint1: keyof typeof Breakpoints = 'mobile') {
             } else {
                 setBreakpoint('desktop');
             }
+
+
+            if (lastBreakpoint !== breakpoint) {
+                lastBreakpoint = breakpoint;
+            }
         };
 
         handleResize();
