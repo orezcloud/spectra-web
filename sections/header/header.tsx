@@ -3,7 +3,6 @@ import {useIsMobileOrTablet} from '../../styles/breakpoints';
 import {useSnapshot} from 'valtio';
 import {globalState} from '../../state/global';
 import {ReactNode} from 'react';
-import Link from 'next/link';
 import zIndex from '../../styles/zIndex';
 import {defaultHeaderMenu} from '../../lib/consts';
 import AnimLink from '../../lib/anim-link';
@@ -117,7 +116,7 @@ function Menu() {
 
 export default function Header() {
 
-    const {sticked, bgMenuActive} = useSnapshot(globalState);
+    const {bgMenuActive} = useSnapshot(globalState);
 
     return (
         <>

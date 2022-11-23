@@ -4,13 +4,13 @@ import {ReactNode} from 'react';
 import Link from 'next/link';
 import {globalActions} from '../../state/global';
 import zIndex from '../../styles/zIndex';
-import {transparentHeaderMenu} from '../../lib/consts';
+import {isServer, transparentHeaderMenu} from '../../lib/consts';
 import AnimLink from '../../lib/anim-link';
 
 
-export default function HeaderTransparent() {
+export default function HeaderTransparent({showMenu = true}: { showMenu?: boolean }) {
 
-    const isMobileOrTablet = useIsMobileOrTablet();
+    const isMobileOrTablet = useIsMobileOrTablet('desktop');
 
     if (isMobileOrTablet) {
         return (
@@ -31,7 +31,7 @@ export default function HeaderTransparent() {
     }
 
     return (
-        <DefaultSection name={'header header-transparent'} padding={'none'}>
+        <DefaultSection name={'header header-transparent'} padding={'none'} >
             <div className="row">
                 <div className="col-auto">
                     <Logo/>
@@ -45,6 +45,8 @@ export default function HeaderTransparent() {
                 {`
                   :global(.header-transparent) {
                     z-index: ${zIndex.header + 1};
+                    opacity: ${showMenu ? 1 : 0};
+                    transition: opacity 1s;
                   }
                 `}
             </style>

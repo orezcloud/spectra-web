@@ -14,9 +14,9 @@ export const Breakpoints = {
     desktop: 1377,
 };
 
-let lastBreakpoint: keyof typeof Breakpoints = 'mobile';
+// let lastBreakpoint: keyof typeof Breakpoints = 'mobile';
 
-function useBreakpoint() {
+function useBreakpoint(lastBreakpoint: keyof typeof Breakpoints = 'mobile') {
     const [breakpoint, setBreakpoint] = useState<keyof typeof Breakpoints>(lastBreakpoint);
 
     useEffect(() => {
@@ -68,8 +68,8 @@ function useIsDesktop() {
     return breakpoint === 'desktop';
 }
 
-function useIsMobileOrTablet() {
-    const breakpoint = useBreakpoint();
+function useIsMobileOrTablet(lastBreakpoint: keyof typeof Breakpoints = 'mobile') {
+    const breakpoint = useBreakpoint( lastBreakpoint );
     return breakpoint === 'mobile' || breakpoint === 'tablet';
 }
 

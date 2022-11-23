@@ -64,7 +64,7 @@ export default function App({Component, pageProps}: AppProps) {
         } else {
             globalState.bgMenuActive = true;
         }
-    })
+    }, [router.pathname]);
 
     return <>
         <Component {...pageProps} />
