@@ -48,7 +48,7 @@ export default function App({Component, pageProps}: AppProps) {
                 await sleep(1000);
                 runOnScroll();
             }
-        })()
+        })();
 
         router.events.on('routeChangeComplete', runOnScroll);
 
@@ -61,6 +61,7 @@ export default function App({Component, pageProps}: AppProps) {
     useEffect(() => {
         if (router.pathname === '/') {
             globalState.bgMenuActive = false;
+            globalState.transMenu = true;
         } else {
             globalState.bgMenuActive = true;
         }

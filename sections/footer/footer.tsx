@@ -3,6 +3,7 @@ import {useIsMobileOrTablet} from '../../styles/breakpoints';
 import {base} from '../../styles/consts';
 import {footerLinks} from '../../lib/consts';
 import {FooterBottomDesktop, FooterBottomMobile} from './footer-bottom';
+import AnimLink from '../../lib/anim-link';
 
 
 export default function Footer() {
@@ -21,7 +22,7 @@ export default function Footer() {
                                         {
                                             link.links.map((item, index) => (
                                                 <li key={index}>
-                                                    <a href={item.path}>{item.name}</a>
+                                                    <AnimLink href={item.path}>{item.name}</AnimLink>
                                                 </li>
                                             ))
                                         }

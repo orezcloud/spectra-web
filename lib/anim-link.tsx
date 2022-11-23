@@ -1,7 +1,7 @@
 import {ReactNode, MouseEvent, Fragment, cloneElement} from 'react';
 import {useRouter} from 'next/router';
 import {sleep} from './utils';
-import {globalActions} from '../state/global';
+import {globalActions, globalState} from '../state/global';
 import $ from 'jquery';
 import ReactDevOverlay from 'next/dist/client/components/react-dev-overlay/internal/ReactDevOverlay';
 
@@ -19,6 +19,9 @@ export default function AnimLink({children, href, ...props}: Props) {
         (async () => {
             e.preventDefault();
             const d = $('body, html');
+            if (href !== '/') {
+                globalState.transMenu = false;
+            }
 
             globalActions.transOut();
             await sleep(500);

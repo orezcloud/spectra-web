@@ -10,7 +10,8 @@ import Body from '../layouts/body';
 
 export default function Products() {
     return (
-        <Page backgroundColor={COLORS.bodyBackground}>
+        // <Page backgroundColor={COLORS.bodyBackground}>
+        <Page>
             <Header/>
             <Body>
                 <Hero
@@ -18,7 +19,9 @@ export default function Products() {
                     subtitle={'We have a wide range of products'}
                     image={'/images/hero/hero-1.jpg'}
                 />
-                <CategorySection categoryCards={productCategories}/>
+                <div style={{backgroundColor: COLORS.bodyBackground}}>
+                    <CategorySection categoryCards={productCategories}/>
+                </div>
             </Body>
             <Footer/>
         </Page>

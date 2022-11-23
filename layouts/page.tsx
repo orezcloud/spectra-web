@@ -19,7 +19,7 @@ export default function Page({children, backgroundColor}: {children: ReactNode, 
                 + (isTransOut ? ' trans-out' : '')
                 + (isTransZero ? ' trans-zero' : '')
             }
-                 style={{backgroundColor: backgroundColor || COLORS.bodyBackground}}>
+                 style={{backgroundColor: backgroundColor || 'white'}}>
                 {children}
             </div>
             <MenuLayout/>

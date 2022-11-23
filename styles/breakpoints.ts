@@ -14,10 +14,10 @@ export const Breakpoints = {
     desktop: 1377,
 };
 
-// let lastBreakpoint: keyof typeof Breakpoints = 'mobile';
+let lastBreakpoint: keyof typeof Breakpoints  | undefined = undefined;
 
-function useBreakpoint(lastBreakpoint: keyof typeof Breakpoints = 'mobile') {
-    const [breakpoint, setBreakpoint] = useState<keyof typeof Breakpoints>(lastBreakpoint);
+function useBreakpoint(lastBreakpoint1: keyof typeof Breakpoints = 'mobile') {
+    const [breakpoint, setBreakpoint] = useState<keyof typeof Breakpoints>(lastBreakpoint || lastBreakpoint1);
 
     useEffect(() => {
         const handleResize = () => {

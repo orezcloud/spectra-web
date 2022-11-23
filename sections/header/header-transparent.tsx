@@ -2,7 +2,7 @@ import {DefaultSection} from '../../layouts/section-layouts';
 import {useIsMobileOrTablet} from '../../styles/breakpoints';
 import {ReactNode} from 'react';
 import Link from 'next/link';
-import {globalActions} from '../../state/global';
+import {globalActions, useGlobalState, useIsBgMenuActive} from '../../state/global';
 import zIndex from '../../styles/zIndex';
 import {isServer, transparentHeaderMenu} from '../../lib/consts';
 import AnimLink from '../../lib/anim-link';
@@ -11,6 +11,7 @@ import AnimLink from '../../lib/anim-link';
 export default function HeaderTransparent({showMenu = true}: { showMenu?: boolean }) {
 
     const isMobileOrTablet = useIsMobileOrTablet('desktop');
+    const {transMenu} =  useGlobalState();
 
     if (isMobileOrTablet) {
         return (
@@ -45,8 +46,8 @@ export default function HeaderTransparent({showMenu = true}: { showMenu?: boolea
                 {`
                   :global(.header-transparent) {
                     z-index: ${zIndex.header + 1};
-                    opacity: ${showMenu ? 1 : 0};
-                    transition: opacity 1s;
+                    opacity: ${ !transMenu ? 0 : showMenu ? 1 : 0};
+                    transition: ${ !transMenu ? 'opacity .4s' : 'opacity 1s'};
                   }
                 `}
             </style>

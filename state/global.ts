@@ -8,6 +8,7 @@ interface Global {
     transIn: boolean;
     transZero: boolean;
     bgMenuActive: boolean;
+    transMenu: boolean;
 }
 
 export const globalState = proxy<Global>({
@@ -17,6 +18,7 @@ export const globalState = proxy<Global>({
     transIn: false,
     transZero: false,
     bgMenuActive: false,
+    transMenu: false,
 });
 
 export function useIsMenuOpen() {
@@ -42,6 +44,15 @@ export function useIsTransIn() {
 export function useIsTransZero() {
     const state = useSnapshot(globalState);
     return state.transZero;
+}
+
+export function useIsBgMenuActive() {
+    const state = useSnapshot(globalState);
+    return state.bgMenuActive;
+}
+
+export function useGlobalState() {
+    return useSnapshot(globalState);
 }
 
 export const globalActions = {
