@@ -57,6 +57,7 @@ export function useGlobalState() {
 
 export const globalActions = {
     toggleMenu: () => {
+
         globalState.menuOpen = !globalState.menuOpen;
     },
     transOut: () => {

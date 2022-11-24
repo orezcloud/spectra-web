@@ -2,14 +2,16 @@ import {ReactNode} from 'react';
 import {IS_DEVELOPMENT, IS_STAGING} from '../lib/env';
 import MenuLayout from './menu-layout';
 import {COLORS} from '../styles/consts';
-import {useIsTransIn, useIsTransOut, useIsTransZero} from '../state/global';
+import {useIsMenuOpen, useIsTransIn, useIsTransOut, useIsTransZero} from '../state/global';
+import Modal from '../sections/menu/modal';
 
 
 export default function Page({children, backgroundColor}: {children: ReactNode, backgroundColor?: string}) {
 
     const isTransIn = useIsTransIn();
     const isTransOut = useIsTransOut();
-    const isTransZero = useIsTransZero()
+    const isTransZero = useIsTransZero();
+    const isMenuOpen = useIsMenuOpen()
 
     return (
         <>
@@ -18,11 +20,14 @@ export default function Page({children, backgroundColor}: {children: ReactNode, 
                 + (isTransIn ? ' trans-in' : '')
                 + (isTransOut ? ' trans-out' : '')
                 + (isTransZero ? ' trans-zero' : '')
+                + (isMenuOpen ? ' menu-open' : '')
             }
-                 style={{backgroundColor: backgroundColor || 'white'}}>
+                 style={{backgroundColor: backgroundColor || COLORS.bodyBackground}}>
                 {children}
             </div>
-            <MenuLayout/>
+            <MenuLayout>
+                <Modal/>
+            </MenuLayout>
             {
                 IS_STAGING &&
                 <div className={'notice'}>
@@ -50,6 +55,12 @@ export default function Page({children, backgroundColor}: {children: ReactNode, 
                     font-size: 12px;
                     font-weight: 600;
                     z-index: 1000;
+                  }
+                  .page.menu-open {
+                    //overflow: hidden;
+                    overflow-y: scroll;
+                    height:  100.5vh;
+                    
                   }
                 `}
             </style>

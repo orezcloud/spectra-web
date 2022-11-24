@@ -1,24 +1,29 @@
 import {globalActions, useIsMenuOpen} from '../state/global';
 import zIndex from '../styles/zIndex';
-import {useEffect, useState} from 'react';
+import {ReactNode, useEffect, useState} from 'react';
 import {sleep} from '../lib/utils';
 
 
-export default function MenuLayout() {
+export default function MenuLayout({children}: { children: ReactNode }) {
     const isMenuOpen = useIsMenuOpen();
-    const [menuVisible, setMenuVisible] = useState(false);
+    const [isMenuVisible, setIsMenuVisible] = useState(false);
+    const [isMenuActive, setIsMenuActive] = useState(false);
 
     const menuOpen = async () => {
+        setIsMenuActive(true);
         await sleep(100);
-        setMenuVisible(true);
+        setIsMenuVisible(true);
+        await sleep(1000);
     };
 
     const menuClose = async () => {
-        setMenuVisible(false);
+        setIsMenuVisible(false);
+        await sleep(1000);
+        setIsMenuActive(false);
     };
 
     useEffect(() => {
-        if (menuVisible) {
+        if (isMenuOpen) {
             menuOpen();
         } else {
             menuClose();
@@ -29,12 +34,14 @@ export default function MenuLayout() {
         <div
             className={
                 'menu'
-                + (isMenuOpen ? ' menu-open' : '')
+                + (isMenuVisible ? ' menu-visible' : '')
+                + (isMenuActive ? ' menu-active' : '')
             }>
-            <div onClick={() => globalActions.toggleMenu()}>
-                close
-            </div>
-            <h1>Under Construction</h1>
+            {/*<div onClick={() => globalActions.toggleMenu()}>*/}
+            {/*    close*/}
+            {/*</div>*/}
+            {/*<h1>Under Construction</h1>*/}
+            {children}
 
             <style jsx>
                 {`
@@ -46,9 +53,15 @@ export default function MenuLayout() {
                     height: 100%;
                     background-color: #ffffff;
                     z-index: ${zIndex.menu};
+                    opacity: 1;
+                    transition: opacity .4s;
                   }
 
-                  .menu:not(.menu-open) {
+                  .menu:not(.menu-visible) {
+                    opacity: 0;
+                  }
+
+                  .menu:not(.menu-active) {
                     display: none;
                   }
                 `}

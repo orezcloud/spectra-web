@@ -1,7 +1,7 @@
 import {DefaultSection} from '../../layouts/section-layouts';
 import {useIsMobileOrTablet} from '../../styles/breakpoints';
 import {useSnapshot} from 'valtio';
-import {globalState} from '../../state/global';
+import {globalActions, globalState} from '../../state/global';
 import {ReactNode} from 'react';
 import zIndex from '../../styles/zIndex';
 import {defaultHeaderMenu} from '../../lib/consts';
@@ -95,7 +95,11 @@ function Menu() {
                 {/*    <img className={'svg-img'} src="/icons/search-black.svg" alt="search"/>*/}
                 {/*</MenuItem>*/}
                 <MenuItem className={'icon'}>
-                    <img className={'svg-img'} src="/icons/menu-black.svg" alt="menu"/>
+                    <span className={'d-inline-block'} onClick={() => {
+                        globalActions.toggleMenu()
+                    }}>
+                        <img className={'svg-img'} src="/icons/menu-black.svg" alt="menu"/>
+                    </span>
                 </MenuItem>
             </ul>
 
