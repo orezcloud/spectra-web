@@ -7,6 +7,7 @@ import Body from '../layouts/body';
 import {useEffect, useState} from 'react';
 import {Breakpoints, getTabletMediaQuery, useIsMobileOrTablet} from '../styles/breakpoints';
 import {isServer} from '../lib/consts';
+import PreFooter from '../sections/footer/pre-footer';
 
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
             <Body>
                 <HomeHero/>
             </Body>
+            <PreFooter/>
             <Footer/>
         </Page>
     );

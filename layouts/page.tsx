@@ -57,10 +57,8 @@ export default function Page({children, backgroundColor}: {children: ReactNode, 
                     z-index: 1000;
                   }
                   .page.menu-open {
-                    //overflow: hidden;
-                    overflow-y: scroll;
-                    height:  100.5vh;
-                    
+                    overflow: hidden;
+                    height:  100.08vh;
                   }
                 `}
             </style>

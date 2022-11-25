@@ -6,7 +6,8 @@ export const urls = {
     products: '/products',
     solutions: '/solutions',
     support: '/support',
-    contact: '/contact',
+    contact: '/contact-mail',
+    salesEnquire: '/sales-enquire',
 };
 
 export const defaultHeaderMenu = [
@@ -44,7 +45,7 @@ export const transparentHeaderMenu = [
     {
         name: 'Contact',
         url: urls.contact,
-    }
+    },
 ];
 
 const productCategoryBase = '/products';
@@ -123,6 +124,118 @@ export const dieselGeneratorCategories = [
     },
 ];
 
+export const modalMenuLinks = [
+    {
+        image: '/images/products/cat (1).jpg',
+        name: 'Prime Power Generators',
+        links: [
+            {
+                label: 'Prime Power Generators',
+                url: dieselGeneratorBase + '/prime-power-generators',
+            },
+            {
+                label: 'Standby Power Generators',
+                url: dieselGeneratorBase + '/standby-power-generators',
+            },
+            {
+                label: 'Continuous Power Generators',
+                url: dieselGeneratorBase + '/continuous-power-generators',
+            },
+            {
+                label: 'Special Generators',
+                url: dieselGeneratorBase + '/special-generators',
+            },
+        ],
+    },
+    {
+        image: '/images/products/cat (1).jpg',
+        name: 'Prime Power Generators',
+        links: [
+            {
+                label: 'Prime Power Generators',
+                url: dieselGeneratorBase + '/prime-power-generators',
+            },
+            {
+                label: 'Standby Power Generators',
+                url: dieselGeneratorBase + '/standby-power-generators',
+            },
+            {
+                label: 'Continuous Power Generators',
+                url: dieselGeneratorBase + '/continuous-power-generators',
+            },
+            {
+                label: 'Special Generators',
+                url: dieselGeneratorBase + '/special-generators',
+            },
+        ],
+    },
+    {
+        image: '/images/products/cat (1).jpg',
+        name: 'Prime Power Generators',
+        links: [
+            {
+                label: 'Prime Power Generators',
+                url: dieselGeneratorBase + '/prime-power-generators',
+            },
+            {
+                label: 'Standby Power Generators',
+                url: dieselGeneratorBase + '/standby-power-generators',
+            },
+            {
+                label: 'Continuous Power Generators',
+                url: dieselGeneratorBase + '/continuous-power-generators',
+            },
+            {
+                label: 'Special Generators',
+                url: dieselGeneratorBase + '/special-generators',
+            },
+        ],
+    },
+    {
+        image: '/images/products/cat (1).jpg',
+        name: 'Prime Power Generators',
+        links: [
+            {
+                label: 'Prime Power Generators',
+                url: dieselGeneratorBase + '/prime-power-generators',
+            },
+            {
+                label: 'Standby Power Generators',
+                url: dieselGeneratorBase + '/standby-power-generators',
+            },
+            {
+                label: 'Continuous Power Generators',
+                url: dieselGeneratorBase + '/continuous-power-generators',
+            },
+            {
+                label: 'Special Generators',
+                url: dieselGeneratorBase + '/special-generators',
+            },
+        ],
+    },
+    {
+        image: '/images/products/cat (1).jpg',
+        name: 'Prime Power Generators',
+        links: [
+            {
+                label: 'Prime Power Generators',
+                url: dieselGeneratorBase + '/prime-power-generators',
+            },
+            {
+                label: 'Standby Power Generators',
+                url: dieselGeneratorBase + '/standby-power-generators',
+            },
+            {
+                label: 'Continuous Power Generators',
+                url: dieselGeneratorBase + '/continuous-power-generators',
+            },
+            {
+                label: 'Special Generators',
+                url: dieselGeneratorBase + '/special-generators',
+            },
+        ],
+    },
+];
 
 export const footerLinks = [
     {
@@ -211,6 +324,156 @@ export const footerLinks = [
             {
                 name: 'General Enquiries',
                 path: '/contact',
+            },
+        ],
+    },
+];
+
+export const preFooterLinks = [
+    {
+        title: 'PowerMart',
+        links: [
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+        ],
+    },
+    {
+        title: 'PowerMart',
+        links: [
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+        ],
+    },
+    {
+        title: 'PowerMart',
+        links: [
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+        ],
+    },
+    {
+        title: 'PowerMart',
+        links: [
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+        ],
+    },
+    {
+        title: 'PowerMart',
+        links: [
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+        ],
+    },
+    {
+        title: 'PowerMart',
+        links: [
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+        ],
+    },
+    {
+        title: 'PowerMart',
+        links: [
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+            {
+                name: 'Discover PowerMart',
+                href: '/',
+            },
+            {
+                name: 'Discover PowerMart',
+                href: '/',
             },
         ],
     },

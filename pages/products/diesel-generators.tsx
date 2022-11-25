@@ -6,6 +6,7 @@ import {CategorySection} from '../../sections/products/category-section';
 import {COLORS} from '../../styles/consts';
 import {dieselGeneratorCategories} from '../../lib/consts';
 import Body from '../../layouts/body';
+import PreFooter from '../../sections/footer/pre-footer';
 
 
 export default function DieselGenerators() {
@@ -19,6 +20,7 @@ export default function DieselGenerators() {
                     image={'/images/hero/hero-1.jpg'}
                 />
                 <CategorySection categoryCards={dieselGeneratorCategories}/>
+                <PreFooter/>
                 <Footer/>
             </Body>
         </Page>

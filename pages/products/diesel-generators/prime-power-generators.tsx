@@ -14,6 +14,7 @@ export default function Solutions() {
                 image: '/images/hero/hero-3.jpg',
                 topTitle: 'Product',
             }}
+            isPreFooter={true}
             Elements={[
                 () => (
                     <div>

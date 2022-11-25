@@ -12,12 +12,12 @@ export default function Footer() {
     return (
         <DefaultSection name={'footer'} padding={'none'}>
             <div className="footer-main nobullet overflow-hidden mx-auto">
-                <div className="row justify-content-between">
+                <div className="row justify-content-between justify-content-md-start justify-content-lg-between">
                     {
                         footerLinks.map((link, index) => (
-                            <div className="col-lg-auto col-md-6" key={index}>
+                            <div className="col-lg-auto col-6 col-md-4 mb-7 mb-lg-0" key={index}>
                                 <div className="footer-widget">
-                                    <h3 className="footer-title">{link.title}</h3>
+                                    <h3 className="footer-title mb-4 mb-lg-6">{link.title}</h3>
                                     <ul className="footer-links">
                                         {
                                             link.links.map((item, index) => (
@@ -92,19 +92,19 @@ function Links() {
     return (
         <div className={'links'}>
 
-            <div className={'d-flex justify-content-between'}>
-                <div className={'col-auto'}>
+            <div className={'row justify-content-center text-center justify-content-md-between'}>
+                <div className={'col-12 col-md-auto mb-6 mb-md-0'}>
                     <a href="tel:+9411123456789">
                         <span>+94 11 123 456 789</span>
                     </a>
                 </div>
-                <div className={'col-auto'}>
+                <div className={'col-12 col-md-auto mb-6 mb-md-0'}>
                     <a href="mailto:powermart@sisara.lk">
                         <span>powermart@sisara.lk</span>
                     </a>
                 </div>
 
-                <div className={'col-auto'}>
+                <div className={'col-12 col-md-auto mb-6 mb-md-0'}>
                     <a href="tel:+9411123456789">
                         <span>+94 11 123 456 789</span>
                     </a>

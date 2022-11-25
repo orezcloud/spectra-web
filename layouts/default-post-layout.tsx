@@ -13,7 +13,7 @@ export default function DefaultPostLayout({
                                               name,
                                               isPreFooter,
                                               heroProps,
-                                          }: {Elements: FC<{index?: number}>[], name: string, isPreFooter?: boolean, heroProps: HeroProps}) {
+                                          }: {Elements: FC<{index?: number}>[] , name: string, isPreFooter?: boolean, heroProps: HeroProps}) {
     return (
         <Page>
             <Header/>

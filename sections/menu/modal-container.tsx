@@ -5,7 +5,6 @@ export default function ModalContainer({children, className}: {children: ReactNo
     return (
         <div style={{
             width: '95%',
-            maxWidth: '1200px',
             margin: '0 auto',
         }} className={className}>
             {children}

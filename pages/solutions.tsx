@@ -3,6 +3,7 @@ import ServiceList from '../widgets/list/service-list';
 
 
 export default function Solutions() {
+
     return (
         <DefaultPostLayout
             Elements={[
@@ -50,6 +51,7 @@ export default function Solutions() {
                 subtitle: 'We are here to help you',
                 image: '/images/hero/hero-3.jpg',
             }}
+            isPreFooter={true}
         />
     );
 }

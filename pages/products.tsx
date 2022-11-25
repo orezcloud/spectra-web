@@ -6,6 +6,7 @@ import {CategorySection} from '../sections/products/category-section';
 import {COLORS} from '../styles/consts';
 import {productCategories} from '../lib/consts';
 import Body from '../layouts/body';
+import PreFooter from '../sections/footer/pre-footer';
 
 
 export default function Products() {
@@ -23,6 +24,7 @@ export default function Products() {
                     <CategorySection categoryCards={productCategories}/>
                 </div>
             </Body>
+            <PreFooter/>
             <Footer/>
         </Page>
     );

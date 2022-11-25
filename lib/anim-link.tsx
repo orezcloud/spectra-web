@@ -9,15 +9,29 @@ import ReactDevOverlay from 'next/dist/client/components/react-dev-overlay/inter
 interface Props {
     children: ReactNode;
     href: string;
+    className?: string;
 }
+
+let animating = false;
 
 export default function AnimLink({children, href, ...props}: Props) {
 
     const router = useRouter();
 
     const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        if (animating) {
+            return;
+        }
+        animating = true;
         (async () => {
-            e.preventDefault();
+
+            if (href === router.pathname) {
+                window.scrollTo(0, 0);
+                animating = false;
+                return;
+            }
+
             const d = $('body, html');
             if (href !== '/') {
                 globalState.transMenu = false;
@@ -46,6 +60,7 @@ export default function AnimLink({children, href, ...props}: Props) {
             await sleep(12);
             globalActions.resetTransZero();
             globalActions.resetTransIn();
+            animating = false;
         })();
     };
 

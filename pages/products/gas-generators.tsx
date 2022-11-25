@@ -17,6 +17,7 @@ export default function GasGenerators() {
                 subtitle: 'We are here to help you',
                 image: '/images/hero/hero-3.jpg',
             }}
+            isPreFooter={true}
         />
     )
 }

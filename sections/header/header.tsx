@@ -6,6 +6,8 @@ import {ReactNode} from 'react';
 import zIndex from '../../styles/zIndex';
 import {defaultHeaderMenu} from '../../lib/consts';
 import AnimLink from '../../lib/anim-link';
+import Hamburger from './Hamburger';
+import MenuItem from './MenuItem';
 
 
 export function HeaderSection() {
@@ -63,22 +65,6 @@ function Logo() {
     );
 }
 
-function MenuItem({href, children, className}: {href?: string, children: ReactNode, className?: string}) {
-
-    if (!href) {
-        return (
-            <li className={'menu-item' + (className ? ' ' + className : '')}>
-                {children}
-            </li>
-        );
-    }
-
-    return (
-        <li className={'menu-item' + (className ? ' ' + className : '')}>
-            <AnimLink href={href}>{children}</AnimLink>
-        </li>
-    );
-}
 
 function Menu() {
     return (
@@ -91,16 +77,7 @@ function Menu() {
                         );
                     })
                 }
-                {/*<MenuItem className={'icon'}>*/}
-                {/*    <img className={'svg-img'} src="/icons/search-black.svg" alt="search"/>*/}
-                {/*</MenuItem>*/}
-                <MenuItem className={'icon'}>
-                    <span className={'d-inline-block'} onClick={() => {
-                        globalActions.toggleMenu()
-                    }}>
-                        <img className={'svg-img'} src="/icons/menu-black.svg" alt="menu"/>
-                    </span>
-                </MenuItem>
+                <Hamburger/>
             </ul>
 
             <style jsx>
@@ -154,3 +131,4 @@ export default function Header() {
         </>
     );
 }
+

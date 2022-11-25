@@ -19,6 +19,9 @@ import {sleep, throttle} from '../lib/utils';
 import {globalState} from '../state/global';
 
 
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 init();
 
 export default function App({Component, pageProps}: AppProps) {
@@ -26,7 +29,6 @@ export default function App({Component, pageProps}: AppProps) {
     const router = useRouter();
 
     const runOnScroll = () => {
-        console.log('runOnScroll');
         $('.js-anim:not(.is-active)').each(function () {
 
             // @ts-ignore

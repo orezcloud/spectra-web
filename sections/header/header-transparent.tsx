@@ -57,7 +57,19 @@ export default function HeaderTransparent({showMenu = true}: { showMenu?: boolea
                   :global(.header-transparent) {
                     z-index: ${zIndex.header + 1};
                     opacity: ${ !transMenu ? 0 : showMenu ? 1 : 0};
-                    transition: ${ !transMenu ? 'opacity .4s' : 'opacity 1s'};
+                    transition: ${ !transMenu ? 'opacity .4s' : 'opacity 1.7s'};
+                    
+                    &::after {
+                        content: '';
+                        position: fixed;
+                        z-index: -1;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100px;
+                        background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.4) 100%);
+                        opacity: ${ !transMenu ? 0 : showMenu ? 1 : 0};
+                    }
                   }
                 `}
             </style>
