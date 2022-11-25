@@ -8,14 +8,24 @@
     transform: translateY(-60px);
     opacity: 0;
   }
+
+  &.noslide {
+    .wrapper-main, .footer {
+      transform: translateY(0px) !important;
+    }
+  }
 }
 
 .trans-in {
   .wrapper-main, .footer {
-    //transition: all 0.3s ease-in-out;
     transform: translateY(60px);
-    //transform: translateY(50px);
     opacity: 0;
+  }
+
+  &.noslide {
+    .wrapper-main, .footer {
+      transform: translateY(0px) !important;
+    }
   }
 }
 

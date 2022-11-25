@@ -33,14 +33,14 @@ export default function AnimLink({children, href, ...props}: Props) {
             }
 
             const d = $('body, html');
+
+            globalActions.transOut();
+            await sleep(500);
             if (href !== '/') {
                 globalState.transMenu = false;
             } else {
                 globalState.bgMenuActive = false;
             }
-
-            globalActions.transOut();
-            await sleep(500);
             // d.css({height: '100%', overflow: 'hidden'});
             d.css({height: '100.1%'});
             await sleep(1);

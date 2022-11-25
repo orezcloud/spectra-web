@@ -331,149 +331,117 @@ export const footerLinks = [
 
 export const preFooterLinks = [
     {
-        title: 'PowerMart',
+        title: 'Diesel Generators',
         links: [
             {
-                name: 'Discover PowerMart',
-                href: '/',
+                name: 'Prime Power Generators',
+                href: dieselGeneratorBase + '/prime-power-generators',
             },
             {
-                name: 'Discover PowerMart',
-                href: '/',
+                name: 'Standby Power Generators',
+                href: dieselGeneratorBase + '/standby-power-generators',
             },
             {
-                name: 'Discover PowerMart',
-                href: '/',
+                name: 'Continuous Power Generators',
+                href: dieselGeneratorBase + '/continuous-power-generators',
             },
             {
-                name: 'Discover PowerMart',
-                href: '/',
+                name: 'Special Generators',
+                href: dieselGeneratorBase + '/special-generators',
             },
         ],
     },
     {
-        title: 'PowerMart',
+        title: 'Gas Generators',
         links: [
             {
-                name: 'Discover PowerMart',
-                href: '/',
+                name: 'Oil & Gas Generators',
+                href: productCategoryBase + '/oil-and-gas-generators',
             },
             {
-                name: 'Discover PowerMart',
-                href: '/',
-            },
-            {
-                name: 'Discover PowerMart',
-                href: '/',
-            },
-            {
-                name: 'Discover PowerMart',
-                href: '/',
+                name: 'Liquefied Petroleum Gas Generators',
+                href: productCategoryBase + '/liquefied-petroleum-gas-generators',
             },
         ],
     },
     {
-        title: 'PowerMart',
+        title: 'Light Towers',
         links: [
             {
-                name: 'Discover PowerMart',
-                href: '/',
+                name: 'Gasoline Power Light Towers',
+                href: productCategoryBase + '/gasoline-power-light-towers',
             },
             {
-                name: 'Discover PowerMart',
-                href: '/',
+                name: 'Diesel Power Light Towers',
+                href: productCategoryBase + '/diesel-power-light-towers',
             },
             {
-                name: 'Discover PowerMart',
-                href: '/',
-            },
-            {
-                name: 'Discover PowerMart',
-                href: '/',
+                name: 'Super Silent Power Light Towers',
+                href: productCategoryBase + '/super-silent-power-light-towers',
             },
         ],
     },
     {
-        title: 'PowerMart',
+        title: 'Distribution Solutions',
         links: [
             {
-                name: 'Discover PowerMart',
-                href: '/',
+                name: 'Engine and alternator parts',
+                href: '/engine-and-alternator-parts',
             },
             {
-                name: 'Discover PowerMart',
-                href: '/',
+                name: 'Service kits',
+                href: '/service-kits',
             },
             {
-                name: 'Discover PowerMart',
-                href: '/',
+                name: 'Control Modules',
+                href: '/control-modules',
             },
             {
-                name: 'Discover PowerMart',
-                href: '/',
+                name: 'Automatic Transfer Switches',
+                href: '/automatic-transfer-switches',
+            },
+            {
+                name: 'Load Banks',
+                href: '/load-banks',
             },
         ],
     },
     {
-        title: 'PowerMart',
+        title: 'Hybrid Generators',
         links: [
             {
-                name: 'Discover PowerMart',
-                href: '/',
-            },
-            {
-                name: 'Discover PowerMart',
-                href: '/',
-            },
-            {
-                name: 'Discover PowerMart',
-                href: '/',
-            },
-            {
-                name: 'Discover PowerMart',
-                href: '/',
+                name: 'Diesel Hybrid Generators',
+                href: productCategoryBase + '/diesel-hybrid-generators',
             },
         ],
     },
     {
-        title: 'PowerMart',
+        title: 'Mariine Generators',
         links: [
             {
-                name: 'Discover PowerMart',
-                href: '/',
+                name: 'Open Type Marine Generators',
+                href: productCategoryBase + '/open-type-marine-generators',
             },
             {
-                name: 'Discover PowerMart',
-                href: '/',
-            },
-            {
-                name: 'Discover PowerMart',
-                href: '/',
-            },
-            {
-                name: 'Discover PowerMart',
-                href: '/',
+                name: 'Soundproof Type Marine Generators',
+                href: productCategoryBase + '/soundproof-type-marine-generators',
             },
         ],
     },
     {
-        title: 'PowerMart',
+        title: 'Portable Generators',
         links: [
             {
-                name: 'Discover PowerMart',
-                href: '/',
+                name: 'Gasoline Power Portable Generators',
+                href: productCategoryBase + '/gasoline-power-portable-generators',
             },
             {
-                name: 'Discover PowerMart',
-                href: '/',
+                name: 'Open Type Generators',
+                href: productCategoryBase + '/open-type-generators',
             },
             {
-                name: 'Discover PowerMart',
-                href: '/',
-            },
-            {
-                name: 'Discover PowerMart',
-                href: '/',
+                name: 'Sound Olded Type Generators',
+                href: productCategoryBase + '/sound-olded-type-generators',
             },
         ],
     },

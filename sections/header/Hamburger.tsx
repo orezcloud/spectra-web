@@ -23,13 +23,15 @@ export default function Hamburger({light}: {light?: boolean}) {
                 </span>
             <style jsx>{`
               .text {
-                //font-weight: 400;
-                font-size: 14px;
+                font-weight: 400;
+                font-size: 13px;
                 margin-right: 14px;
+                margin-top: 2px;
               }
 
               :global(.priv-h14892) {
                 margin-left: 10px;
+                opacity: .8;
               }
 
               :global(.priv-h14892::before) {
@@ -38,8 +40,10 @@ export default function Hamburger({light}: {light?: boolean}) {
                 top: 0;
                 left: 0;
                 height: 100%;
-                border: 0.5px solid #000000a8;
-                transform: scaleY(1.7);
+                width: 1px;
+                background-color: #bbb;
+                //border: 0.5px solid #000001a8;
+                transform: scaleY(2.4);
               }
 
               svg {

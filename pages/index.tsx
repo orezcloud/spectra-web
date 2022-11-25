@@ -23,7 +23,7 @@ export default function Home() {
     }, []);
 
     return (
-        <Page>
+        <Page noslide={true}>
             <HeaderTransparent showMenu={isServer ? false : showMenu}/>
             <Header/>
             <Body>

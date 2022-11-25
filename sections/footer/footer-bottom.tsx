@@ -20,13 +20,13 @@ export function FooterBottomDesktop() {
                     </div>
                     <div className={'col-auto'}>
                         <a href={'#'} className={'ms-6'}>
-                            <img width={25} src={'/icons/facebook.svg'} alt={'facebook'}/>
+                            <img width={25} src={'/icons/linkedin-white.png'} alt={'facebook'}/>
                         </a>
                         <a href={'#'} className={'ms-6'}>
-                            <img width={25} src={'/icons/instagram.svg'} alt={'facebook'}/>
+                            <img width={25} src={'/icons/facebook-white.png'} alt={'facebook'}/>
                         </a>
                         <a href={'#'} className={'ms-6'}>
-                            <img width={25} src={'/icons/twitter.svg'} alt={'facebook'}/>
+                            <img width={25} src={'/icons/instagram-white.png'} alt={'facebook'}/>
                         </a>
                     </div>
                 </div>
@@ -79,13 +79,13 @@ export function FooterBottomMobile() {
 
             <div className={'text-center mb-4'}>
                 <a href={'#'} className={'ms-6'}>
-                    <img width={25} src={'/icons/facebook.svg'} alt={'facebook'}/>
+                    <img width={25} src={'/icons/linkedin-white.png'} alt={'facebook'}/>
                 </a>
                 <a href={'#'} className={'ms-6'}>
-                    <img width={25} src={'/icons/instagram.svg'} alt={'facebook'}/>
+                    <img width={25} src={'/icons/facebook-white.png'} alt={'facebook'}/>
                 </a>
                 <a href={'#'} className={'ms-6'}>
-                    <img width={25} src={'/icons/twitter.svg'} alt={'facebook'}/>
+                    <img width={25} src={'/icons/instagram-white.png'} alt={'facebook'}/>
                 </a>
             </div>
 

@@ -6,7 +6,7 @@ import {useIsMenuOpen, useIsTransIn, useIsTransOut, useIsTransZero} from '../sta
 import Modal from '../sections/menu/modal';
 
 
-export default function Page({children, backgroundColor}: {children: ReactNode, backgroundColor?: string}) {
+export default function Page({children, backgroundColor, noslide}: {children: ReactNode, backgroundColor?: string, noslide?: boolean}) {
 
     const isTransIn = useIsTransIn();
     const isTransOut = useIsTransOut();
@@ -17,6 +17,7 @@ export default function Page({children, backgroundColor}: {children: ReactNode, 
         <>
             <div className={
                 'page overflow-hidden'
+                + (noslide ? ' noslide' : '')
                 + (isTransIn ? ' trans-in' : '')
                 + (isTransOut ? ' trans-out' : '')
                 + (isTransZero ? ' trans-zero' : '')
