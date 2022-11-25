@@ -43,10 +43,17 @@
   transition-duration: .5s;
   transition-timing-function: ease-in-out;
 
+  &.u-short {
+    opacity: 0;
+    transition-duration: .5s;
+    transform: translateY(40px);
+  }
+
   &.is-active {
     opacity: 1;
     transform: none
   }
+
 }
 
 .u-parent.is-active {
