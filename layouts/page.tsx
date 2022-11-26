@@ -29,18 +29,18 @@ export default function Page({children, backgroundColor, noslide}: {children: Re
             <MenuLayout>
                 <Modal/>
             </MenuLayout>
-            {
-                IS_STAGING &&
-                <div className={'notice'}>
-                    Staging Environment
-                </div>
-            }
-            {
-                IS_DEVELOPMENT &&
-                <div className={'notice'}>
-                    Development Environment
-                </div>
-            }
+            {/*{*/}
+            {/*    IS_STAGING &&*/}
+            {/*    <div className={'notice'}>*/}
+            {/*        Staging Environment*/}
+            {/*    </div>*/}
+            {/*}*/}
+            {/*{*/}
+            {/*    IS_DEVELOPMENT &&*/}
+            {/*    <div className={'notice'}>*/}
+            {/*        Development Environment*/}
+            {/*    </div>*/}
+            {/*}*/}
             <style jsx>
                 {`
                   .notice {

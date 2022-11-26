@@ -1,7 +1,7 @@
 import DefaultPostLayout from '../layouts/default-post-layout';
 import ProductList from '../widgets/list/product-list';
 import UlList from '../widgets/list/ul-list';
-import {P} from '../widgets/comps/paragraph';
+import {H2, P} from '../widgets/comps/text';
 
 
 export default function Support() {
@@ -10,7 +10,7 @@ export default function Support() {
             Elements={[
                 () => (
                     <div>
-                        <h2>Get support for our products and services</h2>
+                        <H2>Get support for our products and services</H2>
                         <P>Spectra has large stock of spare parts, which are packaged and stored in our modernized
                             warehouse constantly being monitored by our advanced management system.</P>
                         <P>With this attention to detail, we can ensure you a prompt response to your needs with
@@ -27,6 +27,7 @@ export default function Support() {
                         ]}/>
                         <P>We purchase all of our spare parts directly from the manufactures we deal with to ensure all
                             our parts are 100% genuine.</P>
+
                         <ProductList products={[
                             {
                                 image: '/images/spare (1).jpg',

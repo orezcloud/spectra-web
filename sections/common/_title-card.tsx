@@ -59,7 +59,7 @@ export default function TitleCard({title, subtitle, topTitle}: {
                   .subtitle {
                     font-size: 15px;
                     font-family: 'Noto Serif', serif;
-                    letter-spacing: 1px;
+                    letter-spacing: .3px;
                   }
                   
                   @media (${getMobileOrTabletOnlyMediaQuery()}) {

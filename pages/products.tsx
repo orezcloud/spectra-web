@@ -11,7 +11,6 @@ import PreFooter from '../sections/footer/pre-footer';
 
 export default function Products() {
     return (
-        // <Page backgroundColor={COLORS.bodyBackground}>
         <Page>
             <Header/>
             <Body>

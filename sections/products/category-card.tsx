@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import AnimLink from '../../lib/anim-link';
 import AnimImageWrap from '../../widgets/anim-image-wrap';
+import {base} from '../../styles/consts';
 
 
 export interface CategoryCardProps {
@@ -33,19 +33,22 @@ export function CategoryCard({name, description, image, url}: CategoryCardProps)
                     border-radius: 2px;
                     display: inline-block;
                     transition: all .5s ease-in-out;
-                    width:  100%;
+                    width: 100%;
                   }
 
                   h3 {
                     font-family: Spectral, Noto Sans, serif;
+                    font-size: ${base(1.3)};
+                    letter-spacing: 0;
                     text-transform: uppercase;
                     margin-bottom: 2px;
                   }
 
                   p {
-                    font-family: Noto Sans, serif;
-                    font-size: 14px;
-                    font-weight: 700;
+                    //font-family: Noto Sans, serif;
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: black;
                   }
 
 

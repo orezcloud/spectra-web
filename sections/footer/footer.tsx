@@ -1,5 +1,9 @@
 import {DefaultSection} from '../../layouts/section-layouts';
-import {useIsMobileOrTablet} from '../../styles/breakpoints';
+import {
+    getLaptopOrTabletOrMobileMediaQuery,
+    getMobileOrTabletOnlyMediaQuery,
+    useIsMobileOrTablet,
+} from '../../styles/breakpoints';
 import {base} from '../../styles/consts';
 import {footerLinks} from '../../lib/consts';
 import {FooterBottomDesktop, FooterBottomMobile} from './footer-bottom';
@@ -56,6 +60,12 @@ export default function Footer() {
 
                   .footer-main {
                     max-width: 90%;
+                    @media (${getLaptopOrTabletOrMobileMediaQuery()}) {
+                      max-width: 100% !important;
+                    }
+                    @media (${getMobileOrTabletOnlyMediaQuery()}) {
+                      max-width: 95% !important;
+                    }
                   }
 
                   .footer-main .col-lg-2 {

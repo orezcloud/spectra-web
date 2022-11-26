@@ -119,6 +119,10 @@ export function getLaptopOrDesktopMediaQuery() {
     return `min-width: ${Breakpoints.laptop}px`;
 }
 
+export function getLaptopOrTabletOrMobileMediaQuery() {
+    return `max-width: ${Breakpoints.desktop}px`;
+}
+
 export {
     useBreakpoint,
     useIsMobile,

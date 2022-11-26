@@ -2,7 +2,12 @@ import {DefaultSection} from '../../layouts/section-layouts';
 import AnimLink from '../../lib/anim-link';
 import {preFooterLinks} from '../../lib/consts';
 import {COLORS} from '../../styles/consts';
-import {getDesktopMediaQuery, getLaptopOrDesktopMediaQuery, getTabletOnlyMediaQuery} from '../../styles/breakpoints';
+import {
+    getLaptopMediaQuery,
+    getLaptopOrDesktopMediaQuery,
+    getLaptopOrTabletOrMobileMediaQuery, getMobileOrTabletOnlyMediaQuery,
+    getTabletOnlyMediaQuery,
+} from '../../styles/breakpoints';
 
 
 export default function PreFooter() {
@@ -30,6 +35,12 @@ export default function PreFooter() {
                 }
 
                 max-width: 90%;
+                @media (${getLaptopOrTabletOrMobileMediaQuery()}) {
+                  max-width: 100% !important;
+                }
+                @media (${getMobileOrTabletOnlyMediaQuery()}) {
+                  max-width: 95% !important;
+                }
                 margin: 0 auto;
               }
             `}</style>
@@ -52,7 +63,7 @@ function Column({title, links}: ColumnProps) {
             <h4 className={'mb-4 d-inline-block'}>{title}</h4>
             <ul className={'w-auto'}>
                 {links.map((link, index) => (
-                    <li key={index} className={'d-inline-block'}>
+                    <li key={index} className={''}>
                         <AnimLink href={link.href}>
                             <a href={link.href} className={'fw-normal opacity-75'}>{link.name}</a>
                         </AnimLink>

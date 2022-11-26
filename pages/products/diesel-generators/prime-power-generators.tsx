@@ -4,7 +4,7 @@ import UlList from '../../../widgets/list/ul-list';
 import ProductList from '../../../widgets/list/product-list';
 
 
-export default function Solutions() {
+export default function PrimePowerGenerators() {
     return (
         <DefaultPostLayout
             name={'prime-power-generators'}

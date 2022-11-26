@@ -2,7 +2,7 @@ import {ReactNode} from 'react';
 import {
     getDesktopMediaQuery,
     getLaptopMediaQuery,
-    getMobileOnlyMediaQuery, getMobileOrTabletOnlyMediaQuery,
+    getMobileOrTabletOnlyMediaQuery,
     getTabletMediaQuery,
 } from '../styles/breakpoints';
 
@@ -19,51 +19,44 @@ export default function SectionCard({children, minusMargin}: {children: ReactNod
                 {`
                   .section-card {
                     background-color: #fff;
-                    //box-shadow: 0 0 88px 0 rgba(65, 65, 65, 0.07);
-                      //${minusMargin ? 'margin-top: -120px;' : ''}
-                    ${minusMargin ? 'margin-top: -60px;' : ''}
-                  }
+                    margin-top: ${minusMargin ? '-60px;' : 'inherit'};
+                    position: relative;
 
-                  @media (${getMobileOrTabletOnlyMediaQuery()}) {
-                    .section-card {
+                    @media (${getMobileOrTabletOnlyMediaQuery()}) {
                       box-shadow: none;
                       margin-top: 0px;
                     }
                   }
 
+
                   .content-container {
                     background-color: #fff;
                     margin-bottom: 32px;
                     padding: 48px 17px 80px;
-                  }
 
-                  @media (${getTabletMediaQuery()}) {
-                    .content-container {
+                    @media (${getTabletMediaQuery()}) {
                       padding: 72px 50px 152px;
                       margin-bottom: 48px;
-
                     }
 
-                    .content-wrapper {
-                      max-width: 83%;
-                      margin-left: 8.5%;
+                    @media (${getLaptopMediaQuery()}) {
+                      padding-top: 115px;
+                      padding-left: 20px;
+                      padding-right: 20px;
                     }
-                  }
 
-                  @media (${getLaptopMediaQuery()}) {
-                    .content-container {
-                      //padding-top: 152px; // default
-                      padding-top: 115px; 
-                    }
-                  }
-
-                  @media (${getDesktopMediaQuery()}) {
-                    .content-container {
+                    @media (${getDesktopMediaQuery()}) {
                       padding-left: 100px;
                       padding-right: 100px;
                     }
                   }
 
+                  @media (${getTabletMediaQuery()}) {
+                    .content-wrapper {
+                      max-width: 83%;
+                      margin-left: 8.5%;
+                    }
+                  }
                 `}
             </style>
         </div>
