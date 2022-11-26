@@ -6,8 +6,10 @@ function initScrollState() {
     // on scroll
     if (!isServer) {
         window.addEventListener('scroll', () => {
-            const scrollPosition = window.scrollY;
-            globalState.sticked = scrollPosition > 20;
+            if (!globalState.animating) {
+                const scrollPosition = window.scrollY;
+                globalState.sticked = scrollPosition > 20;
+            }
         });
     }
 }

@@ -1,9 +1,8 @@
-import {ReactNode, MouseEvent, Fragment, cloneElement} from 'react';
+import {cloneElement, Fragment, MouseEvent, ReactNode} from 'react';
 import {useRouter} from 'next/router';
 import {sleep} from './utils';
 import {globalActions, globalState} from '../state/global';
 import $ from 'jquery';
-import ReactDevOverlay from 'next/dist/client/components/react-dev-overlay/internal/ReactDevOverlay';
 
 
 interface Props {
@@ -33,9 +32,15 @@ export default function AnimLink({children, href, ...props}: Props) {
             }
 
             const d = $('body, html');
+            globalState.animating = true;
 
             globalActions.transOut();
-            await sleep(500);
+            await sleep(320);
+            if (href !== '/') {
+                globalState.sticked = false;
+                globalState.headerAnimFast = true;
+            }
+            await sleep(170);
             if (href !== '/') {
                 globalState.transMenu = false;
             } else {
@@ -43,12 +48,11 @@ export default function AnimLink({children, href, ...props}: Props) {
             }
             // d.css({height: '100%', overflow: 'hidden'});
             d.css({height: '100.1%'});
-            await sleep(1);
             window.scroll(0, 0);
             d.animate({scrollTop: '0px'}, 1);
-            await sleep(1);
+            await sleep(20);
             d.css({overflow: 'auto', height: 'auto'});
-            await sleep(50);
+            await sleep(60);
 
 
             await router.push(href);
@@ -61,6 +65,9 @@ export default function AnimLink({children, href, ...props}: Props) {
             globalActions.resetTransZero();
             globalActions.resetTransIn();
             animating = false;
+            await sleep(60);
+            globalState.headerAnimFast = false;
+            globalState.animating = false;
         })();
     };
 

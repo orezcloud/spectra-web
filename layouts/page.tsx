@@ -41,28 +41,28 @@ export default function Page({children, backgroundColor, noslide}: {children: Re
             {/*        Development Environment*/}
             {/*    </div>*/}
             {/*}*/}
-            <style jsx>
-                {`
-                  .notice {
-                    position: fixed;
-                    bottom: 0;
-                    right: 0;
-                    padding: 0 10px;
-                    height: 30px;
-                    background-color: #b20000;
-                    color: #fff;
-                    display: flex;
-                    align-items: center;
-                    font-size: 12px;
-                    font-weight: 600;
-                    z-index: 1000;
-                  }
-                  .page.menu-open {
-                    overflow: hidden;
-                    height:  100.08vh;
-                  }
-                `}
-            </style>
+            {/*<style jsx>*/}
+            {/*    {`*/}
+            {/*      .notice {*/}
+            {/*        position: fixed;*/}
+            {/*        bottom: 0;*/}
+            {/*        right: 0;*/}
+            {/*        padding: 0 10px;*/}
+            {/*        height: 30px;*/}
+            {/*        background-color: #b20000;*/}
+            {/*        color: #fff;*/}
+            {/*        display: flex;*/}
+            {/*        align-items: center;*/}
+            {/*        font-size: 12px;*/}
+            {/*        font-weight: 600;*/}
+            {/*        z-index: 1000;*/}
+            {/*      }*/}
+            {/*      .page.menu-open {*/}
+            {/*        overflow: hidden;*/}
+            {/*        height:  100.08vh;*/}
+            {/*      }*/}
+            {/*    `}*/}
+            {/*</style>*/}
         </>
     );
 }

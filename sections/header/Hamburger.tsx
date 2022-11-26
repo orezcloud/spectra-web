@@ -23,8 +23,9 @@ export default function Hamburger({light}: {light?: boolean}) {
                 </span>
             <style jsx>{`
               .text {
-                font-weight: 400;
+                font-weight: 600;
                 font-size: 13px;
+                font-family: 'Lato', sans-serif;
                 margin-right: 14px;
                 margin-top: 2px;
               }

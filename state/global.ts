@@ -3,6 +3,9 @@ import {proxy, useSnapshot} from 'valtio';
 
 interface Global {
     sticked: boolean;
+    headerAnimFast: boolean;
+    animating: boolean
+
     menuOpen: boolean;
     transOut: boolean;
     transIn: boolean;
@@ -13,6 +16,9 @@ interface Global {
 
 export const globalState = proxy<Global>({
     sticked: false,
+    headerAnimFast: false,
+    animating: false,
+
     menuOpen: false,
     transOut: false,
     transIn: false,

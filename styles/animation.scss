@@ -1,36 +1,36 @@
 // transition out
-.wrapper-main, .footer {
+.wrapper-main, .footer, .pre-footer {
   transition: all 0.5s ease-in-out;
 }
 
 .trans-out {
-  .wrapper-main, .footer {
+  .wrapper-main, .footer, .pre-footer {
     transform: translateY(-60px);
     opacity: 0;
   }
 
   &.noslide {
-    .wrapper-main, .footer {
+    .wrapper-main, .footer, .pre-footer {
       transform: translateY(0px) !important;
     }
   }
 }
 
 .trans-in {
-  .wrapper-main, .footer {
+  .wrapper-main, .footer, .pre-footer {
     transform: translateY(60px);
     opacity: 0;
   }
 
   &.noslide {
-    .wrapper-main, .footer {
+    .wrapper-main, .footer, .pre-footer {
       transform: translateY(0px) !important;
     }
   }
 }
 
 .trans-zero {
-  .wrapper-main, .footer {
+  .wrapper-main, .footer, .pre-footer {
     transition: none !important;
   }
 }

@@ -13,7 +13,7 @@ import MenuItem from './MenuItem';
 export function HeaderSection() {
 
     const isMobileOrTablet = useIsMobileOrTablet();
-    const {sticked, bgMenuActive} = useSnapshot(globalState);
+    const {sticked, bgMenuActive, headerAnimFast} = useSnapshot(globalState);
 
     if (isMobileOrTablet) {
         return (
@@ -42,6 +42,7 @@ export function HeaderSection() {
             'header header-static'
             + (sticked ? ' sticked' : '')
             + (!bgMenuActive ? ' off' : '')
+            + (headerAnimFast? ' fast' : '')
         } padding={'none'}>
             <div className="row">
                 <div className="col-auto">
@@ -64,7 +65,6 @@ function Logo() {
         </div>
     );
 }
-
 
 function Menu() {
     return (
@@ -109,25 +109,6 @@ export default function Header() {
             }}>
                 <HeaderSection/>
             </div>
-
-            <style jsx>
-                {`
-                  .wrap-top {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    z-index: ${zIndex.header};
-                    //border-bottom: #00000026 0.6px solid;
-                  }
-
-                  .wrap {
-                    position: relative;
-                    z-index: ${zIndex.page};
-                    opacity: 0;
-                  }
-                `}
-            </style>
         </>
     );
 }

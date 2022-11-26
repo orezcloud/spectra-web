@@ -134,6 +134,7 @@ h3 {
   margin-bottom: 28px;
   margin-top: 18px;
 }
+
 p + h3 {
   margin-top: 50px;
 }
@@ -194,4 +195,12 @@ a {
   &:hover {
     text-decoration: none;
   }
+}
+
+
+
+/**************  Page  **************/
+.page.menu-open {
+  overflow: hidden;
+  height: 100.08vh;
 }
