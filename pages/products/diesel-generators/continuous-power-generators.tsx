@@ -2,7 +2,7 @@ import DefaultPostLayout from '../../../layouts/default-post-layout';
 import ProductList from '../../../widgets/list/product-list';
 
 
-export default function Solutions() {
+export default function ContinuousPowerGenerators() {
     return (
         <DefaultPostLayout
             name={'standby-power-generator'}
