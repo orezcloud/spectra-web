@@ -5,10 +5,11 @@ export default function ServiceList({services}: {services: ServiceListItemProps[
     return (
         <div>
             {
-                services.map((product, index) => (
+                services.map((service, index) => (
                     <ServiceListItem
                         key={index}
-                        {...product}
+                        {...service}
+                        noborder={index === services.length - 1}
                     />
                 ))
             }
@@ -20,9 +21,10 @@ interface ServiceListItemProps {
     image: string,
     title: string,
     description: string
+    noborder?: boolean
 }
 
-function ServiceListItem({image, title, description}: ServiceListItemProps) {
+function ServiceListItem({image, title, description, noborder}: ServiceListItemProps) {
     return (
         <div className={'service-list-item js-anim u-fade'}>
             <div className="row">
@@ -40,7 +42,8 @@ function ServiceListItem({image, title, description}: ServiceListItemProps) {
                 {`
                   .service-list-item {
                     padding: 40px 0;
-                    border-bottom: 1px solid #eaeaea;
+                    //border-bottom: 1px solid #eaeaea;
+                    border-bottom: ${noborder ? 0 : 1}px solid #eaeaea;
                   }
                 `}
             </style>

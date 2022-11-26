@@ -28,14 +28,13 @@ export default function SectionCard({children, minusMargin}: {children: ReactNod
                     }
                   }
 
-
                   .content-container {
                     background-color: #fff;
                     margin-bottom: 32px;
                     padding: 48px 17px 80px;
 
                     @media (${getTabletMediaQuery()}) {
-                      padding: 72px 50px 152px;
+                      padding: 72px 50px 122px;
                       margin-bottom: 48px;
                     }
 
@@ -48,6 +47,7 @@ export default function SectionCard({children, minusMargin}: {children: ReactNod
                     @media (${getDesktopMediaQuery()}) {
                       padding-left: 100px;
                       padding-right: 100px;
+                      padding-bottom: 152px;
                     }
                   }
 

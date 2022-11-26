@@ -1,8 +1,6 @@
-
-
 import DefaultPostLayout from '../../layouts/default-post-layout';
 import ProductList from '../../widgets/list/product-list';
-import {H1} from '../../widgets/comps/text';
+import {H2} from '../../widgets/comps/text';
 
 
 export default function MarineGenerators() {
@@ -11,22 +9,22 @@ export default function MarineGenerators() {
             Elements={[
                 () => (
                     <div>
-                        <H1>Portable Generators</H1>
+                        <H2>Portable Generators</H2>
 
                         <ProductList products={[
                             {
                                 title: 'Gasloine Power Generator',
-                                image: '/images/products/open-type-marine-generator.jpg',
+                                image: '/images/products/portable/Gasoline Power Generator.png',
                                 description: 'Spectra Gasoline portal generator safety and portable, silent, reliable, low failure rate，Short circuit protection device with electronic control technology to make sure safety home…',
                             },
                             {
                                 title: 'Diseal Power Generator',
-                                image: '/images/products/sound-proof-marine-generator.jpg',
+                                image: '/images/products/portable/Diseal open Generator.png',
                                 description: 'Spectra Diseal portal generator safety and portable, silent, reliable, low failure rate，Short circuit protection device with electronic control technology to make sure safety home…',
                             },
                             {
                                 title: 'Canopy type Generator',
-                                image: '/images/products/sound-proof-marine-generator.jpg',
+                                image: '/images/products/portable/Canopy Generator.png',
                                 description: 'Spectra silent diesel generators are characterized by excellent noise reduction design, offer you a better green production and quiet life.',
                             },
                         ]}/>

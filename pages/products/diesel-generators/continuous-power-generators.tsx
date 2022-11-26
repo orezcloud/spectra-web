@@ -19,29 +19,29 @@ export default function Solutions() {
                         <h2>Continuous Power Generators</h2>
                         <ProductList products={[
                             {
-                                title: 'Open Set',
-                                image: '/images/products/open-type.jpg',
-                                description: 'Spectra open type diesel standby generators are perfect to perform in both prime mode and standby mode, with a power range from 6KVA, up to 3250KVA at prime power rating. The design of Spectra open type gensets are typically for projects with generator rooms with noise isolation materials built in. Past projects for open types consist of but not limited to factories, shopping centres, commercial buildings, hotels, airports, and power stations to grid supply.',
+                                title: 'Open Set Generator',
+                                image: '/images/products/diesel/continuous/Open Type.jpg',
+                                description: 'Spectra open type diesel continuous generators are perfect to perform in both prime mode and standby mode, with a power range from 6KVA, up to 3250KVA at prime power rating. The design of Spectra open type gensets are typically for projects with generator rooms with noise isolation materials built in. ',
                             },
                             {
-                                title: 'Soundproof Set',
-                                image: '/images/products/silent-type.jpg',
+                                title: 'Soundproof Generator',
+                                image: '/images/products/diesel/continuous/Slient Type 2.jpg',
                                 description: 'Spectra soundproof diesel generators are perfect to run under prime and continuous mode to offer users with stable and reliable power supply in peak or continuous operation, and provide an overall power range from 6KVA to 810KVA. The low fuel consumption and maintenance costs enhances return over initial investment, resulting in a shorter payback period. These gensets are perfect to be used in outdoor conditions as the canopy offers the comprehensive feature of being weather-proof.',
                             },
                             {
-                                title: 'Super Silent Set',
-                                image: '/images/products/super-silent-type.jpg',
-                                description: 'Spectra diesel generator set, designed to meet the super quiet application environment, uses a unique exhaust air silencing channel, so that the noise value of the unit is greatly reduced. It can be used as the main power supply, and can be used as standby power supply to provide emergency power protection when power failure or temporary power failure occurs. The investment cost is low and the payback time is short. It is mainly used in leasing, power plants, mines, construction, industry, emergency power supply and other industries.',
+                                title: 'Super Silent Generator',
+                                image: '/images/products/diesel/continuous/silent_silent.png',
+                                description: 'Spectra diesel continuous generator set, designed to meet the super quiet application environment, uses a unique exhaust air silencing channel, so that the noise value of the unit is greatly reduced. It can be used as the main power supply, and can be used as standby power supply to provide emergency power protection when power failure or temporary power failure occurs. The investment cost is low and the payback time is short. It is mainly used in leasing, power plants, mines, construction, industry, emergency power supply and other industries.',
                             },
                             {
-                                title: 'Rental Set',
-                                image: '/images/products/rentl-generators.jpg',
-                                description: 'Spectra open type diesel standby generators are perfect to perform in both prime mode and standby mode, with a power range from 6KVA, up to 3250KVA at prime power rating. The design of Spectra open type gensets are typically for projects with generator rooms with noise isolation materials built in. Past projects for open types consist of but not limited to factories, shopping centres, commercial buildings, hotels, airports, and power stations to grid supply.',
+                                title: 'Rental Generator',
+                                image: '/images/products/diesel/continuous/rentl Generators.jpg',
+                                description: 'Spectra continuous generator set Ultra-quiet units are tailored for the ultra-quiet industry and are mainly used in hospitals, supermarkets, municipalities, banks, telecommunications, mining, power stations, and large construction sites. Ultra-low noise will not affect the surrounding environment and strive to achieve harmony in the environment.',
                             },
                             {
                                 title: 'Mobile Generator',
-                                image: '/images/products/mobile-generator.jpg',
-                                description: 'The Spectra Mobile Generator engine and is engineered for ease of operation and maintenance. The rental ready machine features wide-opening removable doors for maximum serviceability. The rugged steel design and construction allow for operation for a variety of applications, regardless of weather conditions. Engine is designed to prevent wet stacking by monitoring and regulating engine exhaust temperatures and providing supplemental heat, as needed.',
+                                image: '/images/products/diesel/continuous/Mobile Generators.jpg',
+                                description: 'The Spectra Mobile continuous Generator engine and is engineered for ease of operation and maintenance. The rental ready machine features wide-opening removable doors for maximum serviceability. The rugged steel design and construction allow for operation for a variety of applications, regardless of weather conditions. Engine is designed to prevent wet stacking by monitoring and regulating engine exhaust temperatures and providing supplemental heat, as needed.',
                             },
                         ]}/>
                     </div>

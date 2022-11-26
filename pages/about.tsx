@@ -1,6 +1,7 @@
 import DefaultPostLayout from '../layouts/default-post-layout';
-import {H1, H2, P} from '../widgets/comps/text';
+import {H1, H2, H3, P} from '../widgets/comps/text';
 import UlList from '../widgets/list/ul-list';
+import PostImage from '../widgets/post-image';
 
 
 export default function About() {
@@ -15,7 +16,7 @@ export default function About() {
                             equipment industry for more than 20 years, applying these technologies and experience to
                             energy equipment equipped with petrol, diesel and other any Generators.</P>
 
-                        <H2>Our Capabilities</H2>
+                        <H3>Our Capabilities</H3>
                         <P>Spectra has been working hard in the mobile energy industry for 20 years. Spectra focuses on
                             the long-term reputation of enterprise stability, product quality and financial
                             strength.</P>
@@ -24,8 +25,9 @@ export default function About() {
                             to work with customers to design a Spectra Generator which is suited to their needs.</P>
                         <P>We are 100% committed to helping our agents grow their business and bring them higher
                             profits.</P>
+                        <PostImage src={'/images/about/Our capability.jpg'}/>
 
-                        <H2>Manufacture Possiblility</H2>
+                        <H3>Manufacture Possiblility</H3>
                         <UlList list={[
                             'High tech machines and advanced technology provide excellent quality.',
                             'With the help of CNC machine, we can always surpass the strict requirements of market.',
@@ -42,8 +44,9 @@ export default function About() {
                             'Parallel connection test system',
                             'Spectra  has been looking for ways to improve its products and processes and invests in the latest and best technology available.',
                         ]}/>
+                        <PostImage src={'/images/about/Production.jpg'}/>
 
-                        <H2>Maintenance Management</H2>
+                        <H3>Maintenance Management</H3>
                         <UlList list={[
                             'Everyone knows that quality means reliability.',
                             'The company’s strong growth is due to customer loyalty, which is because of the reliability of our products – the quality of which is stable every time.',
@@ -51,6 +54,7 @@ export default function About() {
                             'If you happen to have trouble with one of our devices, you can find another aspect of our reliability through our Warranty department, as well as our love of quality and customer satisfaction.',
                             'The system of special parts management department records the information of each part we sold. According to the replacement cycle table of each part, they can quickly send the parts to you. This is a huge information management system we have built, in order to ensure our efficient work and customer satisfaction.',
                         ]}/>
+                        <PostImage src={'/images/about/Maintenance.jpg'}/>
                     </div>
                 ),
             ]}

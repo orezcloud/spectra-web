@@ -3,6 +3,7 @@ import ModalContainer from './modal-container';
 import ModalSlick from './modal-slick';
 import {modalMenuLinks} from '../../lib/consts';
 import {COLORS} from '../../styles/consts';
+import {getMobileMediaQuery} from '../../styles/breakpoints';
 
 
 function Menu({icon, label, href, onClick}: {icon: string, label: string, href?: string, onClick?: () => void}) {
@@ -40,6 +41,15 @@ function SlickItem({
                         </a>)
                 }
             </div>
+            <style jsx>{`
+
+              @media (${getMobileMediaQuery()}) {
+                img {
+                    width: 80%;
+                    margin: 0 auto;
+                }
+              }
+            `}</style>
         </div>
     );
 }
@@ -55,7 +65,7 @@ export default function ModalContent() {
     };
 
     return (
-        <ModalContainer className={'pb-3 pb-7 h-100 d-flex justify-content-center align-items-center'}>
+        <ModalContainer className={'pb-3 pb-0 pb-md-7 h-100 d-flex justify-content-center align-items-center'}>
             <div className={'w-100'}>
                 <div className={'d-flex justify-content-center mb-6'}>
                     <MenuWrapper>
@@ -106,8 +116,14 @@ function Arrow({left}: {left: boolean}) {
                 justify-content: center;
                 align-items: center;
                 background-color: ${COLORS.darkBlue};
-                right: ${left ? 'auto' : '40px'};
+                right: ${left ? '-20px' : '60px'};
+
               }
+
+              :global(.slick-arrow) {
+                z-index: 1;
+              }
+
               :global(.slick-arrow::before) {
                 display: none;
               }

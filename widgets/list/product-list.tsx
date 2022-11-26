@@ -70,7 +70,6 @@ function ProductListItem({image, title, description, noborder}: ProductListItemP
                   .product-list-item {
                     padding: 40px 0;
                     border-bottom: ${noborder ? 0 : 1}px solid #eaeaea;
-
                   }
 
                   // .img-col {
