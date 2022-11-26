@@ -34,10 +34,10 @@ export default function LightTowers() {
                     </div>
                 ),
             ]}
-            name={'marine-generator'}
+            name={'light-generator'}
             heroProps={{
                 title: 'Light Towers',
-                subtitle: 'We are here to help you',
+                subtitle: 'Reliable, Durable & Cost Effective',
                 image: '/images/hero/hero-3.jpg',
             }}
             isPreFooter={true}

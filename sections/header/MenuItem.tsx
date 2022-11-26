@@ -11,7 +11,12 @@ export default function MenuItem({
 
     if (!href) {
         return (
-            <li className={'menu-item' + (className ? ' ' + className : '')} onClick={onClick}>
+            <li className={'menu-item' + (className ? ' ' + className : '')} onClick={(e) =>{
+                e.preventDefault();
+                e.stopPropagation();
+                onClick && onClick();
+                return false;
+            }}>
                 {children}
                 <style jsx>{`
                   .menu-item {

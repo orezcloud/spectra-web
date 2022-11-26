@@ -33,6 +33,11 @@ export default function AnimLink({children, href, ...props}: Props) {
 
             const d = $('body, html');
             globalState.animating = true;
+            if (globalState.menuOpen) {
+                globalState.isNoSlide = true;
+                globalState.menuOpen = false;
+                globalState.transZero = true;
+            }
 
             globalActions.transOut();
             await sleep(320);
@@ -46,6 +51,7 @@ export default function AnimLink({children, href, ...props}: Props) {
             } else {
                 globalState.bgMenuActive = false;
             }
+            globalState.isNoSlide = false;
             // d.css({height: '100%', overflow: 'hidden'});
             d.css({height: '100.1%'});
             window.scroll(0, 0);
@@ -68,6 +74,7 @@ export default function AnimLink({children, href, ...props}: Props) {
             await sleep(60);
             globalState.headerAnimFast = false;
             globalState.animating = false;
+            globalState.isNoSlide = false;
         })();
     };
 

@@ -33,8 +33,8 @@ export default function MarineGenerators() {
             ]}
             name={'portable-generator'}
             heroProps={{
-                title: 'Portable Generator',
-                subtitle: 'We are here to help you',
+                title: 'Portable Generators',
+                subtitle: 'excellent noise reduction design',
                 image: '/images/hero/hero-3.jpg',
             }}
             isPreFooter={true}

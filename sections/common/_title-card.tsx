@@ -1,5 +1,5 @@
 import zIndex from '../../styles/zIndex';
-import {getMobileOrTabletOnlyMediaQuery} from '../../styles/breakpoints';
+import {getLaptopOnlyMediaQuery, getMobileOrTabletOnlyMediaQuery} from '../../styles/breakpoints';
 
 
 export default function TitleCard({title, subtitle, topTitle}: {
@@ -29,6 +29,7 @@ export default function TitleCard({title, subtitle, topTitle}: {
 
                   }
 
+
                   @media (${getMobileOrTabletOnlyMediaQuery()}) {
                     .title-card {
                       min-width: unset;
@@ -45,7 +46,6 @@ export default function TitleCard({title, subtitle, topTitle}: {
                     font-weight: 400;
                   }
 
-                  
 
                   .top-title {
                     font-size: 13px;
@@ -54,6 +54,13 @@ export default function TitleCard({title, subtitle, topTitle}: {
                   .title {
                     font-size: 44px;
                     margin-bottom: 4px;
+
+                    @media (${getLaptopOnlyMediaQuery()}) {
+                      font-size: 36px;
+                    }
+                    @media (${getMobileOrTabletOnlyMediaQuery()}) {
+                      font-size: 28px;
+                    }
                   }
 
                   .subtitle {
@@ -61,7 +68,7 @@ export default function TitleCard({title, subtitle, topTitle}: {
                     font-family: 'Noto Serif', serif;
                     letter-spacing: .3px;
                   }
-                  
+
                   @media (${getMobileOrTabletOnlyMediaQuery()}) {
                     .title {
                       line-height: 1;
@@ -72,7 +79,7 @@ export default function TitleCard({title, subtitle, topTitle}: {
                       line-height: 1.4;
                     }
                   }
-                  
+
                 `}
             </style>
         </div>

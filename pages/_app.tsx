@@ -22,6 +22,7 @@ import {globalState} from '../state/global';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+
 init();
 
 export default function App({Component, pageProps}: AppProps) {
@@ -47,7 +48,7 @@ export default function App({Component, pageProps}: AppProps) {
 
         (async () => {
             while (true) {
-                await sleep(1000);
+                await sleep(1000 / 60);
                 runOnScroll();
             }
         })();

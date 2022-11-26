@@ -4,6 +4,7 @@ import ModalSlick from './modal-slick';
 import {modalMenuLinks} from '../../lib/consts';
 import {COLORS} from '../../styles/consts';
 import {getMobileMediaQuery} from '../../styles/breakpoints';
+import AnimLink from '../../lib/anim-link';
 
 
 function Menu({icon, label, href, onClick}: {icon: string, label: string, href?: string, onClick?: () => void}) {
@@ -26,14 +27,27 @@ function SlickItem({
                        image,
                        links,
                        name,
-                   }: {image: string, name: string, links: readonly {label: string, href: string}[]}) {
+                       url,
+                   }: {image: string, url?: string, name: string, links: readonly {label: string, href: string}[]}) {
     return (
         <div className={'modal-slick-item px-7'}>
             <div className={'modal-slick-item-image'}>
-                <img src={image} alt={'image'}/>
+                {
+                    url ? (
+                        <AnimLink href={url}>
+                            <img src={image} alt={'image'}/>
+                        </AnimLink>
+                    ) : (
+                        <img src={image} alt={'image'}/>
+                    )
+                }
             </div>
             <div className={'modal-slick-item-links d-flex flex-column align-items-center'}>
-                <div className={'title text-center fw-semibold text-uppercase mb-4 mt-5'}>{name}</div>
+                {
+                    name && (
+                        <div className={'title text-center fw-semibold text-uppercase mb-4 mt-5'}>{name}</div>
+                    )
+                }
                 {
                     links.map((value, index) =>
                         <a key={index} href={value.href} className={''}>
@@ -45,8 +59,8 @@ function SlickItem({
 
               @media (${getMobileMediaQuery()}) {
                 img {
-                    width: 80%;
-                    margin: 0 auto;
+                  width: 80%;
+                  margin: 0 auto;
                 }
               }
             `}</style>
@@ -82,10 +96,12 @@ export default function ModalContent() {
                 <div>
                     <ModalSlick items={
                         modalMenuLinks.map((value, index) =>
-                            <SlickItem key={index} name={value.name} image={value.image} links={
+                            <SlickItem
+                                url={value?.url}
+                                key={index} name={value.name} image={value.image} links={
                                 value.links.map((value, index) => ({
-                                    label: value.label,
-                                    href: value.url,
+                                    label: value['label'],
+                                    href: value['url'],
                                 }))
                             }/>,
                         )
@@ -101,7 +117,6 @@ export default function ModalContent() {
 
 function Arrow({left}: {left: boolean}) {
 
-    // const src = left ? '/icons/chev-arrow-left.png' : '/icons/chev-arrow-right.png';
     const src = left ? '/icons/chev-arrow-left-white.png' : '/icons/chev-arrow-right-white.png';
 
     return (
@@ -115,7 +130,7 @@ function Arrow({left}: {left: boolean}) {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: ${COLORS.darkBlue};
+                background-color: ${COLORS.darkest};
                 right: ${left ? '-20px' : '60px'};
 
               }

@@ -12,12 +12,14 @@ interface Global {
     transZero: boolean;
     bgMenuActive: boolean;
     transMenu: boolean;
+    isNoSlide: boolean;
 }
 
 export const globalState = proxy<Global>({
     sticked: false,
     headerAnimFast: false,
     animating: false,
+    isNoSlide: false,
 
     menuOpen: false,
     transOut: false,
@@ -30,6 +32,11 @@ export const globalState = proxy<Global>({
 export function useIsMenuOpen() {
     const state = useSnapshot(globalState);
     return state.menuOpen;
+}
+
+export function useIsNoSlide() {
+    const state = useSnapshot(globalState);
+    return state.isNoSlide;
 }
 
 export function useIsSticked() {

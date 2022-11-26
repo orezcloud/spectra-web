@@ -100,25 +100,25 @@ const dieselGeneratorBase = '/products/diesel-generators';
 export const dieselGeneratorCategories = [
     {
         name: 'Prime Power Generators',
-        image: '/images/products/cat (1).jpg',
+        image: '/images/products/prime/open type.jpg',
         description: 'Reliable power for your business.',
         url: dieselGeneratorBase + '/prime-power-generators',
     },
     {
         name: 'Standby Power Generators',
-        image: '/images/products/cat (2).jpg',
+        image: '/images/products/sound-proof-marine-generator.jpg',
         description: 'Backup power for when you need it most.',
         url: dieselGeneratorBase + '/standby-power-generators',
     },
     {
         name: 'Continuous Power Generators',
-        image: '/images/products/cat (3).jpg',
+        image: '/images/products/diesel/continuous/Open type.jpg',
         description: 'Power for your business 24/7.',
         url: dieselGeneratorBase + '/continuous-power-generators',
     },
     {
         name: 'Special Generators',
-        image: '/images/products/cat (4).jpg',
+        image: '/images/products/special/milltary.jpg',
         description: 'Customized generators for your unique needs',
         url: dieselGeneratorBase + '/special-generators',
     },
@@ -126,113 +126,55 @@ export const dieselGeneratorCategories = [
 
 export const modalMenuLinks = [
     {
-        image: '/images/products/cat (1).jpg',
-        name: 'Prime Power Generators',
+        image: '/images/menu/About-us.jpg',
+        name: 'About us',
+        url: urls.about,
         links: [
-            {
-                label: 'Prime Power Generators',
-                url: dieselGeneratorBase + '/prime-power-generators',
-            },
-            {
-                label: 'Standby Power Generators',
-                url: dieselGeneratorBase + '/standby-power-generators',
-            },
-            {
-                label: 'Continuous Power Generators',
-                url: dieselGeneratorBase + '/continuous-power-generators',
-            },
-            {
-                label: 'Special Generators',
-                url: dieselGeneratorBase + '/special-generators',
-            },
+            // {
+            //     label: 'Prime Power Generators',
+            //     url: dieselGeneratorBase + '/prime-power-generators',
+            // },
         ],
     },
     {
-        image: '/images/products/cat (1).jpg',
-        name: 'Prime Power Generators',
+        name: 'Contact us',
+        url: urls.contact,
+        image: '/images/menu/Contact-us.jpg',
         links: [
-            {
-                label: 'Prime Power Generators',
-                url: dieselGeneratorBase + '/prime-power-generators',
-            },
-            {
-                label: 'Standby Power Generators',
-                url: dieselGeneratorBase + '/standby-power-generators',
-            },
-            {
-                label: 'Continuous Power Generators',
-                url: dieselGeneratorBase + '/continuous-power-generators',
-            },
-            {
-                label: 'Special Generators',
-                url: dieselGeneratorBase + '/special-generators',
-            },
         ],
     },
     {
-        image: '/images/products/cat (1).jpg',
-        name: 'Prime Power Generators',
+        name: 'Get it more',
+        url: urls.salesEnquire,
+        image: '/images/menu/Get-it-more.jpg',
+        links: [],
+    },
+    {
+        name: 'Products',
+        image: '/images/menu/Products.jpg',
+        url: urls.products,
         links: [
-            {
-                label: 'Prime Power Generators',
-                url: dieselGeneratorBase + '/prime-power-generators',
-            },
-            {
-                label: 'Standby Power Generators',
-                url: dieselGeneratorBase + '/standby-power-generators',
-            },
-            {
-                label: 'Continuous Power Generators',
-                url: dieselGeneratorBase + '/continuous-power-generators',
-            },
-            {
-                label: 'Special Generators',
-                url: dieselGeneratorBase + '/special-generators',
-            },
         ],
     },
     {
-        image: '/images/products/cat (1).jpg',
-        name: 'Prime Power Generators',
+        name: 'Services',
+        image: '/images/menu/Service.jpg',
+        url: urls.solutions,
         links: [
-            {
-                label: 'Prime Power Generators',
-                url: dieselGeneratorBase + '/prime-power-generators',
-            },
-            {
-                label: 'Standby Power Generators',
-                url: dieselGeneratorBase + '/standby-power-generators',
-            },
-            {
-                label: 'Continuous Power Generators',
-                url: dieselGeneratorBase + '/continuous-power-generators',
-            },
-            {
-                label: 'Special Generators',
-                url: dieselGeneratorBase + '/special-generators',
-            },
         ],
     },
     {
-        image: '/images/products/cat (1).jpg',
-        name: 'Prime Power Generators',
+        name: 'Solutions',
+        image: '/images/menu/Solution.jpg',
+        url: urls.solutions,
         links: [
-            {
-                label: 'Prime Power Generators',
-                url: dieselGeneratorBase + '/prime-power-generators',
-            },
-            {
-                label: 'Standby Power Generators',
-                url: dieselGeneratorBase + '/standby-power-generators',
-            },
-            {
-                label: 'Continuous Power Generators',
-                url: dieselGeneratorBase + '/continuous-power-generators',
-            },
-            {
-                label: 'Special Generators',
-                url: dieselGeneratorBase + '/special-generators',
-            },
+        ],
+    },
+    {
+        name: 'Support',
+        image: '/images/menu/support.jpg',
+        url: urls.support,
+        links: [
         ],
     },
 ];

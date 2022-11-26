@@ -29,8 +29,8 @@ export default function MarineGenerators() {
             ]}
             name={'marine-generator'}
             heroProps={{
-                title: 'Marine Generator',
-                subtitle: 'We are here to help you',
+                title: 'Marine Generators',
+                subtitle: 'automobiles, aircraft, ships and trains.',
                 image: '/images/hero/hero-3.jpg',
             }}
             isPreFooter={true}

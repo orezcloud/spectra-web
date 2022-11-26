@@ -7,10 +7,9 @@ export default function Solutions() {
         <DefaultPostLayout
             name={'standby-power-generator'}
             heroProps={{
-                title: 'Standby',
-                subtitle: 'Diesel Generators',
+                title: 'Standby Generators',
+                subtitle: 'Power for when you need it most',
                 image: '/images/hero/hero-3.jpg',
-                topTitle: 'Product',
             }}
             isPreFooter={true}
             Elements={[

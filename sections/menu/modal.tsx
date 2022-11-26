@@ -3,8 +3,9 @@ import ModalContent from './modal-content';
 
 
 export default function Modal() {
+
     return (
-        <div className={'h-100 d-flex flex-column'}>
+        <div className={'modal h-100 d-flex flex-column'}>
             <div>
                 <ModalHeader/>
             </div>

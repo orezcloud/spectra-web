@@ -9,7 +9,7 @@ export default function HybridGenerator() {
             Elements={[
                 () => (
                     <div>
-                        <H2>Hybrid Generator</H2>
+                        <H2>Hybrid Generators</H2>
 
                         <ProductList products={[
                             {
@@ -21,10 +21,10 @@ export default function HybridGenerator() {
                     </div>
                 ),
             ]}
-            name={'hybrid-generator'}
+            name={'hybrid-generators'}
             heroProps={{
-                title: 'Hybrid Generator',
-                subtitle: 'We are here to help you',
+                title: 'Hybrid Generators',
+                subtitle: 'Huge reduction in CO² up to + 90%',
                 image: '/images/hero/hero-3.jpg',
             }}
             isPreFooter={true}

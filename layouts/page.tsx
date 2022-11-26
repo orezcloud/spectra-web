@@ -2,7 +2,7 @@ import {ReactNode} from 'react';
 import {IS_DEVELOPMENT, IS_STAGING} from '../lib/env';
 import MenuLayout from './menu-layout';
 import {COLORS} from '../styles/consts';
-import {useIsMenuOpen, useIsTransIn, useIsTransOut, useIsTransZero} from '../state/global';
+import {useIsMenuOpen, useIsNoSlide, useIsTransIn, useIsTransOut, useIsTransZero} from '../state/global';
 import Modal from '../sections/menu/modal';
 
 
@@ -12,12 +12,13 @@ export default function Page({children, backgroundColor, noslide}: {children: Re
     const isTransOut = useIsTransOut();
     const isTransZero = useIsTransZero();
     const isMenuOpen = useIsMenuOpen()
+    const isNoSlide = useIsNoSlide();
 
     return (
         <>
             <div className={
                 'page overflow-hidden'
-                + (noslide ? ' noslide' : '')
+                + (( noslide || isNoSlide ) ? ' noslide' : '')
                 + (isTransIn ? ' trans-in' : '')
                 + (isTransOut ? ' trans-out' : '')
                 + (isTransZero ? ' trans-zero' : '')

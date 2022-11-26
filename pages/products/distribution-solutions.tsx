@@ -42,10 +42,10 @@ export default function DistributionSolutions() {
                     </div>
                 ),
             ]}
-            name={'marine-generator'}
+            name={'distribution-solutions'}
             heroProps={{
                 title: 'Distribution Solutions',
-                subtitle: 'We are here to help you',
+                subtitle: 'Wide range of services',
                 image: '/images/hero/hero-3.jpg',
             }}
             isPreFooter={true}

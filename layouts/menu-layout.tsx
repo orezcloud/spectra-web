@@ -1,25 +1,54 @@
-import {globalActions, useIsMenuOpen} from '../state/global';
+import {globalActions, globalState, useIsMenuOpen} from '../state/global';
 import zIndex from '../styles/zIndex';
 import {ReactNode, useEffect, useState} from 'react';
 import {sleep} from '../lib/utils';
 
 
-export default function MenuLayout({children}: { children: ReactNode }) {
+export default function MenuLayout({children}: {children: ReactNode}) {
     const isMenuOpen = useIsMenuOpen();
     const [isMenuVisible, setIsMenuVisible] = useState(false);
     const [isMenuActive, setIsMenuActive] = useState(false);
+    const [animating, setAnimating] = useState(false);
+    const [dontRender, setDontRender] = useState(false);
 
     const menuOpen = async () => {
-        setIsMenuActive(true);
-        await sleep(100);
-        setIsMenuVisible(true);
-        await sleep(1000);
+        if (dontRender) {
+            return
+        }
+        if (!animating) {
+            setAnimating(true);
+            setIsMenuActive(true);
+            await sleep(150);
+            setIsMenuVisible(true);
+            await sleep(700);
+            setAnimating(false);
+        } else {
+            setDontRender(true);
+            await sleep(200);
+            globalState.menuOpen = true;
+            await sleep(400);
+            setDontRender(false)
+        }
     };
 
     const menuClose = async () => {
-        setIsMenuVisible(false);
-        await sleep(1000);
-        setIsMenuActive(false);
+        if (dontRender) {
+            return
+        }
+        if (!animating) {
+            setAnimating(true);
+            setIsMenuVisible(false);
+            await sleep(1000);
+            setIsMenuActive(false);
+            await sleep(150);
+            setAnimating(false);
+        } else {
+            setDontRender(true);
+            await sleep(200);
+            globalState.menuOpen = true;
+            await sleep(400);
+            setDontRender(false)
+        }
     };
 
     useEffect(() => {
@@ -54,7 +83,7 @@ export default function MenuLayout({children}: { children: ReactNode }) {
                     background-color: #ffffff;
                     z-index: ${zIndex.menu};
                     opacity: 1;
-                    transition: opacity .4s;
+                    transition: opacity .4s !important;
                   }
 
                   .menu:not(.menu-visible) {
@@ -62,7 +91,7 @@ export default function MenuLayout({children}: { children: ReactNode }) {
                   }
 
                   .menu:not(.menu-active) {
-                    display: none;
+                    display: none !important;
                   }
                 `}
             </style>
