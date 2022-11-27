@@ -229,3 +229,7 @@ p, ol, ul {
 .modal {
   z-index: 400;
 }
+
+li.menu-item::marker {
+  content: none;
+}

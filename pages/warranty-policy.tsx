@@ -25,7 +25,7 @@ export default function About() {
                             regulations are made in this manual or in relevant commercial contracts.</P>
 
 
-                        <H5>Diesel Generator Sets and Lighting Towers:</H5>
+                        {/*<H5>Diesel Generator Sets and Lighting Towers:</H5>*/}
                         {/*todo: the table*/}
 
 
@@ -39,6 +39,13 @@ export default function About() {
                             generating sets.</P>
 
 
+
+
+
+                    </div>
+                ),
+                () => (
+                    <div>
                         <H3>Warranty Coverage</H3>
 
                         <H4>Repair Range</H4>
@@ -127,8 +134,10 @@ export default function About() {
                             Expenditure for storing generator sets
                         </P>
                         <P>Loss due to inconvenience</P>
-
-
+                    </div>
+                ),
+                () => (
+                    <div>
                         <H3>Other Warranty Regulations</H3>
                         <H4>Repairing and replacing accessories and spare parts</H4>
                         <P>Spectra provides services to repair or replace some accessories and spare parts. The
@@ -154,10 +163,8 @@ export default function About() {
                             Spectra Power Solutions <br/><br/>
                             All Rights Reserved.<br/><br/>
                         </P>
-
-
                     </div>
-                ),
+                )
             ]}
             name={'about'}
             heroProps={{

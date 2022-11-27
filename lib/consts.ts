@@ -8,6 +8,13 @@ export const urls = {
     support: '/support',
     contact: '/contact-mail',
     salesEnquire: '/sales-enquire',
+    faq: '/faq',
+    warrantyPolicy: '/warranty-policy',
+    selectedProjects: '/selected-projects',
+    afterSales: '/after-sales',
+    policiesProcedures: '/policies-procedures',
+    environmentPolicies: '/environment-policies',
+    hash: '#',
 };
 
 export const defaultHeaderMenu = [
@@ -65,7 +72,7 @@ export const productCategories = [
         name: 'Hybrid Generator',
         image: '/images/products/hybrid-generator.jpg',
         description: 'A combination of diesel and gas for increased efficiency.',
-        url: productCategoryBase + '/hybrid-generator',
+        url: productCategoryBase + '/hybrid-generators',
     },
     {
         name: 'Gas Generators',
@@ -189,23 +196,23 @@ export const footerLinks = [
         links: [
             {
                 name: 'Discover PowerMart',
-                path: '/',
+                path: urls.hash,
             },
             {
                 name: 'PowerMart for Business',
-                path: '/about',
+                path: urls.hash,
             },
             {
                 name: 'Careers',
-                path: '/careers',
+                path: urls.hash,
             },
             {
                 name: 'Policies & Procedures',
-                path: '/policies',
+                path: urls.policiesProcedures,
             },
             {
                 name: 'Environment policies',
-                path: '/environment-policies',
+                path: urls.environmentPolicies,
             },
         ],
     },
@@ -214,11 +221,11 @@ export const footerLinks = [
         links: [
             {
                 name: 'After Sales Service',
-                path: '/after-sales',
+                path: urls.afterSales,
             },
             {
                 name: 'Spare Parts',
-                path: '/about',
+                path: urls.hash,
             },
         ],
     },
@@ -227,19 +234,19 @@ export const footerLinks = [
         links: [
             {
                 name: 'FAQs',
-                path: '/faq',
+                path: urls.faq,
             },
             {
                 name: 'Warranties',
-                path: '/warranty-policy',
+                path: urls.warrantyPolicy,
             },
             {
                 name: 'Selected Projects',
-                path: '/selected-projects',
+                path: urls.selectedProjects,
             },
             {
                 name: 'Downloads',
-                path: '/downloads',
+                path: urls.hash,
             },
         ],
     },
@@ -248,11 +255,11 @@ export const footerLinks = [
         links: [
             {
                 name: 'Diesel to Power',
-                path: '/',
+                path: urls.hash,
             },
             {
                 name: 'Gas to Power',
-                path: '/about',
+                path: urls.hash,
             },
         ],
     },
@@ -261,15 +268,15 @@ export const footerLinks = [
         links: [
             {
                 name: 'Become a Partner',
-                path: '/',
+                path: urls.hash,
             },
             {
                 name: 'Sales Enquiries',
-                path: '/about',
+                path: urls.salesEnquire,
             },
             {
                 name: 'General Enquiries',
-                path: '/contact',
+                path: urls.contact,
             },
         ],
     },

@@ -25,7 +25,7 @@ export default function AnimLink({children, href, ...props}: Props) {
         animating = true;
         (async () => {
 
-            if (href === router.pathname) {
+            if (href === router.pathname || href === '#') {
                 window.scrollTo(0, 0);
                 animating = false;
                 return;
