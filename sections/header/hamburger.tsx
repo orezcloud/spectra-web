@@ -1,9 +1,9 @@
 import {globalActions} from '../../state/global';
-import MenuItem from './MenuItem';
+import MenuItem from './menu-item';
 import {useState} from 'react';
 
 
-export default function Hamburger({light}: {light?: boolean}) {
+export default function Hamburger({light, noborder }: {light?: boolean, noborder?: boolean}) {
 
     const [color] = useState(!light ? '#151515' : 'white');
 
@@ -16,9 +16,9 @@ export default function Hamburger({light}: {light?: boolean}) {
             </span>
             <span className={'d-inline-block'}>
                     <svg width="28" height="15" viewBox="0 0 31 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <line y1="1.25" x2="31" y2="1.25" stroke={color} stroke-width="1.5"/>
-                        <line y1="9.75" x2="31" y2="9.75" stroke={color} stroke-width="1.5"/>
-                        <line y1="18.25" x2="31" y2="18.25" stroke={color} stroke-width="1.5"/>
+                        <line y1="1.25" x2="31" y2="1.25" stroke={color} strokeWidth="1.5"/>
+                        <line y1="9.75" x2="31" y2="9.75" stroke={color} strokeWidth="1.5"/>
+                        <line y1="18.25" x2="31" y2="18.25" stroke={color} strokeWidth="1.5"/>
                     </svg>
                 </span>
             <style jsx>{`
@@ -43,6 +43,7 @@ export default function Hamburger({light}: {light?: boolean}) {
                 height: 100%;
                 width: 1px;
                 background-color: #bbb;
+                ${noborder ? 'display: none;' : ''}
                 //border: 0.5px solid #000001a8;
                 transform: scaleY(2.4);
               }

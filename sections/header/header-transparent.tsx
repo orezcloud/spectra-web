@@ -18,15 +18,12 @@ export default function HeaderTransparent({showMenu = true}: {showMenu?: boolean
             <DefaultSection name={
                 'header header-transparent'
             } padding={'none'}>
-                <div className="row m-0">
-                    <div className="col-auto">
-                        <img className={'svg-img'} src="/icons/menu-white.svg" alt="menu"/>
-                    </div>
-                    <div className="col text-center">
+                <div className="row m-0 px-4">
+                    <div className="col">
                         <Logo/>
                     </div>
                     <div className="col-auto">
-                        <img className={'svg-img'} src="/icons/search-white.svg" alt="search"/>
+                        <HamMenu notext={true}/>
                     </div>
                 </div>
 
@@ -80,6 +77,7 @@ export default function HeaderTransparent({showMenu = true}: {showMenu?: boolean
                     }
 
                   }
+
                   :global(.header-transparent.sticked::after) {
                     opacity: 0;
                   }
@@ -122,8 +120,10 @@ function MenuItem({
                   .menu-item :global(*) {
                     color: #fff;
                     text-transform: uppercase;
-                    font-weight: 300;
+                    font-weight: 400;
                     cursor: pointer;
+                    font-family: Lato, sans-serif;
+
                   }
                 `}
             </style>
@@ -143,18 +143,30 @@ function Menu() {
                         </MenuItem>
                     ))
                 }
-                <MenuItem href={'#'}>QUICK LINKS</MenuItem>
-                {/*<MenuItem className={'icon'}>*/}
-                {/*    <img className={'svg-img'} src="/icons/search-white.svg" alt="search"/>*/}
+                <HamMenu/>
+                {/*<MenuItem href={'#'}>QUICK LINKS</MenuItem>*/}
+                {/*<MenuItem className={'icon'} onClick={() => globalActions.toggleMenu()}>*/}
+                {/*    <span className={'me-4'}>MENU</span>*/}
+                {/*    <img className={'svg-img'} src="/icons/menu-white.svg" alt="menu" style={{*/}
+                {/*        transform: 'scale(1.22)',*/}
+                {/*    }}/>*/}
                 {/*</MenuItem>*/}
-                <MenuItem className={'icon'} onClick={() => globalActions.toggleMenu()}>
-                    <span className={'me-4'}>MENU</span>
-                    <img className={'svg-img'} src="/icons/menu-white.svg" alt="menu" style={{
-                        transform: 'scale(1.22)',
-                    }}/>
-                </MenuItem>
             </ul>
 
         </div>
+    );
+}
+
+function HamMenu({notext = false}: {notext?: boolean}) {
+    return (
+        <MenuItem className={'icon'} onClick={() => globalActions.toggleMenu()}>
+            {
+                !notext &&
+                <span className={'me-4'}>MENU</span>
+            }
+            <img className={'svg-img'} src="/icons/menu-white.svg" alt="menu" style={{
+                transform: 'scale(1.22)',
+            }}/>
+        </MenuItem>
     );
 }

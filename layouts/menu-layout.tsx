@@ -1,4 +1,4 @@
-import {globalActions, globalState, useIsMenuOpen} from '../state/global';
+import {globalState, useIsMenuOpen} from '../state/global';
 import zIndex from '../styles/zIndex';
 import {ReactNode, useEffect, useState} from 'react';
 import {sleep} from '../lib/utils';
@@ -13,7 +13,7 @@ export default function MenuLayout({children}: {children: ReactNode}) {
 
     const menuOpen = async () => {
         if (dontRender) {
-            return
+            return;
         }
         if (!animating) {
             setAnimating(true);
@@ -27,13 +27,13 @@ export default function MenuLayout({children}: {children: ReactNode}) {
             await sleep(200);
             globalState.menuOpen = true;
             await sleep(400);
-            setDontRender(false)
+            setDontRender(false);
         }
     };
 
     const menuClose = async () => {
         if (dontRender) {
-            return
+            return;
         }
         if (!animating) {
             setAnimating(true);
@@ -47,7 +47,7 @@ export default function MenuLayout({children}: {children: ReactNode}) {
             await sleep(200);
             globalState.menuOpen = true;
             await sleep(400);
-            setDontRender(false)
+            setDontRender(false);
         }
     };
 
@@ -66,12 +66,7 @@ export default function MenuLayout({children}: {children: ReactNode}) {
                 + (isMenuVisible ? ' menu-visible' : '')
                 + (isMenuActive ? ' menu-active' : '')
             }>
-            {/*<div onClick={() => globalActions.toggleMenu()}>*/}
-            {/*    close*/}
-            {/*</div>*/}
-            {/*<h1>Under Construction</h1>*/}
             {children}
-
             <style jsx>
                 {`
                   .menu {
@@ -83,7 +78,7 @@ export default function MenuLayout({children}: {children: ReactNode}) {
                     background-color: #ffffff;
                     z-index: ${zIndex.menu};
                     opacity: 1;
-                    transition: opacity .4s !important;
+                    transition: opacity .3s ease !important;
                   }
 
                   .menu:not(.menu-visible) {
@@ -91,6 +86,7 @@ export default function MenuLayout({children}: {children: ReactNode}) {
                   }
 
                   .menu:not(.menu-active) {
+                    height: 0;
                     display: none !important;
                   }
                 `}

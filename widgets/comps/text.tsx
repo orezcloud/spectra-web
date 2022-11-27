@@ -1,4 +1,7 @@
-export function P({children}: {children: string}) {
+import {ReactNode} from 'react';
+
+
+export function P({children}: {children: ReactNode}) {
     return (
         <p className={'js-anim u-fade u-short'}>
             {children}

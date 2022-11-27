@@ -3,7 +3,7 @@ import {H2} from '../../widgets/comps/text';
 import ProductList from '../../widgets/list/product-list';
 
 
-export default function HybridGenerator() {
+export default function HybridGenerators() {
     return (
         <DefaultPostLayout
             Elements={[

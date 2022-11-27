@@ -15,8 +15,8 @@ export function CategoryCard({name, description, image, url}: CategoryCardProps)
         <div className={'category-card p-4 u-fade js-anim u-hover'}>
             <AnimLink href={url}>
                 <a href={url}>
-                    <div className="row">
-                        <div className="col-3 d-flex align-items-center">
+                    <div className="row w-100">
+                        <div className="img-col col-3 d-flex align-items-center">
                             <AnimImageWrap children={<img src={image} alt={name}/>}/>
                         </div>
                         <div className="col-9 align-self-center">
@@ -29,6 +29,10 @@ export function CategoryCard({name, description, image, url}: CategoryCardProps)
 
             <style jsx>
                 {`
+                  .img-col {
+                      //min-width: 140px;
+                  }
+
                   .category-card {
                     background-color: white;
                     border-radius: 2px;
@@ -41,7 +45,7 @@ export function CategoryCard({name, description, image, url}: CategoryCardProps)
                       display: flex;
                       height: 100%;
                       width: 100%;
-                      justify-content: center;
+                      //justify-content: center;
                       align-items: center
                     }
                   }

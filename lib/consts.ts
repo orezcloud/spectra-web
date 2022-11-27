@@ -39,6 +39,10 @@ export const defaultHeaderMenu = [
 
 export const transparentHeaderMenu = [
     {
+        name: 'About',
+        url: urls.about,
+    },
+    {
         name: 'Products',
         url: urls.products,
     },
@@ -298,11 +302,11 @@ export const preFooterLinks = [
         links: [
             {
                 name: 'Oil & Gas Generators',
-                href: productCategoryBase + '/oil-and-gas-generators',
+                href: productCategoryBase + '/gas-generators',
             },
             {
                 name: 'Liquefied Petroleum Gas Generators',
-                href: productCategoryBase + '/liquefied-petroleum-gas-generators',
+                href: productCategoryBase + '/gas-generators',
             },
         ],
     },
@@ -311,15 +315,15 @@ export const preFooterLinks = [
         links: [
             {
                 name: 'Gasoline Power Light Towers',
-                href: productCategoryBase + '/gasoline-power-light-towers',
+                href: productCategoryBase + '/light-towers',
             },
             {
                 name: 'Diesel Power Light Towers',
-                href: productCategoryBase + '/diesel-power-light-towers',
+                href: productCategoryBase + '/light-towers',
             },
             {
                 name: 'Super Silent Power Light Towers',
-                href: productCategoryBase + '/super-silent-power-light-towers',
+                href: productCategoryBase + '/light-towers',
             },
         ],
     },
@@ -328,23 +332,23 @@ export const preFooterLinks = [
         links: [
             {
                 name: 'Engine and alternator parts',
-                href: '/engine-and-alternator-parts',
+                href: productCategoryBase + '/distribution-solutions',
             },
             {
                 name: 'Service kits',
-                href: '/service-kits',
+                href: productCategoryBase + '/distribution-solutions',
             },
             {
                 name: 'Control Modules',
-                href: '/control-modules',
+                href: productCategoryBase + '/distribution-solutions',
             },
             {
                 name: 'Automatic Transfer Switches',
-                href: '/automatic-transfer-switches',
+                href: productCategoryBase + '/distribution-solutions',
             },
             {
                 name: 'Load Banks',
-                href: '/load-banks',
+                href: productCategoryBase + '/distribution-solutions',
             },
         ],
     },
@@ -353,20 +357,20 @@ export const preFooterLinks = [
         links: [
             {
                 name: 'Diesel Hybrid Generators',
-                href: productCategoryBase + '/diesel-hybrid-generators',
+                href: productCategoryBase + '/hybrid-generators',
             },
         ],
     },
     {
-        title: 'Mariine Generators',
+        title: 'Marine Generators',
         links: [
             {
                 name: 'Open Type Marine Generators',
-                href: productCategoryBase + '/open-type-marine-generators',
+                href: productCategoryBase + '/marine-generators',
             },
             {
                 name: 'Soundproof Type Marine Generators',
-                href: productCategoryBase + '/soundproof-type-marine-generators',
+                href: productCategoryBase + '/marine-generators',
             },
         ],
     },
@@ -375,15 +379,15 @@ export const preFooterLinks = [
         links: [
             {
                 name: 'Gasoline Power Portable Generators',
-                href: productCategoryBase + '/gasoline-power-portable-generators',
+                href: productCategoryBase + '/portable-generators',
             },
             {
                 name: 'Open Type Generators',
-                href: productCategoryBase + '/open-type-generators',
+                href: productCategoryBase + '/portable-generators',
             },
             {
                 name: 'Sound Olded Type Generators',
-                href: productCategoryBase + '/sound-olded-type-generators',
+                href: productCategoryBase + '/portable-generators',
             },
         ],
     },

@@ -1,13 +1,11 @@
 import {DefaultSection} from '../../layouts/section-layouts';
 import {useIsMobileOrTablet} from '../../styles/breakpoints';
 import {useSnapshot} from 'valtio';
-import {globalActions, globalState} from '../../state/global';
-import {ReactNode} from 'react';
-import zIndex from '../../styles/zIndex';
+import {globalState} from '../../state/global';
 import {defaultHeaderMenu} from '../../lib/consts';
 import AnimLink from '../../lib/anim-link';
-import Hamburger from './Hamburger';
-import MenuItem from './MenuItem';
+import Hamburger from './hamburger';
+import MenuItem from './menu-item';
 
 
 export function HeaderSection() {
@@ -22,15 +20,12 @@ export function HeaderSection() {
                 + (sticked ? ' sticked' : '')
                 + (!bgMenuActive ? ' off' : '')
             } padding={'none'}>
-                <div className="row m-0">
-                    <div className="col-auto">
-                        <img className={'svg-img'} src="/icons/menu-black.svg" alt="menu"/>
-                    </div>
-                    <div className="col text-center">
+                <div className="row m-0 px-4">
+                    <div className="col">
                         <Logo/>
                     </div>
-                    <div className="col-auto">
-                        <img className={'svg-img'} src="/icons/search-black.svg" alt="search"/>
+                    <div className="col-auto nobullet">
+                        <Hamburger noborder={true}/>
                     </div>
                 </div>
             </DefaultSection>
@@ -42,7 +37,7 @@ export function HeaderSection() {
             'header header-static'
             + (sticked ? ' sticked' : '')
             + (!bgMenuActive ? ' off' : '')
-            + (headerAnimFast? ' fast' : '')
+            + (headerAnimFast ? ' fast' : '')
         } padding={'none'}>
             <div className="row">
                 <div className="col-auto">

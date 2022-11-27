@@ -11,7 +11,7 @@ export default function MenuItem({
 
     if (!href) {
         return (
-            <li className={'menu-item' + (className ? ' ' + className : '')} onClick={(e) =>{
+            <li className={'menu-item' + (className ? ' ' + className : '')} onClick={(e) => {
                 e.preventDefault();
                 e.stopPropagation();
                 onClick && onClick();
@@ -22,6 +22,7 @@ export default function MenuItem({
                   .menu-item {
                     cursor: pointer;
                     font-weight: 400;
+                    list-style-type: none;
                   }
                 `}</style>
             </li>
