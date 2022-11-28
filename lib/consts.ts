@@ -64,7 +64,7 @@ const productCategoryBase = '/products';
 export const productCategories = [
     {
         name: 'Diesel Generators',
-        image: '/images/products/prime/open type.jpg',
+        image: '/images/products/prime/open-type.jpg',
         description: 'Reliable and efficient diesel generators for all your power needs.',
         url: productCategoryBase + '/diesel-generators',
     },
@@ -94,7 +94,7 @@ export const productCategories = [
     },
     {
         name: 'Portable Generators',
-        image: '/images/products/portable/Diseal open Generator.png',
+        image: '/images/products/portable/diseal-open-generator.png',
         description: 'Take power with you wherever you go.',
         url: productCategoryBase + '/portable-generators',
     },

@@ -14,17 +14,17 @@ export default function MarineGenerators() {
                         <ProductList products={[
                             {
                                 title: 'Gasloine Power Generator',
-                                image: '/images/products/portable/Gasoline Power Generator.png',
+                                image: '/images/products/portable/gasoline power generator.png',
                                 description: 'Spectra Gasoline portal generator safety and portable, silent, reliable, low failure rate，Short circuit protection device with electronic control technology to make sure safety home…',
                             },
                             {
                                 title: 'Diseal Power Generator',
-                                image: '/images/products/portable/Diseal open Generator.png',
+                                image: '/images/products/portable/diseal-open-generator.png',
                                 description: 'Spectra Diseal portal generator safety and portable, silent, reliable, low failure rate，Short circuit protection device with electronic control technology to make sure safety home…',
                             },
                             {
                                 title: 'Canopy type Generator',
-                                image: '/images/products/portable/Canopy Generator.png',
+                                image: '/images/products/portable/canopy generator.png',
                                 description: 'Spectra silent diesel generators are characterized by excellent noise reduction design, offer you a better green production and quiet life.',
                             },
                         ]}/>
