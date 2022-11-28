@@ -46,7 +46,7 @@ export default function DistributionSolutions() {
             heroProps={{
                 title: 'Distribution Solutions',
                 subtitle: 'Wide range of services',
-                image: '/images/hero/hero-3.jpg',
+                image: '/bg/distribution solutions background.jpg',
             }}
             isPreFooter={true}
         />

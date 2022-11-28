@@ -42,7 +42,7 @@ export function FieldGroup(props: IFieldGroupProps) {
         <>
             {
                 props.groupTitle &&
-                <h4>{props.groupTitle}</h4>
+                <h4 className={'mb-8'}>{props.groupTitle}</h4>
             }
             {
                 props.fields.map((field, index) => (
@@ -87,7 +87,7 @@ export function Form(props: IFormProps) {
                     <FieldGroup key={index} {...group}/>
                 ))
             }
-            <button type="submit">
+            <button type="submit" className={'mt-8'}>
                 <span>
                     {props.submitText || 'Submit'}
                 </span>

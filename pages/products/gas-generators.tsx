@@ -30,7 +30,7 @@ export default function GasGenerators() {
             heroProps={{
                 title: 'Gas Generators',
                 subtitle: 'Ranging from 10KW – 2000KW',
-                image: '/images/hero/hero-3.jpg',
+                image: '/bg/gas-generator-background.jpg',
             }}
             isPreFooter={true}
         />

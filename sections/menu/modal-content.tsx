@@ -9,16 +9,16 @@ import AnimLink from '../../lib/anim-link';
 
 function Menu({icon, label, href, onClick}: {icon: string, label: string, href?: string, onClick?: () => void}) {
     return (
-        <a className={'d-inline-flex align-items-center'} href={onClick ? '' : href} onClick={e => {
+        <a className={'d-inline-flex align-items-center opacity-50'} href={onClick ? '' : href} onClick={e => {
             if (onClick) {
                 e.preventDefault();
                 onClick();
             }
         }}>
             <span className={'me-2 d-inline-block'}>
-                <img className={'svg img'} src={icon} alt="icon" height={'27'}/>
+                <img className={'svg img'} src={icon} alt="icon" height={'23'}/>
             </span>
-            <span>{label}</span>
+            <span className={'d-inline-block'}>{label}</span>
         </a>
     );
 }
@@ -43,11 +43,13 @@ function SlickItem({
                 }
             </div>
             <div className={'modal-slick-item-links d-flex flex-column align-items-center'}>
-                {
-                    name && (
-                        <div className={'title text-center fw-semibold text-uppercase mb-4 mt-5'}>{name}</div>
-                    )
-                }
+                <AnimLink href={url || ""}>
+                    {
+                        name && (
+                            <div className={'title text-center fw-semibold text-uppercase mb-4 mt-5'}>{name}</div>
+                        )
+                    }
+                </AnimLink>
                 {
                     links.map((value, index) =>
                         <a key={index} href={value.href} className={''}>
@@ -72,7 +74,7 @@ export default function ModalContent() {
 
     const MenuWrapper = ({children}: {children: ReactNode}) => {
         return (
-            <div className={'p-3 px-6 d-inline-block text-uppercase'}>
+            <div className={'p-3 px-6 d-inline-block text-uppercase fw-normal'}>
                 {children}
             </div>
         );
@@ -83,13 +85,13 @@ export default function ModalContent() {
             <div className={'w-100'}>
                 <div className={'d-flex justify-content-center mb-6'}>
                     <MenuWrapper>
-                        <Menu label={'Home'} icon={'/icons/facebook.svg'} href={'/'}/>
+                        <Menu label={'LinkedIn'} icon={'/icons/linkedin-black.png'} href={'/'}/>
                     </MenuWrapper>
                     <MenuWrapper>
-                        <Menu label={'Home'} icon={'/icons/facebook.svg'} href={'/'}/>
+                        <Menu label={'Facebook'} icon={'/icons/facebook-black.png'} href={'/'}/>
                     </MenuWrapper>
                     <MenuWrapper>
-                        <Menu label={'Home'} icon={'/icons/facebook.svg'} href={'/'}/>
+                        <Menu label={'Instagram'} icon={'/icons/instagram-black.png'} href={'/'}/>
                     </MenuWrapper>
                 </div>
 

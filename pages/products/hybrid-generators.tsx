@@ -25,7 +25,7 @@ export default function HybridGenerators() {
             heroProps={{
                 title: 'Hybrid Generators',
                 subtitle: 'Huge reduction in CO² up to + 90%',
-                image: '/images/hero/hero-3.jpg',
+                image: '/bg/hybrid-generator-background.jpg',
             }}
             isPreFooter={true}
         />

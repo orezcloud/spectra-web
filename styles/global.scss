@@ -233,3 +233,7 @@ p, ol, ul {
 li.menu-item::marker {
   content: none;
 }
+
+.noslide .pre-footer {
+  z-index: 31;
+}

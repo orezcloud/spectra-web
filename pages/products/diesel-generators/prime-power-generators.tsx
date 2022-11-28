@@ -12,7 +12,7 @@ export default function PrimePowerGenerators() {
             heroProps={{
                 title: 'Prime Power',
                 subtitle: 'Diesel Generators',
-                image: '/images/hero/hero-3.jpg',
+                image: '/bg/heading-prime-power.jpg',
                 topTitle: 'Product',
             }}
             isPreFooter={true}

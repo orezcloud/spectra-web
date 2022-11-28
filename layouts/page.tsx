@@ -1,6 +1,6 @@
 import {ReactNode} from 'react';
 import {IS_DEVELOPMENT, IS_STAGING} from '../lib/env';
-import MenuLayout from './menu-layout';
+import ModalLayout from './modal-layout';
 import {COLORS} from '../styles/consts';
 import {useIsMenuOpen, useIsNoSlide, useIsTransIn, useIsTransOut, useIsTransZero} from '../state/global';
 import Modal from '../sections/menu/modal';
@@ -27,9 +27,9 @@ export default function Page({children, backgroundColor, noslide}: {children: Re
                  style={{backgroundColor: backgroundColor || COLORS.bodyBackground}}>
                 {children}
             </div>
-            <MenuLayout>
+            <ModalLayout>
                 <Modal/>
-            </MenuLayout>
+            </ModalLayout>
             {/*{*/}
             {/*    IS_STAGING &&*/}
             {/*    <div className={'notice'}>*/}

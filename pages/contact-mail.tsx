@@ -38,39 +38,60 @@ export default function ContactMail() {
                                                     name: 'name',
                                                     fieldType: 'text',
                                                     type: 'text',
-                                                    placeholder: 'Name',
+                                                    placeholder: 'e.g. John Doe',
                                                     label: 'Name',
                                                 },
                                                 {
                                                     name: 'phone',
-                                                    label: 'Phone or Email',
+                                                    fieldType: 'text',
+                                                    type: 'phone',
+                                                    placeholder: 'e.g. 0123456789',
+                                                    label: 'Phone',
+                                                },
+                                                {
+                                                    name: 'email',
+                                                    fieldType: 'text',
+                                                    type: 'email',
+                                                    placeholder: 'e.g. mail@google.com',
+                                                    label: 'Name',
+                                                },
+                                                {
+                                                    name: 'how-did',
                                                     fieldType: 'select',
+                                                    label: 'How did you hear about us?',
+                                                    placeholder: '',
                                                     options: [
                                                         {
-                                                            value: 'Email',
-                                                            label: 'email',
+                                                            label: 'Select',
+                                                            value: '',
                                                         },
                                                         {
-                                                            value: 'Phone',
-                                                            label: 'phone',
-                                                        }
+                                                            label: 'Google',
+                                                            value: 'google',
+                                                        },
+                                                        {
+                                                            label: 'Facebook',
+                                                            value: 'facebook',
+                                                        },
+                                                        {
+                                                            label: 'Twitter',
+                                                            value: 'twitter',
+                                                        },
+                                                        {
+                                                            label: 'Instagram',
+                                                            value: 'instagram',
+                                                        },
+                                                        {
+                                                            label: 'Other',
+                                                            value: 'other',
+                                                        },
                                                     ],
-                                                    type: 'text',
-                                                    placeholder: 'Name',
                                                 },
                                                 {
-                                                    name: 'textar',
-                                                    label: 'Name',
+                                                    name: 'message',
                                                     fieldType: 'textarea',
-                                                    type: 'text',
-                                                    placeholder: 'Name',
-                                                },
-                                                {
-                                                    name: 'cus',
-                                                    fieldType: 'text',
-                                                    label: 'Name',
-                                                    type: 'text',
-                                                    placeholder: 'Name',
+                                                    placeholder: 'e.g. Hello, I am interested in your product',
+                                                    label: 'Message',
                                                 },
                                             ],
                                         },
@@ -84,7 +105,7 @@ export default function ContactMail() {
             name={'contact'}
             heroProps={{
                 title: 'Contact',
-                subtitle: 'We are here to help you',
+                subtitle: 'Get in touch with us',
                 image: '/images/hero/hero-3.jpg',
             }}
         />

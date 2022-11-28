@@ -79,7 +79,7 @@ function TabContent(props: {children: ReactNode}) {
             <div className={'opacity-0'} style={{height: 0}}>.</div>
 
 
-            <div className={'d-flex justify-content-center py-7'}>
+            <div className={'d-flex justify-content-center py-8 pb-10'}>
                 <div className={'tab-content'}>
                     {props.children}
                 </div>

@@ -35,7 +35,7 @@ export default function MarineGenerators() {
             heroProps={{
                 title: 'Portable Generators',
                 subtitle: 'excellent noise reduction design',
-                image: '/images/hero/hero-3.jpg',
+                image: '/bg/portable-generator-background.jpg',
             }}
             isPreFooter={true}
         />

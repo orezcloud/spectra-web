@@ -20,44 +20,44 @@ export default function Support() {
                         <P>For all year round, the following parts are regularly stocked for your convenience: </P>
                         <UlList list={[
                             'Engine maintenance spare parts',
-                            'Engine overhaul spare parts',
-                            'Engine accessories',
-                            'Engine filters',
-                            'Engine lubricants',
+                            'Alternator spares',
+                            'Control modules',
+                            'ATS\'s',
+                            'Geset parts and maintenance tools',
                         ]}/>
                         <P>We purchase all of our spare parts directly from the manufactures we deal with to ensure all
                             our parts are 100% genuine.</P>
 
                         <ProductList products={[
                             {
-                                image: '/images/spare (1).jpg',
-                                title: 'Product 1',
-                                description: 'Spectra provides almost all the engine parts from a complete cylinder to small gaskets for all the generators we put into the market. Main engine parts list includes: Major Engine Parts, Engine Overhaul gaskets and other engine parts and components.',
-                            },
-                            {
-                                image: '/images/spare (2).jpg',
-                                title: 'Product 1',
+                                image: '/images/spare (4).jpg',
+                                title: 'Engine Parts',
                                 description: 'Spectra provides almost all the engine parts from a complete cylinder to small gaskets for all the generators we put into the market. Main engine parts list includes: Major Engine Parts, Engine Overhaul gaskets and other engine parts and components.',
                             },
                             {
                                 image: '/images/spare (3).jpg',
-                                title: 'Product 1',
-                                description: 'Spectra provides almost all the engine parts from a complete cylinder to small gaskets for all the generators we put into the market. Main engine parts list includes: Major Engine Parts, Engine Overhaul gaskets and other engine parts and components.',
+                                title: 'Oil Filters',
+                                description: 'Standardized production of oil filters ensures long life and reliability of the engine and minimizes wear on the core components.',
                             },
                             {
-                                image: '/images/spare (4).jpg',
-                                title: 'Product 1',
-                                description: 'Spectra provides almost all the engine parts from a complete cylinder to small gaskets for all the generators we put into the market. Main engine parts list includes: Major Engine Parts, Engine Overhaul gaskets and other engine parts and components.',
+                                image: '/images/spare (1).jpg',
+                                title: 'Air Filters',
+                                description: 'Provides an engine-matched air filter, which has high filtration accuracy, effectively protects the intake air of the engine, and ensures stable operation of the generator set and prolongs its service life.',
+                            },
+                            {
+                                image: '/images/spare (2).jpg',
+                                title: 'Fuel Filters',
+                                description: 'Poor fuel filtration / water separation causes the majority of fuel injection pump failure. 99 percent of fuel injection pumps that require replacing have suffered from fuel contamination. Dirt and water in fuel could cause the following damage to your engine:',
                             },
                         ]}/>
                     </div>
                 ),
             ]}
-            name={'about'}
+            name={'support'}
             heroProps={{
                 image: '/images/hero/hero-2.jpg',
                 title: 'Support',
-                subtitle: 'We are here to help you',
+                subtitle: 'Get Help & Support',
             }}
         />
     );

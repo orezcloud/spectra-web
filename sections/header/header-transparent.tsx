@@ -117,6 +117,10 @@ function MenuItem({
 
             <style jsx>
                 {`
+                  .menu-item {
+                    color: #fff;
+                  }
+
                   .menu-item :global(*) {
                     color: #fff;
                     text-transform: uppercase;

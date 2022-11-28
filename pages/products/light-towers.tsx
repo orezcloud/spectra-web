@@ -38,7 +38,7 @@ export default function LightTowers() {
             heroProps={{
                 title: 'Light Towers',
                 subtitle: 'Reliable, Durable & Cost Effective',
-                image: '/images/hero/hero-3.jpg',
+                image: '/bg/light-tower-generator-background-2.jpg',
             }}
             isPreFooter={true}
         />

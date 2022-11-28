@@ -94,7 +94,7 @@ export const productCategories = [
     },
     {
         name: 'Portable Generators',
-        image: '/images/products/portable/diseal open generator.png',
+        image: '/images/products/portable/Diseal open Generator.png',
         description: 'Take power with you wherever you go.',
         url: productCategoryBase + '/portable-generators',
     },
@@ -123,7 +123,7 @@ export const dieselGeneratorCategories = [
     },
     {
         name: 'Continuous Power Generators',
-        image: '/images/products/diesel/continuous/Open type.jpg',
+        image: '/images/products/diesel/continuous/open type.jpg',
         description: 'Power for your business 24/7.',
         url: dieselGeneratorBase + '/continuous-power-generators',
     },
@@ -137,7 +137,7 @@ export const dieselGeneratorCategories = [
 
 export const modalMenuLinks = [
     {
-        image: '/images/menu/About-us.jpg',
+        image: '/images/menu/about-us.jpg',
         name: 'About us',
         url: urls.about,
         links: [
@@ -183,7 +183,7 @@ export const modalMenuLinks = [
     },
     {
         name: 'Support',
-        image: '/images/menu/support.jpg',
+        image: '/images/menu/Support.jpg',
         url: urls.support,
         links: [
         ],

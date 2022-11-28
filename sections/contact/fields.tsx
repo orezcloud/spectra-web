@@ -27,8 +27,9 @@ function DefaultInputStyle({children}: {children: ReactNode}) {
             <style jsx>{`
               div :global(input, textarea, select) {
                 width: 100%;
-                padding: 0.5rem;
                 margin-bottom: 1rem;
+                //padding: .5rem;
+                padding: 0.5rem 0.5rem 0.5rem 20px;
               }
             `}</style>
         </>
