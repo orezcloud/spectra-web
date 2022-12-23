@@ -11,6 +11,9 @@ export default function ContactMail() {
             Elements={[
                 () => (
                     <div>
+                        <title>
+                            Sales Enquire - Spectra Power Solutions
+                        </title>
                         <ContactFormSimple
                             tabs={[
                                 {

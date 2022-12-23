@@ -44,7 +44,7 @@ export default function HeaderTransparent({showMenu = true}: {showMenu?: boolean
         <DefaultSection name={
             'header header-transparent'
             + (sticked ? ' sticked' : '')
-        } padding={'none'}>
+        } padding={'none'} width={'header'}>
 
 
             <div className="row">
@@ -147,7 +147,7 @@ function Menu() {
                         </MenuItem>
                     ))
                 }
-                <HamMenu/>
+                {/*<HamMenu/>*/}
                 {/*<MenuItem href={'#'}>QUICK LINKS</MenuItem>*/}
                 {/*<MenuItem className={'icon'} onClick={() => globalActions.toggleMenu()}>*/}
                 {/*    <span className={'me-4'}>MENU</span>*/}

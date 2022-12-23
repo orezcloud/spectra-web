@@ -9,6 +9,9 @@ export default function About() {
             Elements={[
                 () => (
                     <div>
+                        <title>
+                            Frequently Asked Questions - Spectra Power Solutions
+                        </title>
                         <H2>Guide to Diesel Generator Air Filters, Fuel Filters, and Oil Filters</H2>
                         <H3>Why are new Parts Important to a Diesel Generator?</H3>
                         <P>Air filters, fuel filters (including water separators), and oil filters, are essential

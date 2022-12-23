@@ -1,14 +1,36 @@
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import {preloadImage, sleep} from '../../lib/utils';
 import {proxy, useSnapshot} from 'valtio';
+import AnimatedString, {AnimatedText} from '../comps/animated-string';
 
+
+const dd = [
+    {
+        title: 'Hospital Power Solutions',
+        color: 'white',
+        subtitle: 'Powering the future of healthcare',
+    },
+    {
+        title: 'Construction Power Solutions',
+        color: 'white',
+        subtitle: 'Powering the future of construction',
+    },
+    {
+        title: 'Mining Power Solutions',
+        color: 'white',
+        subtitle: 'Powering the future of mining',
+    },
+];
 
 export default function MiniSlider({size, imageUrls}: {size?: 'full', imageUrls: string[]}) {
     const {heroImage, currentIndex} = useSnapshot(state);
+    const [text, setText] = useState('');
+    const [color, setColor] = useState('white');
+    const [subText, setSubText] = useState('');
 
     useEffect(() => {
 
-        if (state.currentIndex  === 0) {
+        if (state.currentIndex === 0) {
             setTimeout(() => {
                 if (state.images && state.images.length > 0) {
                     preloadImage(imageUrls[1]);
@@ -20,7 +42,7 @@ export default function MiniSlider({size, imageUrls}: {size?: 'full', imageUrls:
             }
         }
 
-    }, [currentIndex, heroImage])
+    }, [currentIndex, heroImage]);
 
     const init = async () => {
 
@@ -43,6 +65,8 @@ export default function MiniSlider({size, imageUrls}: {size?: 'full', imageUrls:
         }];
         state.currentIndex = 0;
 
+        setText(dd[state.currentIndex].title);
+        setSubText(dd[state.currentIndex].subtitle);
 
         while (true) {
             await sleep(3200);
@@ -98,6 +122,10 @@ export default function MiniSlider({size, imageUrls}: {size?: 'full', imageUrls:
             return image;
         });
 
+        setText(dd[state.currentIndex].title);
+        setSubText(dd[state.currentIndex].subtitle);
+        setColor(dd[state.currentIndex].color);
+
         await sleep(1800);
 
         // remove first image
@@ -121,6 +149,22 @@ export default function MiniSlider({size, imageUrls}: {size?: 'full', imageUrls:
             maxWidth: '100%',
             overflow: 'hidden',
         }}>
+
+            {
+                text &&
+                <div className={'anim-text'} style={{
+                    position: 'absolute',
+                    zIndex: 100,
+                    color: color || 'white',
+                }}>
+                    <div className={'text'}>
+                        <AnimatedText text={text}/>
+                    </div>
+                    <div className="bg"/>
+                    <div className="bg2"/>
+                </div>
+            }
+
             {
                 heroImage.map((image) => {
                     return (
@@ -133,20 +177,59 @@ export default function MiniSlider({size, imageUrls}: {size?: 'full', imageUrls:
                 })
             }
 
-            {/*{*/}
-            {/*    images.map((image) => {*/}
-            {/*        return (*/}
-            {/*            <img*/}
-            {/*                key={image.id}*/}
-            {/*                src={image.url}*/}
-            {/*                className={'preload'}*/}
-            {/*            />*/}
-            {/*        );*/}
-            {/*    })*/}
-            {/*}*/}
-
             <style jsx>
                 {`
+                  .anim-text {
+                    bottom: 45px;
+                    left: 55px;
+                    font-size: 1.9rem;
+                    font-family: Spectral, Noto Sans, serif;
+                    font-weight: 400;
+                    text-transform: uppercase;
+
+                    :global(.animated-string) {
+                      text-shadow: -1px 1px 1px rgba(7, 7, 7, 0.36);
+                    }
+
+                    //.text {
+                    //  z-index: 100;
+                    //}
+                    //.bg {
+                    //  z-index: 99;
+                    //  position: absolute;
+                    //  top: -5%;
+                    //  left: -1%;
+                    //  width: 103%;
+                    //  height: 110%;
+                    //  -webkit-backdrop-filter: blur(10px);
+                    //  backdrop-filter: blur(10px);
+                    //  -webkit-text-fill-color: transparent;
+                    //  -webkit-background-clip: text;
+                    //  background-clip: text;
+                    //  -webkit-box-decoration-break: clone;
+                    //  box-decoration-break: clone;
+                    //}
+                    //.bg2 {
+                    //    z-index: 98;
+                    //    position: absolute;
+                    //    top: -5%;
+                    //    left: -1%;
+                    //    width: 103%;
+                    //    height: 110%;
+                    //    background-color:  #00000033;
+                    //}
+
+                    @media (max-width: 768px) {
+                      font-size: 1.5rem;
+                      left: 30px;
+                    }
+
+                    @media (max-width: 480px) {
+                      font-size: 1.2rem;
+                      left: 25px;
+                    }
+                  }
+
                   .preload {
                     position: absolute;
                     top: 0;
@@ -173,7 +256,9 @@ interface State {
     images: {
         url: string
         id: string
-    }[]
+        text?: string
+    }[],
+
 }
 
 const state = proxy<State>({

@@ -1,6 +1,7 @@
 import DefaultPostLayout from '../../layouts/default-post-layout';
 import ProductList from '../../widgets/list/product-list';
 import {H1} from '../../widgets/comps/text';
+import Certs from '../../widgets/comps/certs';
 
 
 export default function LightTowers() {
@@ -31,6 +32,7 @@ export default function LightTowers() {
                                 description: 'Spectra Silent Light Tower, designed to meet the super quiet application environment, uses a unique exhaust air silencing channel, so that the noise value of the unit is greatly reduced Sprectra Light Tower provides a flexible lighting solution by allowing users to easily plug into any power source including auxiliary power, portable generators or directly into the mains power supply.',
                             },
                         ]}/>
+                        <Certs/>
                     </div>
                 ),
             ]}

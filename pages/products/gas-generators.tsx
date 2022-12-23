@@ -1,6 +1,7 @@
 import DefaultPostLayout from '../../layouts/default-post-layout';
 import ProductList from '../../widgets/list/product-list';
 import {H1} from '../../widgets/comps/text';
+import Certs from '../../widgets/comps/certs';
 
 
 export default function GasGenerators() {
@@ -23,6 +24,7 @@ export default function GasGenerators() {
                                 description: 'With petroleum industry development, liquefied petroleum gas, as a basic raw material for chemical industry and new fuel, has become more and more important.',
                             },
                         ]}/>
+                        <Certs/>
                     </div>
                 ),
             ]}

@@ -12,6 +12,9 @@ import PreFooter from '../sections/footer/pre-footer';
 export default function Products() {
     return (
         <Page>
+            <title>
+                Products - Spectra Power Solutions
+            </title>
             <Header/>
             <Body>
                 <Hero

@@ -5,3 +5,7 @@ Environment Variables
 
 Staging URL
 https://spectra-web-mu.vercel.app/
+
+
+title tags
+social media

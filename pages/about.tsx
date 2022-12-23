@@ -1,5 +1,5 @@
 import DefaultPostLayout from '../layouts/default-post-layout';
-import {H1, H2, H3, P} from '../widgets/comps/text';
+import {H2, H3, P} from '../widgets/comps/text';
 import UlList from '../widgets/list/ul-list';
 import PostImage from '../widgets/post-image';
 
@@ -10,6 +10,9 @@ export default function About() {
             Elements={[
                 () => (
                     <div>
+                        <title>
+                            About Us - Spectra Power Solutions
+                        </title>
                         <H2>About Spectra Generators</H2>
                         <P>A Corporation of Vision, Quality, Innovation, Stability and Financial Strength.</P>
                         <P>Our reputation is built on the principle of being a world leader in the engine driven energy

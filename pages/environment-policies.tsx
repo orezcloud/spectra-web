@@ -7,6 +7,9 @@ export default function About() {
             Elements={[
                 () => (
                     <div>
+                        <title>
+                            Environment Policies - Spectra Power Solutions
+                        </title>
                         <h2>ENVIRONMENT IS THE TOP PRIORITY</h2>
                         <ul>
                          <li>
@@ -26,7 +29,7 @@ export default function About() {
                          </li>
                         </ul>
 
-                        
+
                     </div>
                 ),
             ]}

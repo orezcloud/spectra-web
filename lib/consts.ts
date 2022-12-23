@@ -6,7 +6,9 @@ export const urls = {
     products: '/products',
     solutions: '/solutions',
     support: '/support',
-    contact: '/contact-mail',
+    // contact: '/contact-mail',
+    contact: '/contact',
+    contactMail: '/contact-mail',
     salesEnquire: '/sales-enquire',
     faq: '/faq',
     warrantyPolicy: '/warranty-policy',
@@ -14,6 +16,8 @@ export const urls = {
     afterSales: '/after-sales',
     policiesProcedures: '/policies-procedures',
     environmentPolicies: '/environment-policies',
+    privacyPolicy: '/privacy-policy',
+    termsConditions: '/terms-conditions',
     hash: '#',
 };
 
@@ -111,7 +115,7 @@ const dieselGeneratorBase = '/products/diesel-generators';
 export const dieselGeneratorCategories = [
     {
         name: 'Prime Power Generators',
-        image: '/images/products/prime/open type.jpg',
+        image: '/images/products/prime/open-type.jpg',
         description: 'Reliable power for your business.',
         url: dieselGeneratorBase + '/prime-power-generators',
     },
@@ -137,7 +141,7 @@ export const dieselGeneratorCategories = [
 
 export const modalMenuLinks = [
     {
-        image: '/images/menu/about-us.jpg',
+        image: '/images/menu/About-us.jpg',
         name: 'About us',
         url: urls.about,
         links: [
@@ -192,16 +196,8 @@ export const modalMenuLinks = [
 
 export const footerLinks = [
     {
-        title: 'PowerMart',
+        title: 'Spectra',
         links: [
-            {
-                name: 'Discover PowerMart',
-                path: urls.hash,
-            },
-            {
-                name: 'PowerMart for Business',
-                path: urls.hash,
-            },
             {
                 name: 'Careers',
                 path: urls.hash,
@@ -210,10 +206,10 @@ export const footerLinks = [
                 name: 'Policies & Procedures',
                 path: urls.policiesProcedures,
             },
-            {
-                name: 'Environment policies',
-                path: urls.environmentPolicies,
-            },
+            // {
+            //     name: 'Environment policies',
+            //     path: urls.environmentPolicies,
+            // },
         ],
     },
     {
@@ -244,21 +240,17 @@ export const footerLinks = [
                 name: 'Selected Projects',
                 path: urls.selectedProjects,
             },
-            {
-                name: 'Downloads',
-                path: urls.hash,
-            },
         ],
     },
     {
-        title: 'Case Studies',
+        title: 'News & Events',
         links: [
             {
-                name: 'Diesel to Power',
+                name: 'Promotions',
                 path: urls.hash,
             },
             {
-                name: 'Gas to Power',
+                name: 'Eco Friend',
                 path: urls.hash,
             },
         ],

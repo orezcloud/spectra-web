@@ -4,7 +4,7 @@ import {isImage} from '../lib/utils';
 
 interface SectionContainerProps {
     children: ReactNode;
-    width?: 'full' | 'medium';
+    width?: 'full' | 'medium' | 'header';
     style?: CSSProperties;
 }
 
@@ -13,7 +13,8 @@ function SectionContainer(props: SectionContainerProps) {
     return (
         <div className={
             'section-container ' +
-            (props.width === 'full' ? '' : 'pad-container')
+            (props.width === 'full' ? '' :
+             props.width === 'header' ? 'header-pad-container' :  'pad-container')
         }
         >
             {props.children}
@@ -73,7 +74,7 @@ interface SectionProps {
     children: ReactNode,
     name: string,
     className?: string,
-    width?: 'full' | 'medium',
+    width?: 'full' | 'medium' | 'header',
     padding?: 'none' | 'default' | 'large' | 'top-zero',
     sectionBackground?: string,
     TopElement?: ReactNode

@@ -1,9 +1,13 @@
 import {ReactNode} from 'react';
 
 
-export function P({children}: {children: ReactNode}) {
+export function P({children, className, style}: {children: ReactNode, className?: string, style?: any}) {
     return (
-        <p className={'js-anim u-fade u-short'}>
+        <p className={'js-anim u-fade u-short'
+            + (className ? ' ' + className : '')}
+
+           style={style}
+        >
             {children}
         </p>
     );
@@ -17,9 +21,11 @@ export function H1({children}: {children: string}) {
     );
 }
 
-export function H2({children}: {children: string}) {
+export function H2({children, style}: {children: ReactNode,  style?: any}) {
     return (
-        <h2 className={'js-anim u-fade u-short'}>
+        <h2 className={'js-anim u-fade u-short'}
+            style={style}
+        >
             {children}
         </h2>
     );

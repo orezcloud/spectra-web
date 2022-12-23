@@ -10,6 +10,9 @@ export default function Support() {
             Elements={[
                 () => (
                     <div>
+                        <title>
+                            Support - Spectra Power Solutions
+                        </title>
                         <H2>Get support for our products and services</H2>
                         <P>Spectra has large stock of spare parts, which are packaged and stored in our modernized
                             warehouse constantly being monitored by our advanced management system.</P>

@@ -1,5 +1,6 @@
 import DefaultPostLayout from '../../../layouts/default-post-layout';
 import ProductList from '../../../widgets/list/product-list';
+import Certs from '../../../widgets/comps/certs';
 
 
 export default function ContinuousPowerGenerators() {
@@ -44,6 +45,7 @@ export default function ContinuousPowerGenerators() {
                                 description: 'The Spectra Mobile continuous Generator engine and is engineered for ease of operation and maintenance. The rental ready machine features wide-opening removable doors for maximum serviceability. The rugged steel design and construction allow for operation for a variety of applications, regardless of weather conditions. Engine is designed to prevent wet stacking by monitoring and regulating engine exhaust temperatures and providing supplemental heat, as needed.',
                             },
                         ]}/>
+                        <Certs/>
                     </div>
                 ),
             ]}

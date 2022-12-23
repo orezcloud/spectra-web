@@ -8,6 +8,7 @@ import {base} from '../../styles/consts';
 import {footerLinks} from '../../lib/consts';
 import {FooterBottomDesktop, FooterBottomMobile} from './footer-bottom';
 import AnimLink from '../../lib/anim-link';
+import AnimatedString from '../../widgets/comps/animated-string';
 
 
 export default function Footer() {
@@ -37,7 +38,19 @@ export default function Footer() {
                     }
                 </div>
             </div>
+            <div style={{
+                marginTop: base(2.4),
+            }}/>
+
             <Note/>
+
+            {/*<div className={'position-relative'}>*/}
+            {/*    <AnimatedString text={'Hello World'} opacity={.4} delay={0}/>*/}
+            {/*    <div className={'position-absolute'} style={{top: 0}}>*/}
+            {/*        <AnimatedString text={'Hello World'} opacity={1} delay={200}/>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
+
             <Links/>
             {
                 !isMobileOrTablet ? <FooterBottomDesktop/> :
@@ -81,8 +94,9 @@ function Note() {
     return (
         <div className={'note'}>
             <p className={'text-center'}>
-                Spectra acknowledges and pays respect to the past, present and future Traditional Sri Lanka this nation
-                and the continuation of cultural, spritual and educational practices of indian ocean Islander peoples
+                Spectra have more than 20 years history, we are not only dedicated to provide standard power generators
+                sets and customized generator sets, but also integrated system solutions and project service in
+                compliance with clients' demands
             </p>
 
             <style jsx>

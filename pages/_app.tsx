@@ -39,6 +39,17 @@ export default function App({Component, pageProps}: AppProps) {
             if (bottom_of_window > bottom_of_object) {
                 $(this).addClass('is-active');
             }
+            // Check if the "show_quick" class exists and show the element at 10% of its outer height if it does
+            if ($(this).hasClass('anim-quick')) {
+                // @ts-ignore
+                let top_of_object = $(this).offset().top + ($(this).outerHeight() * 0.1);
+                let top_of_window = $(window).scrollTop();
+                // @ts-ignore
+                if (top_of_window < top_of_object) {
+                    $(this).addClass('is-active');
+                }
+            }
+
         });
     };
 

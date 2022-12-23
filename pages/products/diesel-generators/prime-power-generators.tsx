@@ -3,6 +3,7 @@ import PostImage from '../../../widgets/post-image';
 import UlList from '../../../widgets/list/ul-list';
 import ProductList from '../../../widgets/list/product-list';
 import {H2, H3, P} from '../../../widgets/comps/text';
+import Certs from '../../../widgets/comps/certs';
 
 
 export default function PrimePowerGenerators() {
@@ -67,6 +68,7 @@ export default function PrimePowerGenerators() {
                                 description: 'Spectra diesel generator set, designed to meet the super quiet application environment, uses a unique exhaust air silencing channel, so that the noise value of the unit is greatly reduced. It can be used as the main power supply, and can be used as standby power supply to provide emergency power protection when power failure or temporary power failure occurs. The investment cost is low and the payback time is short. It is mainly used in leasing, power plants, mines, construction, industry, emergency power supply and other industries.',
                             },
                         ]}/>
+                        <Certs/>
                     </div>
                 ),
             ]}

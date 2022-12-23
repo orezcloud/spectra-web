@@ -38,7 +38,7 @@ export function HeaderSection() {
             + (sticked ? ' sticked' : '')
             + (!bgMenuActive ? ' off' : '')
             + (headerAnimFast ? ' fast' : '')
-        } padding={'none'}>
+        } padding={'none'} width={'header'}>
             <div className="row">
                 <div className="col-auto">
                     <Logo/>
@@ -72,7 +72,7 @@ function Menu() {
                         );
                     })
                 }
-                <Hamburger/>
+                {/*<Hamburger/>*/}
             </ul>
 
             <style jsx>

@@ -3,9 +3,9 @@ import AnimLink from '../../lib/anim-link';
 import {preFooterLinks} from '../../lib/consts';
 import {COLORS} from '../../styles/consts';
 import {
-    getLaptopMediaQuery,
     getLaptopOrDesktopMediaQuery,
-    getLaptopOrTabletOrMobileMediaQuery, getMobileOrTabletOnlyMediaQuery,
+    getLaptopOrTabletOrMobileMediaQuery,
+    getMobileOrTabletOnlyMediaQuery,
     getTabletOnlyMediaQuery,
 } from '../../styles/breakpoints';
 
@@ -26,7 +26,7 @@ export default function PreFooter() {
               .row {
                 > div {
                   @media (${getLaptopOrDesktopMediaQuery()}) {
-                    width: 20% !important;
+                    width: 25% !important;
                   }
 
                   @media (${getTabletOnlyMediaQuery()}) {
@@ -60,12 +60,12 @@ interface ColumnProps {
 function Column({title, links}: ColumnProps) {
     return (
         <div className={'column'}>
-            <h4 className={'mb-4 d-inline-block'}>{title}</h4>
+            <h4 className={'mb-4 d-inline-block single-line-text'}>{title}</h4>
             <ul className={'w-auto'}>
                 {links.map((link, index) => (
                     <li key={index} className={''}>
                         <AnimLink href={link.href}>
-                            <a href={link.href} className={'fw-normal opacity-75'}>{link.name}</a>
+                            <a href={link.href} className={'fw-normal opacity-75 single-line-text'}>{link.name}</a>
                         </AnimLink>
                     </li>
                 ))}

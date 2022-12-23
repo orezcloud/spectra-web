@@ -8,6 +8,9 @@ export default function About() {
             Elements={[
                 () => (
                     <div>
+                        <title>
+                            Spectra Warranty Policy - Spectra Power Solutions
+                        </title>
                         <H2>SPECTRA WARRANTY POLICY</H2>
                         <H3>Warranty Period</H3>
                         <P>During the warranty period, users will enjoy our Spectra generators warranty through our
@@ -37,9 +40,6 @@ export default function About() {
                             All the repaired or replaced accessories and spare parts or generating sets can only
                             enjoy the remaining time of warranty period of the original accessories, spare parts or
                             generating sets.</P>
-
-
-
 
 
                     </div>
@@ -164,7 +164,7 @@ export default function About() {
                             All Rights Reserved.<br/><br/>
                         </P>
                     </div>
-                )
+                ),
             ]}
             name={'about'}
             heroProps={{

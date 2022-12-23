@@ -1,3 +1,7 @@
+import {urls} from '../../lib/consts';
+import AnimLink from '../../lib/anim-link';
+
+
 export function FooterBottomDesktop() {
     return (
         <div className={'footer-bottom'}>
@@ -5,10 +9,10 @@ export function FooterBottomDesktop() {
                 <div className={'mid-links d-inline-flex justify-content-center text-center position-absolute mx-auto'}
                      style={{zIndex: 3}}>
                     <div className={'col-auto mx-5'}>
-                        <a href={'#'}>Privacy Policy</a>
+                        <AnimLink href={urls.privacyPolicy}>Privacy Policy</AnimLink>
                     </div>
                     <div className={'col-auto mx-5'}>
-                        <a href={'#'}>Terms & Conditions</a>
+                        <AnimLink href={urls.termsConditions}>Terms & Conditions</AnimLink>
                     </div>
                 </div>
 

@@ -8,6 +8,9 @@ export default function About() {
             Elements={[
                 () => (
                     <div>
+                        <title>
+                            After Sales - Spectra Power Solutions
+                        </title>
                         <H2>SPECTRA AFTER SALES</H2>
                         <P>We are always by your side and provide our customer with the best experience in sales,
                             services and

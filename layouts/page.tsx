@@ -4,6 +4,7 @@ import ModalLayout from './modal-layout';
 import {COLORS} from '../styles/consts';
 import {useIsMenuOpen, useIsNoSlide, useIsTransIn, useIsTransOut, useIsTransZero} from '../state/global';
 import Modal from '../sections/menu/modal';
+import CookieMessage from '../widgets/cookie-message';
 
 
 export default function Page({children, backgroundColor, noslide}: {children: ReactNode, backgroundColor?: string, noslide?: boolean}) {
@@ -27,9 +28,13 @@ export default function Page({children, backgroundColor, noslide}: {children: Re
                  style={{backgroundColor: backgroundColor || COLORS.bodyBackground}}>
                 {children}
             </div>
+            <title>
+                Spectra Power Solutions - Power Your World with Our Generators!
+            </title>
             <ModalLayout>
                 <Modal/>
             </ModalLayout>
+            <CookieMessage/>
             {/*{*/}
             {/*    IS_STAGING &&*/}
             {/*    <div className={'notice'}>*/}

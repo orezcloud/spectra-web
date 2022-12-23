@@ -1,6 +1,7 @@
 import DefaultPostLayout from '../../layouts/default-post-layout';
 import ProductList from '../../widgets/list/product-list';
 import {H2} from '../../widgets/comps/text';
+import Certs from '../../widgets/comps/certs';
 
 
 export default function MarineGenerators() {
@@ -28,6 +29,7 @@ export default function MarineGenerators() {
                                 description: 'Spectra silent diesel generators are characterized by excellent noise reduction design, offer you a better green production and quiet life.',
                             },
                         ]}/>
+                        <Certs/>
                     </div>
                 ),
             ]}

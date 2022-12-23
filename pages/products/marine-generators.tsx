@@ -2,6 +2,7 @@
 import DefaultPostLayout from '../../layouts/default-post-layout';
 import ProductList from '../../widgets/list/product-list';
 import {H1} from '../../widgets/comps/text';
+import Certs from '../../widgets/comps/certs';
 
 
 export default function MarineGenerators() {
@@ -24,6 +25,7 @@ export default function MarineGenerators() {
                                 description: 'Spectra Marine canopy type generator, also called dynamo, any machine that converts mechanical energy to electricity for transmission and distribution over power lines to domestic, commercial, and industrial customers. Generators also produce the electrical power required for automobiles, aircraft, ships, and trains.',
                             },
                         ]}/>
+                        <Certs/>
                     </div>
                 ),
             ]}

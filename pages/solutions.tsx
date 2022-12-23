@@ -6,9 +6,19 @@ export default function Solutions() {
 
     return (
         <DefaultPostLayout
+            name={'solutions'}
+            heroProps={{
+                title: 'Solutions',
+                subtitle: 'Power solutions for all industries',
+                image: '/images/hero/hero-3.jpg',
+            }}
+            isPreFooter={true}
             Elements={[
                 () => (
                     <div>
+                        <title>
+                            Solutions - Spectra Power Solutions
+                        </title>
                         <h2>All power solutions under one roof</h2>
                         <ServiceList services={[
                             {
@@ -66,13 +76,6 @@ export default function Solutions() {
                     </div>
                 ),
             ]}
-            name={'solutions'}
-            heroProps={{
-                title: 'Solutions',
-                subtitle: 'Power solutions for all industries',
-                image: '/images/hero/hero-3.jpg',
-            }}
-            isPreFooter={true}
         />
     );
 }

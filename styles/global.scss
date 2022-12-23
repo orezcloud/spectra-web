@@ -53,6 +53,11 @@ img {
   user-select: none;
 }
 
+.single-line-text {
+  white-space: nowrap;
+overflow: hidden;
+}
+
 /* Contaier Medium */
 @media (min-width: 768px) {
   .container-medium {
@@ -97,6 +102,24 @@ img {
 
   @media (min-width: 1440px) {
     padding: 0 160px;
+  }
+}
+
+// header pad container
+.header-pad-container {
+
+  //padding: 0 17px;
+
+  @media (min-width: 1024px) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 0 55px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 55px;
   }
 }
 
@@ -237,3 +260,5 @@ li.menu-item::marker {
 .noslide .pre-footer {
   z-index: 31;
 }
+
+

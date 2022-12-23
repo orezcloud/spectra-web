@@ -8,6 +8,9 @@ export default function PoliciesProcedures() {
             Elements={[
                 () => (
                     <div>
+                        <title>
+                            Policies & Procedures - Spectra Power Solutions
+                        </title>
                         <H2>Our Commitment</H2>
                         <P>Spectra are committed to working proactively to reduce modern slavery within our supply chain
                             and operations. Our Ethical Sourcing & Social Responsibility Policy outlines how we
