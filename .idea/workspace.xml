@@ -1,114 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="663e48ec-cbbf-46d5-ba4f-7ce8d626dd0d" name="Changes" comment="Initial">
-      <change afterPath="$PROJECT_DIR$/pages/contact.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/privacy-policy.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/terms-conditions.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/certs.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/products/special/solar generator.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/widgets/comps/animated-string.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/widgets/comps/certs.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/widgets/cookie-message.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/section-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/section-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/section-layouts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/section-layouts.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/envelope.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/phone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/icons/tele.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/about2/about (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/about2/about (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/about2/about (3).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/about2/about (4).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/hero2/Picture-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/hero2/Picture-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/hero2/Picture-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/hero2/Picture-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/hero2/Picture-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/consts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/consts.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/about.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/after-sales.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/after-sales.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/become-a-partner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/become-a-partner.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/careers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/careers.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/contact-mail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/contact-mail.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/environment-policies.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/environment-policies.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/faq.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/faq.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/policies-procedures.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/policies-procedures.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/products.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/products/diesel-generators/continuous-power-generators.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products/diesel-generators/continuous-power-generators.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/products/diesel-generators/prime-power-generators.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products/diesel-generators/prime-power-generators.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/products/diesel-generators/special-generators.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products/diesel-generators/special-generators.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/products/diesel-generators/standby-power-generators.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products/diesel-generators/standby-power-generators.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/products/distribution-solutions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products/distribution-solutions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/products/gas-generators.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products/gas-generators.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/products/hybrid-generators.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products/hybrid-generators.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/products/light-towers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products/light-towers.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/products/marine-generators.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products/marine-generators.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/products/portable-generators.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products/portable-generators.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sales-enquire.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sales-enquire.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/selected-projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/selected-projects.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/solutions.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/solutions.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/spare-parts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/spare-parts.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/support.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/support.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/warranty-policy.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/warranty-policy.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bg/distribution solutions background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/bg/distribution solutions background.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bg/gas-generator-background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/bg/gas-generator-background.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bg/heading-prime-power.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/bg/heading-prime-power.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bg/hybrid-generator-background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/bg/hybrid-generator-background.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bg/light-tower-generator-background-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/bg/light-tower-generator-background-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bg/marine-generator-background-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/bg/marine-generator-background-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/bg/portable-generator-background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/bg/portable-generator-background.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/hero/hero-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/hero/hero-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/hero/hero-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/hero/hero-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/hero/hero-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/hero/hero-3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/hero/hero-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/hero/hero-4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/hero/hero-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/hero/hero-5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/hero/hero-6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/hero/hero-6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/menu/About-us.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/menu/About-us.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/menu/Contact-us.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/menu/Contact-us.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/menu/Get-it-more.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/menu/Get-it-more.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/menu/Products.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/menu/Products.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/menu/Service.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/menu/Service.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/menu/Solution.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/menu/Solution.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/menu/Support.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/menu/Support.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/page/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/page/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/diseal-power-light.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/diseal-power-light.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/gasoline-power-light.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/gasoline-power-light.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/hybrid-generator.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/hybrid-generator.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/mobile-generator.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/mobile-generator.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/oil-gas-generators.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/oil-gas-generators.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/open-type-marine-generator.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/open-type-marine-generator.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/open-type.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/open-type.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/petrolium-generator.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/petrolium-generator.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/prime/Mobile Generator.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/prime/Mobile Generator.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/prime/Slient Type 2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/prime/Slient Type 2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/prime/Super Slient Type.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/prime/Super Slient Type.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/prime/open-type.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/prime/open-type.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/prime/rentl Generators.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/prime/rentl Generators.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/rentl-generators.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/rentl-generators.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/silent-type.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/silent-type.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/sound-proof-marine-generator.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/sound-proof-marine-generator.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/special/Agriculture.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/special/Agriculture.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/special/Milltary.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/special/Milltary.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/special/Oil and gas.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/special/Oil and gas.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/special/Railway generators.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/special/Railway generators.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/special/Solar  Generator.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/special/Telecom Generators.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/special/Telecom Generators.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/super-silent-power-light.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/super-silent-power-light.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/products/super-silent-type.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/products/super-silent-type.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/solutions/solution (1).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/solutions/solution (1).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/solutions/solution (10).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/solutions/solution (10).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/solutions/solution (11).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/solutions/solution (11).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/solutions/solution (2).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/solutions/solution (2).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/solutions/solution (3).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/solutions/solution (3).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/solutions/solution (4).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/solutions/solution (4).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/solutions/solution (5).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/solutions/solution (5).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/solutions/solution (6).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/solutions/solution (6).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/solutions/solution (7).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/solutions/solution (7).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/solutions/solution (8).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/solutions/solution (8).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/solutions/solution (9).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/solutions/solution (9).jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/contact/contact-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sections/contact/contact-form.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sections/footer/footer-bottom.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sections/footer/footer-bottom.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sections/footer/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sections/footer/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/footer/pre-footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sections/footer/pre-footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sections/header/header-transparent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sections/header/header-transparent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/header/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sections/header/header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/header/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sections/header/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/products/category-section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sections/products/category-section.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/animation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/animation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/home/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sections/home/hero.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/global.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/widgets/comps/text.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/widgets/comps/text.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/widgets/mini-slider/mini-slider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/widgets/mini-slider/mini-slider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widgets/post-image.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/widgets/post-image.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,16 +114,14 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/bg" />
-    <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
-    <property name="ts.external.directory.path" value="C:\Users\iolat\Documents\Dev\spectra-web\node_modules\typescript\lib" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "C:\\Users\\iolat\\Documents\\Dev\\spectra-web\\node_modules\\typescript\\lib"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\iolat\Documents\Dev\spectra-web\public\bg" />

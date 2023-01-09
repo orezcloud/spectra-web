@@ -28,9 +28,42 @@ export default function About() {
                             regulations are made in this manual or in relevant commercial contracts.</P>
 
 
-                        {/*<H5>Diesel Generator Sets and Lighting Towers:</H5>*/}
+                        <H5>Diesel Generator Sets and Lighting Towers:</H5>
                         {/*todo: the table*/}
+                        <table className={'js-anim u-fade'}>
+                            <tr>
+                                <th>Category</th>
+                                <th>Months</th>
+                                <th>Max (hrs)</th>
+                            </tr>
+                            <tr>
+                                <td>Common Sets</td>
+                                <td>/</td>
+                                <td>1000</td>
+                            </tr>
+                        </table>
 
+                        <style jsx>{`
+                          table {
+                            margin-top: 20px;
+                            margin-bottom: 20px;
+                          }
+
+                          tr th {
+                            text-align: left;
+                            padding: 10px;
+                            border: 1px solid #ddd;
+                            background-color: #f2f2f2;
+                          }
+
+                          tr td {
+                            text-align: left;
+                            padding: 10px; 
+                            border: 1px solid #ddd;
+                          }
+
+
+                        `}</style>
 
                         <H4>Repaired Parts Warranty Period</H4>
                         <P>If the repaired or replaced accessories and spare parts are genuine and are from Spectra,

@@ -1,7 +1,7 @@
 import AnimImageWrap from './anim-image-wrap';
 
 
-export default function PostImage({src, alt, footnote}: {src: string, alt?: string, footnote?: string}) {
+export default function PostImage({src, alt, footnote, noMargin}: {src: string, alt?: string, footnote?: string, noMargin?: boolean}) {
     return (
         <div className={'image'}>
             {/*<img src={src} alt={alt || ''}/>*/}
@@ -18,7 +18,7 @@ export default function PostImage({src, alt, footnote}: {src: string, alt?: stri
                     left: -5%;
                     overflow: hidden;
                     margin-bottom: 60px;
-                    margin-top: 50px;
+                    margin-top: ${noMargin ? '0' : '50px'};
                   }
                   @media (max-width: 767px) {
                     .image {

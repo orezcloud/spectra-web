@@ -13,11 +13,18 @@ export default function About() {
                         <title>
                             About Us - Spectra Power Solutions
                         </title>
-                        <H2>About Spectra Generators</H2>
-                        <P>A Corporation of Vision, Quality, Innovation, Stability and Financial Strength.</P>
-                        <P>Our reputation is built on the principle of being a world leader in the engine driven energy
-                            equipment industry for more than 20 years, applying these technologies and experience to
-                            energy equipment equipped with petrol, diesel and other any Generators.</P>
+                        <div className={'row'}>
+                            <div className={'col-12 col-md-7'}>
+                                <H2>About Spectra Generators</H2>
+                                <P>A Corporation of Vision, Quality, Innovation, Stability and Financial Strength.</P>
+                                <P>Our reputation is built on the principle of being a world leader in the engine driven energy
+                                    equipment industry for more than 20 years, applying these technologies and experience to
+                                    energy equipment equipped with petrol, diesel and other any Generators.</P>
+                            </div>
+                            <div className={'col-12 col-md-4 ms-md-4'}>
+                                <PostImage src={'/images/about2/about (1).jpg'} noMargin={true}/>
+                            </div>
+                        </div>
 
                         <H3>Our Capabilities</H3>
                         <P>Spectra has been working hard in the mobile energy industry for 20 years. Spectra focuses on
@@ -28,7 +35,7 @@ export default function About() {
                             to work with customers to design a Spectra Generator which is suited to their needs.</P>
                         <P>We are 100% committed to helping our agents grow their business and bring them higher
                             profits.</P>
-                        <PostImage src={'/images/about/Our capability.jpg'}/>
+                        <PostImage src={'/images/about2/about (4).png'}/>
 
                         <H3>Manufacture Possiblility</H3>
                         <UlList list={[
@@ -47,7 +54,7 @@ export default function About() {
                             'Parallel connection test system',
                             'Spectra  has been looking for ways to improve its products and processes and invests in the latest and best technology available.',
                         ]}/>
-                        <PostImage src={'/images/about/Production.jpg'}/>
+                        <PostImage src={'/images/about2/about (2).jpg'}/>
 
                         <H3>Maintenance Management</H3>
                         <UlList list={[
@@ -57,7 +64,8 @@ export default function About() {
                             'If you happen to have trouble with one of our devices, you can find another aspect of our reliability through our Warranty department, as well as our love of quality and customer satisfaction.',
                             'The system of special parts management department records the information of each part we sold. According to the replacement cycle table of each part, they can quickly send the parts to you. This is a huge information management system we have built, in order to ensure our efficient work and customer satisfaction.',
                         ]}/>
-                        <PostImage src={'/images/about/Maintenance.jpg'}/>
+                        <PostImage src={'/images/about2/about (3).jpg'}/>
+
                     </div>
                 ),
             ]}

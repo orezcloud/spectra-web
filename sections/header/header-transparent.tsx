@@ -4,7 +4,7 @@ import {ReactNode} from 'react';
 import Link from 'next/link';
 import {globalActions, useGlobalState} from '../../state/global';
 import zIndex from '../../styles/zIndex';
-import {transparentHeaderMenu} from '../../lib/consts';
+import {defaultHeaderMenu} from '../../lib/consts';
 import AnimLink from '../../lib/anim-link';
 
 
@@ -91,7 +91,7 @@ function Logo() {
     return (
         <div className="logo">
             <Link href="/">
-                <img src="/logo-white.png" alt="logo"/>
+                <img src="/logo.png" alt="logo"/>
             </Link>
         </div>
     );
@@ -141,7 +141,7 @@ function Menu() {
         <div className="menu nobullet">
             <ul>
                 {
-                    transparentHeaderMenu.map((item, index) => (
+                    defaultHeaderMenu.map((item, index) => (
                         <MenuItem href={item.url} key={index}>
                             {item.name}
                         </MenuItem>

@@ -8,7 +8,6 @@ import {base} from '../../styles/consts';
 import {footerLinks} from '../../lib/consts';
 import {FooterBottomDesktop, FooterBottomMobile} from './footer-bottom';
 import AnimLink from '../../lib/anim-link';
-import AnimatedString from '../../widgets/comps/animated-string';
 
 
 export default function Footer() {
@@ -117,20 +116,32 @@ function Links() {
         <div className={'links'}>
 
             <div className={'row justify-content-center text-center justify-content-md-between'}>
-                <div className={'col-12 col-md-auto mb-6 mb-md-0'}>
-                    <a href="tel:+9411123456789">
-                        <span>+94 11 123 456 789</span>
-                    </a>
+                <div className={'col-12 col-md-4 mb-6 mb-md-0'}>
+                    <a href="tel:+94112745745">
+                        <span className={'me-2'}>
+                            <img src="/icons/phone.png" alt="phone"
+                                 width={20} height={20}/>
+                        </span><span>+94 11 2 745 745</span>
+                    </a> / <a href="tel:+94777420728">
+                    <span>+94 777 420 728</span>
+                </a>
                 </div>
-                <div className={'col-12 col-md-auto mb-6 mb-md-0'}>
-                    <a href="mailto:powermart@sisara.lk">
-                        <span>powermart@sisara.lk</span>
-                    </a>
+                <div className={'col-12 col-md-4 mb-6 mb-md-0'}>
+                    <span className={'me-2'}>
+                            <img src="/icons/envelope.png" alt="phone"
+                                 width={20} height={20}/>
+                        </span><a href="mailto:powermart@sisara.lk">
+                    <span>powermart@sisara.lk</span>
+                </a>
                 </div>
 
-                <div className={'col-12 col-md-auto mb-6 mb-md-0'}>
-                    <a href="tel:+9411123456789">
-                        <span>+94 11 123 456 789</span>
+                <div className={'col-12 col-md-4 mb-6 mb-md-0'}>
+                    <span className={'me-2'}>
+                            <img className={'mb-1'} src="/icons/tele.png" alt="phone"
+                                 width={20} height={20}/>
+                        </span>
+                    <a href="tel:+94112745746">
+                        <span>+94 11 2 745 746</span>
                     </a>
                 </div>
             </div>
@@ -138,7 +149,7 @@ function Links() {
             <style jsx>
                 {`
                   .links {
-                    max-width: 80%;
+                    max-width: 90%;
                     margin: 0 auto;
                     padding-top: 20px;
                     font-size: ${base(1.3)}px;

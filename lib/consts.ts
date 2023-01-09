@@ -18,6 +18,7 @@ export const urls = {
     environmentPolicies: '/environment-policies',
     privacyPolicy: '/privacy-policy',
     termsConditions: '/terms-conditions',
+    becomeAPartner: '/become-a-partner',
     hash: '#',
 };
 
@@ -206,10 +207,10 @@ export const footerLinks = [
                 name: 'Policies & Procedures',
                 path: urls.policiesProcedures,
             },
-            // {
-            //     name: 'Environment policies',
-            //     path: urls.environmentPolicies,
-            // },
+            {
+                name: 'Environment policies',
+                path: urls.environmentPolicies,
+            },
         ],
     },
     {
@@ -233,7 +234,7 @@ export const footerLinks = [
                 path: urls.faq,
             },
             {
-                name: 'Warranties',
+                name: 'Warranty Policy',
                 path: urls.warrantyPolicy,
             },
             {
@@ -260,7 +261,7 @@ export const footerLinks = [
         links: [
             {
                 name: 'Become a Partner',
-                path: urls.hash,
+                path: urls.becomeAPartner,
             },
             {
                 name: 'Sales Enquiries',

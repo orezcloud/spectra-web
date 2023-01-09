@@ -73,7 +73,7 @@ function HeaderTabs(props: HeaderTabsProps) {
     );
 }
 
-function TabContent(props: {children: ReactNode}) {
+function TabContent(props: {children: ReactNode, top?: boolean}) {
     return (
         <div className="tab-content-container">
             <div className={'opacity-0'} style={{height: 0}}>.</div>
@@ -89,6 +89,7 @@ function TabContent(props: {children: ReactNode}) {
                 border-bottom: 1px solid #000;
                 border-left: 1px solid #000;
                 border-right: 1px solid #000;
+                border-top:  ${props.top ? '1px solid #000' : 'none'};
               }
 
               .tab-content {
@@ -167,7 +168,7 @@ export default function ContactForm(props: ITabbedFormProps) {
 }
 
 interface IContactFormSimpleProps {
-    tabs: {
+    tabs?: {
         title: string;
         isSelect?: boolean;
         href: string;
@@ -179,22 +180,26 @@ export function ContactFormSimple(props: IContactFormSimpleProps) {
 
     return (
         <Container className="contact-form">
-            <HeaderTabs
-                tabs={props.tabs.map(tab => (
-                    {
-                        title: tab.title,
-                        href: tab.href,
+            {
+                props.tabs &&
+                <HeaderTabs
+                    tabs={props.tabs.map(tab => (
+                        {
+                            title: tab.title,
+                            href: tab.href,
+                        }
+                    ))}
+                    activeTab={props.tabs.findIndex(tab => tab.isSelect)}
+                    setActiveTab={
+                        (_) => {
+                        }
                     }
-                ))}
-                activeTab={props.tabs.findIndex(tab => tab.isSelect)}
-                setActiveTab={
-                    (_) => {
-                    }
-                }
-            />
-            <TabContent>
+                />
+            }
+            <TabContent top={
+                !props.tabs
+            }>
                 {
-                    props.tabs.length > 0 &&
                     <Form
                         fieldGroups={props.content.fieldGroups}
                         onSubmit={props.content.onSubmit}

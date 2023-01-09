@@ -55,7 +55,7 @@ img {
 
 .single-line-text {
   white-space: nowrap;
-overflow: hidden;
+  overflow: hidden;
 }
 
 /* Contaier Medium */
@@ -262,3 +262,23 @@ li.menu-item::marker {
 }
 
 
+/* override */
+.header-transparent div > div .row {
+  height: 60px;
+  .menu-item img {
+    transform: scale(.8) !important;
+  }
+  @media (min-width: 1024px) {
+    .logo img {
+        transform: scale(1.2) !important;
+    }
+  }
+}
+
+.header.header-static {
+  padding-top: 45px ;
+  padding-bottom: 45px ;
+  div > div .row {
+    height: 50px;
+  }
+}

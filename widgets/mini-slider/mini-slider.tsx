@@ -1,22 +1,32 @@
 import {useEffect, useState} from 'react';
 import {preloadImage, sleep} from '../../lib/utils';
 import {proxy, useSnapshot} from 'valtio';
-import AnimatedString, {AnimatedText} from '../comps/animated-string';
+import {AnimatedText} from '../comps/animated-string';
 
 
 const dd = [
     {
-        title: 'Hospital Power Solutions',
+        title: 'Excellence Power Solutions',
         color: 'white',
         subtitle: 'Powering the future of healthcare',
     },
     {
-        title: 'Construction Power Solutions',
+        title: 'No Powercut at Home',
         color: 'white',
         subtitle: 'Powering the future of construction',
     },
     {
-        title: 'Mining Power Solutions',
+        title: 'Capacity Does Not Interfere with Your Enjoyment',
+        color: 'white',
+        subtitle: 'Powering the future of mining',
+    },
+    {
+        title: 'No More Worries About Power',
+        color: 'white',
+        subtitle: 'Powering the future of mining',
+    },
+    {
+        title: 'Installation & Services',
         color: 'white',
         subtitle: 'Powering the future of mining',
     },
@@ -164,7 +174,6 @@ export default function MiniSlider({size, imageUrls}: {size?: 'full', imageUrls:
                     <div className="bg2"/>
                 </div>
             }
-
             {
                 heroImage.map((image) => {
                     return (

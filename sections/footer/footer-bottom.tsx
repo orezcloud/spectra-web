@@ -19,7 +19,7 @@ export function FooterBottomDesktop() {
                 <div className={'d-flex justify-content-between'}>
                     <div className={'col-auto'}>
                         <span>
-                            Copyright © 2021 SISARA. All rights reserved.
+                            Copyright © 2021 Spectra. All rights reserved.
                         </span>
                     </div>
                     <div className={'col-auto'}>
