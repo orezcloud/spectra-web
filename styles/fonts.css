@@ -3,11 +3,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300;400;500;600;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');*/
 /*
 font-family: 'Noto Sans Display', sans-serif;
 font-family: 'Noto Serif', serif;
 font-family: 'Noto Serif Display', serif;
 font-family: 'Spectral', serif;
 font-family: 'Lato', sans-serif;
+
+font-family: 'Roboto Condensed', sans-serif;
 */
 
+@font-face {
+    font-family: 'HelveticaInserat';
+    src: url('HelveticaInserat.woff2') format('woff2'),
+    url('HelveticaInserat.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
