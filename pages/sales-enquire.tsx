@@ -19,7 +19,7 @@ export default function ContactMail() {
                                 {
                                     title: 'General Enquire',
                                     isSelect: false,
-                                    href: urls.contact,
+                                    href: urls.contactMail,
                                 },
                                 {
                                     title: 'Sales Enquire',

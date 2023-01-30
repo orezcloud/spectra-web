@@ -31,6 +31,7 @@ export default function ContactMail() {
                                 {
                                     submitText: 'Send',
                                     onSubmit: (data) => {
+                                        // todo: send data to server
                                         console.log(data);
                                     },
                                     fieldGroups: [
