@@ -17,10 +17,17 @@ function initScrollState() {
 
 export default function init() {
     initScrollState();
+    if (isServer) return;
     preloadImages();
 }
 
 const loadImages = [
+    '/images/hero/hero-1.jpg',
+    '/images/hero/hero-2.jpg',
+    '/images/hero/hero-3.jpg',
+    '/images/hero/hero-4.jpg',
+    '/images/hero/hero-5.jpg',
+    '/images/hero/hero-6.jpg',
     '/bg/gas-generator-background.jpg',
     '/bg/distribution solutions background.jpg',
     '/bg/heading-prime-power.jpg',
@@ -28,17 +35,11 @@ const loadImages = [
     '/bg/light-tower-generator-background-2.jpg',
     '/bg/marine-generator-background-2.jpg',
     '/bg/portable-generator-background.jpg',
-    '/images/hero/hero-1.jpg',
-    '/images/hero/hero-2.jpg',
-    '/images/hero/hero-3.jpg',
-    '/images/hero/hero-4.jpg',
-    '/images/hero/hero-5.jpg',
-    '/images/hero/hero-6.jpg',
-]
+];
 
 async function preloadImages() {
     for (let i = 0; i < loadImages.length; i++) {
         await preloadImage(loadImages[i]);
-        await sleep(400)
+        await sleep(400);
     }
 }

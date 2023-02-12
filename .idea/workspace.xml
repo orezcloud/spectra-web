@@ -7,7 +7,9 @@
     <list default="true" id="663e48ec-cbbf-46d5-ba4f-7ce8d626dd0d" name="Changes" comment="Initial">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/init.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/init.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sales-enquire.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sales-enquire.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/header/header-transparent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sections/header/header-transparent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/fonts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/global.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

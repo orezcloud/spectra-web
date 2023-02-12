@@ -49,7 +49,7 @@ export default function HeaderTransparent({showMenu = true}: {showMenu?: boolean
 
             <div className="row">
                 <div className="col-auto">
-                    <Logo/>
+                    <Logo white={true}/>
                 </div>
                 <div className="col-auto ms-auto">
                     <Menu/>
@@ -87,11 +87,15 @@ export default function HeaderTransparent({showMenu = true}: {showMenu?: boolean
     );
 }
 
-function Logo() {
+function Logo({white = false}: {white?: boolean}) {
     return (
         <div className="logo">
             <Link href="/">
-                <img src="/logo.png" alt="logo"/>
+                {
+                    !white ?
+                        <img src="/logo.png" alt="logo"/>:
+                        <img src="/logo-white.png" alt="logo"/>
+                }
             </Link>
         </div>
     );
