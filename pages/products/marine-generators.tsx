@@ -15,12 +15,12 @@ export default function MarineGenerators() {
 
                         <ProductList products={[
                             {
-                                title: 'Open type Generator',
+                                title: 'Open type',
                                 image: '/images/products/open-type-marine-generator.jpg',
                                 description: 'Spectra Marine open type generator, also called dynamo, any machine that converts mechanical energy to electricity for transmission and distribution over power lines to domestic, commercial, and industrial customers. The design of Spectra open type gensets are typically for projects with generator rooms with noise isolation materials built in. Generators also produce the electrical power required for automobiles, aircraft, ships, and trains.',
                             },
                             {
-                                title: 'Canopy type Generator',
+                                title: 'Canopy type',
                                 image: '/images/products/sound-proof-marine-generator.jpg',
                                 description: 'Spectra Marine canopy type generator, also called dynamo, any machine that converts mechanical energy to electricity for transmission and distribution over power lines to domestic, commercial, and industrial customers. Generators also produce the electrical power required for automobiles, aircraft, ships, and trains.',
                             },

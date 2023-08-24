@@ -195,11 +195,9 @@ export default function MiniSlider({size, imageUrls}: {size?: 'full', imageUrls:
                     font-family: Spectral, Noto Sans, serif;
                     font-weight: 400;
                     text-transform: uppercase;
-
                     :global(.animated-string) {
                       text-shadow: -1px 1px 1px rgba(7, 7, 7, 0.36);
                     }
-
                     //.text {
                     //  z-index: 100;
                     //}
@@ -227,18 +225,15 @@ export default function MiniSlider({size, imageUrls}: {size?: 'full', imageUrls:
                     //    height: 110%;
                     //    background-color:  #00000033;
                     //}
-
                     @media (max-width: 768px) {
                       font-size: 1.5rem;
                       left: 30px;
                     }
-
                     @media (max-width: 480px) {
                       font-size: 1.2rem;
                       left: 25px;
                     }
                   }
-
                   .preload {
                     position: absolute;
                     top: 0;

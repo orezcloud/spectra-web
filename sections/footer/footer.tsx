@@ -14,7 +14,7 @@ export default function Footer() {
     const isMobileOrTablet = useIsMobileOrTablet();
 
     return (
-        <DefaultSection name={'footer'} padding={'none'}>
+        <DefaultSection name={'footer'} padding={'none'} className={'noslide'}>
             <div className="footer-main nobullet overflow-hidden mx-auto">
                 <div className="row justify-content-between justify-content-md-start justify-content-lg-between">
                     {
@@ -50,7 +50,8 @@ export default function Footer() {
             {/*    </div>*/}
             {/*</div>*/}
 
-            <Links/>
+            {/*<Links/>*/}
+            <div className={'pt-5'}/>
             {
                 !isMobileOrTablet ? <FooterBottomDesktop/> :
                     <FooterBottomMobile/>

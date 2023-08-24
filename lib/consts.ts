@@ -18,7 +18,9 @@ export const urls = {
     environmentPolicies: '/environment-policies',
     privacyPolicy: '/privacy-policy',
     termsConditions: '/terms-conditions',
+    cookiePolicy: '/cookie-policy',
     becomeAPartner: '/become-a-partner',
+    careers: '/careers',
     hash: '#',
 };
 
@@ -200,8 +202,9 @@ export const footerLinks = [
         title: 'Spectra',
         links: [
             {
-                name: 'Careers',
-                path: urls.hash,
+                // name: 'Careers',
+                name: 'Working Together',
+                path: urls.careers,
             },
             {
                 name: 'Policies & Procedures',

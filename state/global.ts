@@ -13,6 +13,8 @@ interface Global {
     bgMenuActive: boolean;
     transMenu: boolean;
     isNoSlide: boolean;
+    cookieAccepted?: boolean;
+    cookieDisableForce?: boolean;
 }
 
 export const globalState = proxy<Global>({

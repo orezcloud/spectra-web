@@ -46,6 +46,10 @@ export default function TitleCard({title, subtitle, topTitle}: {
                     font-weight: 400;
                   }
 
+                  h1 {
+                    font-weight: 700;
+                    font-family: "Roboto Condensed", sans-serif;
+                  }
 
                   .top-title {
                     font-size: 13px;

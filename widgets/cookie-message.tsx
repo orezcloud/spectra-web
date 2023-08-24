@@ -1,23 +1,28 @@
 import React, {useEffect} from 'react';
 import {DefaultSection} from '../layouts/section-layouts';
 import {proxy, useSnapshot} from 'valtio';
+import {urls} from '../lib/consts';
+import Link from 'next/link';
+import {COLORS} from '../styles/consts';
+import {globalState} from '../state/global';
 
 
-const state = proxy({
-    isAccepted: true,
-});
+// export const cookiePolicyProxy = proxy({
+//     isAccepted: true,
+// });
+
 function setCookie(name: string, value: string, days: number) {
-    let expires = "";
+    let expires = '';
     if (days) {
         let date = new Date();
         date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
+        expires = '; expires=' + date.toUTCString();
     }
-    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    document.cookie = name + '=' + (value || '') + expires + '; path=/';
 }
 
 function getCookie(name: string) {
-    let nameEQ = name + "=";
+    let nameEQ = name + '=';
     let ca = document.cookie.split(';');
     for (let i = 0; i < ca.length; i++) {
         let c = ca[i];
@@ -34,17 +39,17 @@ function eraseCookie(name: string) {
 
 export default function CookieMessage() {
     // const [isAccepted, setIsAccepted] = useState(false);
-    const {isAccepted} = useSnapshot(state);
+    const {cookieAccepted, cookieDisableForce} = useSnapshot(globalState);
 
     useEffect(() => {
         if (getCookie('cookie-accepted') === 'true') {
-            state.isAccepted = true;
+            globalState.cookieAccepted = true;
         } else {
-            state.isAccepted = false;
+            globalState.cookieAccepted = false;
         }
-    })
+    }, []);
 
-    if (isAccepted) {
+    if (cookieAccepted || cookieDisableForce) {
         return null;
     }
 
@@ -67,13 +72,19 @@ export default function CookieMessage() {
                 <DefaultSection name={'cookie'} padding={'none'}>
                     <div className={'sww'}>
                         <p>
-                            This website uses cookies to improve your experience. By continuing to
-                            use this website, you consent to the use of cookies.
+                            {/*This website uses cookies to improve your experience. By continuing to*/}
+                            {/*use this website, you consent to the use of cookies.*/}
+                            We use cookies to improve your experience on our site. Cookies are small files that are
+                            stored on your device when you visit our site. By continuing to use our site, you consent to
+                            our use of cookies. By accepting, you agree to the <Link href={urls.termsConditions}>Terms
+                            of Use</Link>, <Link href={urls.cookiePolicy}>Cookie Policy</Link> and <Link
+                            href={urls.privacyPolicy}>Privacy Policy</Link> of
+                            Spectra Power Solutions.
                         </p>
                         <button
                             onClick={
                                 () => {
-                                    state.isAccepted = true;
+                                    globalState.cookieAccepted = true;
                                     setCookie('cookie-accepted', 'true', 365);
                                 }
                             }
@@ -95,6 +106,15 @@ export default function CookieMessage() {
                     cursor: pointer;
                     z-index: 10000;
                     min-width: 100px;
+                  }
+
+                  p {
+                    padding-right: 1rem;
+
+                    :global(a) {
+                        //color: ${COLORS.red};
+                      color: #ccc;
+                    }
                   }
 
                   .sww {

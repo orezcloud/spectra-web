@@ -5,11 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="663e48ec-cbbf-46d5-ba4f-7ce8d626dd0d" name="Changes" comment="Initial">
+      <change afterPath="$PROJECT_DIR$/pages/cookie-policy.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/init.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/init.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/header/header-transparent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sections/header/header-transparent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/consts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/consts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/products/diesel-generators/continuous-power-generators.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products/diesel-generators/continuous-power-generators.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/products/marine-generators.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products/marine-generators.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/products/portable-generators.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/products/portable-generators.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/common/_title-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sections/common/_title-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/footer/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/sections/footer/footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/state/global.ts" beforeDir="false" afterPath="$PROJECT_DIR$/state/global.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/animation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/animation.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/fonts.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widgets/cookie-message.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/widgets/cookie-message.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widgets/mini-slider/mini-slider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/widgets/mini-slider/mini-slider.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,25 +104,26 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\iolat\\Documents\\Dev\\spectra-web\\node_modules\\typescript\\lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "C:/Users/iolat/Documents/Dev/spectra-web/pages",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "C:\\Users\\iolat\\Documents\\Dev\\spectra-web\\node_modules\\typescript\\lib"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\iolat\Documents\Dev\spectra-web\pages" />
       <recent name="C:\Users\iolat\Documents\Dev\spectra-web\public\bg" />
       <recent name="C:\Users\iolat\Documents\Dev\spectra-web\public\icons" />
       <recent name="C:\Users\iolat\Documents\Dev\spectra-web\public\images\menu" />
       <recent name="C:\Users\iolat\Documents\Dev\spectra-web\public\images\products\special" />
-      <recent name="C:\Users\iolat\Documents\Dev\spectra-web\public\images\products\prime" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\iolat\Documents\Dev\spectra-web\styles" />
       <recent name="C:\Users\iolat\Documents\Dev\spectra-web\public" />
+      <recent name="C:\Users\iolat\Documents\Dev\spectra-web\styles" />
       <recent name="C:\Users\iolat\Documents\Dev\spectra-web\public\images\solutions" />
       <recent name="C:\Users\iolat\Documents\Dev\spectra-web\public\images" />
       <recent name="C:\Users\iolat\Documents\Dev\spectra-web\public\icons" />
